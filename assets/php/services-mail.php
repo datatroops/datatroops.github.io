@@ -1,7 +1,10 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+//header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
     // Only process POST reqeusts.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //if ($_SERVER["REQUEST_METHOD"] == "POST") 
+	if(isset($_POST['submit'])){
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["con_name"]));
                 $name = str_replace(array("\r","\n"),array(" "," "),$name);
@@ -32,7 +35,7 @@ header("Access-Control-Allow-Origin: *");
         }
  
         // Set the recipient email address.
-        $recipient = "yourinfo@gmail.com";
+        $recipient = "karanaggarwal54@gmail.com";
  
         // Set the email subject.
         $subject = "Test Email for Template Demo - Mail From $name";
