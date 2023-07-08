@@ -42,7 +42,26 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+        <style>
+            #thank_you{
+                height: 2rem;
+                margin-top: 1.5rem;
+                background-color: var(--bg-color);
+                margin-bottom:1rem;
+                text-align: center;
+                }
+                #disName{
+                display: inline;
+                font-size: 1.5rem;
+                color: #003153;
+                font-style: underline;
+                }
+                #thank_you p{
+                display: inline;
+                font-size: 1.5rem;
+                color: #444444;
+                }
+        </style>
 </head>
 
 <body>
@@ -364,7 +383,7 @@
     <div id="main-wrapper">
         <div class="site-wrapper-reveal">
             <!--====================  Conact us Section Start ====================-->
-            <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70">
+            <div class="contact-us-section-wrappaer section-space--pt_100 section-space--pb_70" id="contactStart">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-lg-6">
@@ -382,33 +401,38 @@
                                 <!-- <form id="contact-form" action="http://whizthemes.com/mail-php/jowel/mitech/php/mail.php" method="post"> -->
                                 <!-- <form id="contact-form" action="assets/php/mail.php" method="post"> -->
                                     <!-- this is using formsubmit application  -->
-                                <form action="https://formsubmit.co/info@datatroops.io" method="POST">
+                                <form action="https://formsubmit.co/info@datatroops.io" method="POST" name="contactForm" id="contactForm">
                                     <!-- Honeypot -->
                                     <input type="text" name="_honey" style="display:none">
 
                                     <!-- next for redirecting to another page -->
-                                    <input type="hidden" name="_next" value="https://datatroops.io/contact-us">
+                                    <input type="hidden" name="_next" value="https://datatroops.github.io/contact-us.html#contactForm">
                                     <div class="contact-form">
                                         <div class="contact-input">
                                             <!-- captcha -->
                                             <input type="hidden" name="_captcha" value="false">
                                             <div class="contact-inner">
-                                                <input name="con_name" type="text" placeholder="Name *">
+                                                <input id="con_name" name="con_name" type="text" placeholder="Name *" required>
                                             </div>
                                             <div class="contact-inner">
-                                                <input name="con_email" type="email" placeholder="Email *">
+                                                <input id="con_email" name="con_email" type="email" placeholder="Email *" required>
                                             </div>
                                         </div>
                                         <div class="contact-inner">
-                                            <input name="con_subject" type="text" placeholder="Subject *">
+                                            <input id="con_subject" name="con_subject" type="text" placeholder="Subject *" required>
                                         </div>
                                         <div class="contact-inner contact-message">
-                                            <textarea name="con_message" placeholder="Please describe what you need."></textarea>
+                                            <textarea id="con_message" name="con_message" placeholder="Please describe what you need."></textarea>
                                         </div>
                                         <div class="submit-btn mt-20">
-                                            <button class="ht-btn ht-btn-md" type="submit">Send message</button>
+                                            <!-- <button  class="ht-btn ht-btn-md" type="submit">Send message</button> -->
+                                            <input class="ht-btn ht-btn-md" type="button" value="Send Message" id="button">
                                             <p class="form-messege"></p>
                                         </div>
+                                        <div id="thank_you" style="display:none;">
+                                            <div id="disName"></div>
+                                            <p>&nbsp;thank you for reaching out!, we will contact you soon!</p>
+                                        </div>   
                                     </div>
                                 </form>
                             </div>
@@ -890,7 +914,41 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
-
+    <!-- thank_you script -->
+    <script>
+        function isEmpty(element) {
+        console.log("hey1");
+        if (element.value == "") {
+        console.log("hey2");
+        alert("Please fill all required details");
+        return 1;
+        }
+        return 0;
+        }
+        function submitForm() { // submits form
+        document.getElementById("contactForm").submit();
+        // submit() is not a function is the error occurs if we 'name' or keep type of any other input as submit (keep that in mind).
+        }
+        document.getElementById('button').addEventListener('click', function (e) {
+            console.log("hey");
+            let name=document.getElementById('con_name');
+            let email=document.getElementById('con_email');
+            let message=document.getElementById('con_message');
+            let subject=document.getElementById('con_subject');
+            if(isEmpty(name)) console.log("No");
+            else if(isEmpty(email)) console.log("No");
+            else if(isEmpty(message)) console.log("No");
+            else if(isEmpty(subject)) console.log("No");
+            else {
+                console.log("yes");
+                setTimeout("submitForm()", 2000); // set timout 
+                let thank= document.getElementById("thank_you");
+                let disName= document.getElementById("disName");
+                thank.style.display='block';
+                disName.innerHTML=name.value.toUpperCase();
+            }
+        });
+    </script>
 </body>
 
 </html>
