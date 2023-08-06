@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unleashing the Power of Functional Programming</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/light-logo.png">
+
+    <!-- CSS
+        ============================================ -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+
+    <!-- Font Family CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/cerebrisans.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/linea-icons.css">
+
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+
+    <!-- animate-text CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/animate-text.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+
+    <!-- Light gallery CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css">
+
+    <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from avobe) -->
+
+    <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+        <link rel="stylesheet" href="assets/css/plugins/plugins.min.css"> -->
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+p,code,figcaption,li,td{
+    /* font-size:20px; */
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	/* list-style: disc; */
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+	
+    </style>
+</head>
+
+<body>
+
+
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--====================  header area ====================-->
+        <!--====================  header area ====================-->
+        <div class="header-area header-area--default">
+
+            <!-- Header Bottom Wrap Start -->
+            <div class="header-bottom-wrap header-sticky">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header default-menu-style position-relative">
+    
+                                <!-- brand logo -->
+                                <div class="header__logo">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo/light-logo.png" width="100%" height="70px" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+    
+                                <!-- header midle box  -->
+                                <div class="header-right">
+                                    <!-- <div class="header-bottom-wrap d-md-block d-none"> -->
+                                        <!-- <div class="header-bottom-inner"> -->
+                                            <!-- <div class="header-bottom-left-wrap"> -->
+                                                <!-- navigation menu -->
+                                                <div class="header__navigation d-none d-xl-block">
+                                                    <nav class="navigation-menu primary--menu">
+    
+                                                        <ul>
+                                                            <li>
+                                                                <a href="index.html"><span>Home</span></a>
+                                                                <!-- <ul class="submenu"> -->
+                                                                    <!-- <li><a href="index-infotechno.html"><span>Infotechno</span></a></li> -->
+                                                                    <!-- <li><a href="index-processing.html"><span>Processing</span></a></li> -->
+                                                                    <!-- <li><a href="index-appointment.html"><span>Appointment</span></a></li> -->
+                                                                    <!-- <li><a href="index-services.html"><span>Services</span></a></li> -->
+                                                                    <!-- <li><a href="index-resolutions.html"><span>Resolutions</span></a></li> -->
+                                                                    <!-- <li><a href="index-cybersecurity.html"><span>Cybersecurity</span></a></li> -->
+                                                                    <!-- <li><a href="index-modern-it-company.html"><span>Modern IT Company</span></a></li> -->
+                                                                    <!-- <li><a href="index.html"><span>Machine Learning</span></a></li> -->
+                                                                    <!-- <li><a href="index-software-innovation.html"><span>Software Innovation</span></a></li> -->
+                                                                <!-- </ul> -->
+                                                            </li>
+                                                            
+                                                            <li class="has-children has-children--multilevel-submenu">
+                                                                <a href="#"><span>IT solutions</span></a>
+                                                                <ul class="submenu">
+                                                                    <li><a href="#"><span>IT Services</span></a></li>
+                                                                    <li><a href="#"><span>Managed IT Services</span></a></li>
+                                                                    <li><a href="#"><span>Industries</span></a></li>
+                                                                    <li><a href="#"><span>Business solution</span></a></li>
+                                                                    <li><a href="#"><span>IT Services Details</span></a></li>
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                            <li class="has-children has-children--multilevel-submenu">
+                                                                <a href="#"><span>Company</span></a>
+                                                                <ul class="submenu">
+                                                                        <!-- <ul class="submenu"> -->
+                                                                            <!-- <li><a href="about-us.html"><span>About us 01</span></a></li> -->
+                                                                            <!-- <li><a href="about-us-02.html"><span>About us 02</span></a></li> -->
+                                                                            <!-- <li class="has-children"> -->
+                                                                                <!-- <a href="#"><span>Submenu Level Two</span></a> -->
+                                                                                <!-- <ul class="submenu"> -->
+                                                                                    <!-- <li><a href="#"><span>Submenu Level Three</span></a></li> -->
+                                                                                    <!-- <li><a href="#"><span>Submenu Level Three</span></a></li> -->
+                                                                                    <!-- <li><a href="#"><span>Submenu Level Three</span></a></li> -->
+                                                                                <!-- </ul> -->
+                                                                            <!-- </li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- <li><a href="leadership.html"><span>Leadership</span></a></li> -->
+                                                                    <li><a href="why-choose-us.html"><span>Why choose us</span></a></li>
+                                                                    <!-- <li><a href="our-history.html"><span>Our history</span></a></li> -->
+                                                                    <li><a href="#"><span>FAQs</span></a></li>
+                                                                    <!-- <li><a href="pricing-plans.html"><span>Pricing plans</span></a></li> -->
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="technology.html"><span>Technology</span></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="about-us.html"><span>About us</span></a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="careers.html"><span>Careers</span></a>
+                                                            </li>
+                                                            
+                                                            <li>
+                                                                <a href="contact-us.html"><span>Contact us</span></a>
+                                                            </li>
+                                                            
+                                                            
+                                                            <!-- <li class="has-children"> -->
+                                                                <!-- <a href="#"><span>Elements</span></a> -->
+                                                                <!-- <!-- mega menu -->
+                                                                <!-- <ul class="megamenu megamenu--mega"> -->
+                                                                    <!-- <li> -->
+                                                                        <!-- <h2 class="page-list-title">ELEMENT GROUP 01</h2> -->
+                                                                        <!-- <ul> -->
+                                                                            <!-- <li><a href="element-accordion.html"><span>Accordions & Toggles</span></a></li> -->
+                                                                            <!-- <li><a href="element-box-icon.html"><span>Box Icon</span></a></li> -->
+                                                                            <!-- <li><a href="element-box-image.html"><span>Box Image</span></a></li> -->
+                                                                            <!-- <li><a href="element-box-large-image.html"><span>Box Large Image</span></a></li> -->
+                                                                            <!-- <li><a href="element-buttons.html"><span>Buttons</span></a></li> -->
+                                                                            <!-- <li><a href="element-cta.html"><span>Call to action</span></a></li> -->
+                                                                            <!-- <li><a href="element-client-logo.html"><span>Client Logo</span></a></li> -->
+                                                                            <!-- <li><a href="element-countdown.html"><span>Countdown</span></a></li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- </li> -->
+                                                                    <!-- <li> -->
+                                                                        <!-- <h2 class="page-list-title">ELEMENT GROUP 02</h2> -->
+                                                                        <!-- <ul> -->
+                                                                            <!-- <li><a href="element-counters.html"><span>Counters</span></a></li> -->
+                                                                            <!-- <li><a href="element-dividers.html"><span>Dividers</span></a></li> -->
+                                                                            <!-- <li><a href="element-flexible-image-slider.html"><span>Flexible image slider</span></a></li> -->
+                                                                            <!-- <li><a href="element-google-map.html"><span>Google Map</span></a></li> -->
+                                                                            <!-- <li><a href="element-gradation.html"><span>Gradation</span></a></li> -->
+                                                                            <!-- <li><a href="element-instagram.html"><span>Instagram</span></a></li> -->
+                                                                            <!-- <li><a href="element-lists.html"><span>Lists</span></a></li> -->
+                                                                            <!-- <li><a href="element-message-box.html"><span>Message box</span></a></li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- </li> -->
+                                                                    <!-- <li> -->
+                                                                        <!-- <h2 class="page-list-title">ELEMENT GROUP 03</h2> -->
+                                                                        <!-- <ul> -->
+                                                                            <!-- <li><a href="element-popup-video.html"><span>Popup Video</span></a></li> -->
+                                                                            <!-- <li><a href="element-pricing-box.html"><span>Pricing Box</span></a></li> -->
+                                                                            <!-- <li><a href="element-progress-bar.html"><span>Progress Bar</span></a></li> -->
+                                                                            <!-- <li><a href="element-progress-circle.html"><span>Progress Circle</span></a></li> -->
+                                                                            <!-- <li><a href="element-rows-columns.html"><span>Rows & Columns</span></a></li> -->
+                                                                            <!-- <li><a href="element-social-networks.html"><span>Social Networks</span></a></li> -->
+                                                                            <!-- <li><a href="element-tabs.html"><span>Tabs</span></a></li> -->
+                                                                            <!-- <li><a href="element-team-member.html"><span>Team member</span></a></li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- </li> -->
+                                                                    <!-- <li> -->
+                                                                        <!-- <h2 class="page-list-title">ELEMENT GROUP 04</h2> -->
+                                                                        <!-- <ul> -->
+                                                                            <!-- <li><a href="element-testimonials.html"><span>Testimonials</span></a></li> -->
+                                                                            <!-- <li><a href="element-timeline.html"><span>Timeline</span></a></li> -->
+                                                                            <!-- <li><a href="element-carousel-sliders.html"><span>Carousel Sliders</span></a></li> -->
+                                                                            <!-- <li><a href="element-typed-text.html"><span>Typed Text</span></a></li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- </li> -->
+                                                                <!-- </ul> -->
+                                                            <!-- </li> -->
+                                                            <!-- <li class="has-children has-children--multilevel-submenu"> -->
+                                                                <!-- <a href="#"><span>Case Studies</span></a> -->
+                                                                <!-- <!-- multilevel submenu -->
+                                                                <!-- <ul class="submenu"> -->
+                                                                    <!-- <li><a href="case-studies.html"><span>Case Studies 01</span></a></li> -->
+                                                                    <!-- <li><a href="case-studies-02.html"><span>Case Studies 02</span></a></li> -->
+                                                                    <!-- <li><a href="single-smart-vision.html"><span>Single Layout</span></a></li> -->
+                                                                <!-- </ul> -->
+                                                            <!-- </li> -->
+                                                            <!-- <li class="has-children has-children--multilevel-submenu"> -->
+                                                                <!-- <a href="blog-list-large-image.html"><span>Blog</span></a> -->
+                                                                <!-- <!-- multilevel submenu -->
+                                                                <!-- <ul class="submenu"> -->
+                                                                    <!-- <li><a href="blog-list-large-image.html"><span>List Large Image</span></a></li> -->
+                                                                    <!-- <li><a href="blog-list-left-large-image.html"><span>Left Large Image</span></a></li> -->
+                                                                    <!-- <li><a href="blog-grid-classic.html"><span>Grid Classic</span></a></li> -->
+                                                                    <!-- <li><a href="blog-grid-masonry.html"><span>Grid Masonry</span></a></li> -->
+                                                                    <!-- <li class="has-children"> -->
+                                                                        <!-- <a href="blog-post-layout-one.html"><span>Single Layouts</span></a> -->
+                                                                        <!-- <ul class="submenu"> -->
+                                                                            <!-- <li><a href="blog-post-layout-one.html"><span>Left Sidebar</span></a></li> -->
+                                                                            <!-- <li><a href="blog-post-right-sidebar.html"><span>Right Sidebar</span></a></li> -->
+                                                                            <!-- <li><a href="blog-post-no-sidebar.html"><span>No Sidebar</span></a></li> -->
+                                                                        <!-- </ul> -->
+                                                                    <!-- </li> -->
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            <!-- </div> -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+    
+                                </div>
+    
+                                <!-- header right box -->
+                                <div class="header-right-box">
+                                    <!-- <div class="header-right-inner" id="hidden-icon-wrapper"> -->
+    
+                                        <!-- language-menu -->
+                                        <!-- <div class="language-menu"> -->
+                                            <!-- <ul> -->
+                                                <!-- <li> -->
+                                                    <!-- <a href="#" class=""> -->
+                                                        <!-- <img class="ls-flag" src="assets/images/flags/en.webp" alt="en" title="English"> -->
+                                                        <!-- <span class="wpml-ls-native">English</span> -->
+                                                    <!-- </a> -->
+    
+                                                    <!-- <ul class="ls-sub-menu"> -->
+                                                        <!-- <li class=""> -->
+                                                            <!-- <a href="#" class=""> -->
+                                                                <!-- <img class="ls-flag" src="assets/images/flags/fr.webp" alt="en" title="Français"><span class="wpml-ls-native">Français</span> -->
+                                                            <!-- </a> -->
+                                                        <!-- </li> -->
+                                                        <!-- <li class=""> -->
+                                                            <!-- <a href="#" class=""> -->
+                                                                <!-- <img class="wpml-ls-flag" src="assets/images/flags/de.webp" alt="de" title="Deutsch"><span class="wpml-ls-native">Deutsch</span> -->
+                                                            <!-- </a> -->
+                                                        <!-- </li> -->
+    
+                                                    <!-- </ul> -->
+    
+                                                <!-- </li> -->
+    
+                                            <!-- </ul> -->
+                                        <!-- </div> -->
+    
+                                        <!-- header-search-form -->
+                                        <!-- <div class="header-search-form default-search"> -->
+                                            <!-- <form action="#" class="search-form-top"> -->
+                                                <!-- <input class="search-field" type="text" placeholder="Search…"> -->
+                                                <!-- <button class="search-submit"> -->
+                                                    <!-- <i class="search-btn-icon fa fa-search"></i> -->
+                                                <!-- </button> -->
+                                            <!-- </form> -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+    
+                                    <!-- mobile menu -->
+                                    <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
+                                        <i></i>
+                                    </div>
+                                    <!-- hidden icons menu -->
+                                    <!-- <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger"> -->
+                                        <!-- <a href="javascript:void(0)"> -->
+                                            <!-- <i class="far fa-ellipsis-h-alt"></i> -->
+                                        <!-- </a> -->
+                                    <!-- </div> -->
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Bottom Wrap End -->
+    
+        </div>
+        <!--====================  End of header area  ====================-->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- breadcrumb-area start -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb_box text-center">
+                        <h1 class="breadcrumb-title">Unleashing the Power of Functional Programming</h1>
+                        <!-- breadcrumb-list start -->
+                        <!-- <ul class="breadcrumb-list">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Blog Details</li>
+                        </ul> -->
+                        <!-- breadcrumb-list end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb-area end -->
+
+
+
+
+
+
+
+
+
+
+
+    <div id="main-wrapper">
+        <div class="site-wrapper-reveal">
+
+
+
+
+
+
+
+
+            <!--====================  Blog Area Start ====================-->
+            <div class="blog-pages-wrapper section-space--ptb_100">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- <div class="col-lg-4 order-lg-1 order-2">
+                            <div class="page-sidebar-content-wrapper page-sidebar-left  small-mt__40 tablet-mt__40"> -->
+
+                                <!--=== Sidebar Widget Start ===-->
+                                <!-- <div class="sidebar-widget search-post wow move-up">
+                                    <div class="widget-title">
+                                        <h4 class="sidebar-widget-title">Search</h4>
+                                    </div>
+                                    <form action="#" method="post">
+                                        <div class="widget-search">
+                                            <input type="text" placeholder="Enter search keyword…">
+
+                                            <button type="submit" class="search-submit">
+                                                <span class="search-btn-icon fa fa-search"></span>
+                                            </button>
+
+                                        </div>
+                                    </form>
+                                </div> -->
+                                <!--=== Sidebar Widget End ===-->
+
+
+                                <!-- === Sidebar Widget Start === -->
+                                <!-- <div class="sidebar-widget widget-blog-recent-post wow move-up">
+
+                                    <h4 class="sidebar-widget-title">Recent Posts</h4>
+
+                                    <ul>
+                                        <li>
+                                            <a href="#">Ideas for High Returns on Investment</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">How Technology Made Businesses More Efficient</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Data Secure on Transitioning to a New Office</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">The Keys to Persuading Customers Nowadays</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blockchain Technology Effects on Logistics Sector?</a>
+                                        </li>
+                                    </ul>
+
+                                </div> -->
+                                <!-- === Sidebar Widget End === -->
+
+                                <!-- === Sidebar Widget Start === -->
+                                <!-- <div class="sidebar-widget widget-images wow move-up">
+
+                                    <img class="img-fluid" src="assets/images/blog/blog-sidebar-ads.webp" alt="">
+
+                                </div> -->
+                                <!-- === Sidebar Widget End === -->
+
+                                <!-- === Sidebar Widget Start === -->
+                                <!-- <div class="sidebar-widget widget-tag wow move-up">
+                                    <h4 class="sidebar-widget-title">Tags</h4>
+                                    <a href="#" class="ht-btn ht-btn-xs">business</a>
+                                    <a href="#" class="ht-btn ht-btn-xs">featured</a>
+                                    <a href="#" class="ht-btn ht-btn-xs">IT Security</a>
+                                    <a href="#" class="ht-btn ht-btn-xs">IT services</a>
+
+                                </div> -->
+                                <!-- === Sidebar Widget End === -->
+
+
+                            <!-- </div>
+                        </div> -->
+                        <div class="col-lg-8 order-lg-2 order-1">
+                            <div class="main-blog-wrap">
+                                <!--======= Single Blog Item Start ========-->
+                                <div class="single-blog-item">
+                                    <div class="post-info lg-blog-post-info  wow move-up">
+                                        <div class="post-meta mt-20">
+                                        <div class="post-author">
+                                            <a href="#">
+                                                <img class="img-fluid avatar-96" src="assets/images/team/Anish.jpeg" alt=""> Anish Dhatwalia
+                                            </a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                   <div class="page-body"><h3 id="adcdc586-1053-436a-8099-aa0adf35ce72" class=""><strong>What is a function paradigm</strong></h3><p id="48d060e4-8607-4220-8830-b94300ffe905" class="">A function is basically something that takes an input and accordingly gives a output for it. For an example, if you wish to make a coffee for yourself then a coffee machine can be taken as a function. Here the coffee beans, sugar, and milk as inputs will give a “coffee” as output. Additionally, Functional paradigm is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing state and mutable data. Instead of relying on traditional imperative programming(Object-oriented programming) with mutable variables, functional programming emphasises the use of pure functions, immutability, and declarative expressions.</p><p id="7a2419e5-a170-4ecc-9799-4d48bf1dc61d" class="">
+                                </p><p id="440da195-1716-4172-84a0-22d6d0a0cc95" class=""><strong>Here are some key reasons why the functional paradigm is valued and used by developers</strong></p><ol type="1" id="a4f0b0b3-36f1-47d8-a1d8-c84662fbcdc8" class="numbered-list" start="1"><li><strong>Pure Functions</strong>: In functional programming, functions are pure, meaning they always produce the same output for a given input and have no side effects. This property makes it easier to reason about code, test, and debug since there are no hidden dependencies or unexpected changes to variables.</li></ol><ol type="1" id="f4da7a8e-aa1c-4940-80f5-68ab066ac9dc" class="numbered-list" start="2"><li><strong>Reduced Side Effects</strong>: Since functional programming discourages the use of mutable state, it reduces the potential for unexpected side effects and makes code easier to understand and maintain. Side effects are like:<ul id="699a9c7a-4e6e-48cb-90de-abdfc082549f" class="bulleted-list"><li style="list-style-type:disc">Modifying a variable</li></ul><ul id="e4ff457a-ba28-497f-bbe7-9e80f4ae9108" class="bulleted-list"><li style="list-style-type:disc">Modifying a data structure in place</li></ul><ul id="1b2cb162-f504-4318-8e5b-4bedf681bc8c" class="bulleted-list"><li style="list-style-type:disc">Setting a field on an object</li></ul><ul id="0b0569f2-7379-4c8a-8e51-10037d8073a3" class="bulleted-list"><li style="list-style-type:disc">Throwing an exception or halting with an error</li></ul><ul id="1401910f-c4bd-4093-aab5-922323f5f63b" class="bulleted-list"><li style="list-style-type:disc">Printing to the console or reading user input</li></ul><ul id="a525754b-3d06-4324-9422-3968170867b3" class="bulleted-list"><li style="list-style-type:disc">Reading from or writing to a file</li></ul><ul id="3e55a300-6cea-495c-89c3-ed9978431da1" class="bulleted-list"><li style="list-style-type:disc">Drawing on the screen</li></ul></li></ol><ol type="1" id="02fead4b-8b26-4ea5-b9e3-38775f5dd489" class="numbered-list" start="3"><li><strong>Immutability</strong>: In functional programming, data is immutable, which means it cannot be changed after creation. Instead of modifying existing data, functional programs create new data structures when changes are required. This helps avoid many concurrency-related issues and makes the code more reliable.</li></ol><ol type="1" id="521b0f89-17d4-4da8-9ce8-827e619d8ce1" class="numbered-list" start="4"><li><strong>Higher-order Functions</strong>: Functional programming often involves the use of higher-order functions, which are functions that can take other functions as arguments or return functions as results. This allows for code that is more expressive, concise, and reusable.</li></ol><ol type="1" id="8e43f7da-414d-401a-9138-8f4678ea8ee4" class="numbered-list" start="5"><li><strong>Concurrent and Parallel Programming</strong>: Functional programming lends itself well to concurrent and parallel programming, as pure functions and immutable data can be easily shared among multiple threads without the fear of race conditions and other synchronization issues.</li></ol><ol type="1" id="c740c1d3-ee50-4416-8252-5be67284b08f" class="numbered-list" start="6"><li><strong>Mathematical Foundation</strong>: Functional programming is rooted in lambda calculus and mathematical concepts, which provides a solid theoretical foundation for reasoning about code behaviour and correctness.</li></ol><ol type="1" id="88c0eb62-f0ee-4dae-a6c1-41bc035f05ff" class="numbered-list" start="7"><li><strong>Easier Testing</strong>: With pure functions and immutability, unit testing becomes more straightforward since you can test functions in isolation without the need for complex setup or teardown.</li></ol><ol type="1" id="90f70a0b-a642-4ac5-9ae4-ef08d60d66d6" class="numbered-list" start="8"><li><strong>Modularity and Composition</strong>: Functional programming encourages modularity and composition of functions, which allows developers to build complex systems by combining smaller, reusable pieces.</li></ol><ol type="1" id="fc7ea254-fbfb-4f18-80ab-91411369b196" class="numbered-list" start="9"><li><strong>Referential transparency</strong>: An expression or function is said to be referentially transparent if it can be replaced with its value without changing the program&#x27;s behaviour. In other words, if you substitute an expression with its result anywhere in the program, the program&#x27;s meaning and outcome remain the same.</li></ol><p id="218665f5-4fa1-4578-a41b-a8a7f5297a6d" class="">It&#x27;s important to note that while functional programming offers many benefits, it&#x27;s not always the best choice for every situation. There are scenarios where imperative or object-oriented programming may be more suitable, and many modern programming languages support a mix of paradigms, allowing developers to choose the best approach for their specific problem.</p><p id="c8a92584-3f5a-40c2-b6f8-1342e5c3d8ba" class="">
+                                </p><p id="64f9c36e-156e-4b70-836e-2b9b4d48788f" class=""><strong>Let’s discuss the importance of Functional Programming with an example:</strong></p><p id="95e17990-60f2-4e95-b26c-eec2f926ae0b" class="">As we know, in functional programming, there should be minimal side effects. So to illustrate this, we will take an example where we will go from functions having side effects to none.</p><p id="81716251-c6c1-433f-b15e-6fc15777a6a2" class="">Lets take an example of a Cafe where we want to buy sandwich, for this we have created a function buySandwich for it.</p><pre id="4062ed02-696b-48a5-a6cc-5885bd83ceab" class="code"><code>class Cafe {
+    def buySandwich(cc: CreditCard): Sandwich = {
+        val sandwich = new Sandwich()   //creating a new instance of sandwich
+        cc.charge(sandwich.price)     // deducting money from card
+        sandwich                      // returning sandwich
+    }
+}</code>
+                            </pre><p id="1328c139-f026-4ba7-aa22-8a878691df5f" class="">As you can notice an illustration of a side effect is the line <em><span style="border-bottom:0.05em solid">cc.charge(sandwich.price)</span></em>. Here it is necessary to connect with the outside world in order to charge a credit card; for example, imagine this interaction involves contacting the credit card provider via a web service, getting authorization for the transaction, charging the card, and (if successful) saving a record of the transaction for future use. However, our function just produces a Sandwich, and these additional processes take place incidentally (thus the name &quot;side effect&quot;). So, this leads problem in testing i.e. whenever we would have to test the function then it would also access the credit card. So, here the function buySandwich is dependent on the credit card company.</p><p id="898c8281-212e-4be8-837c-925d5aa41db0" class="">Another issue is if we are ordering sandwiches more than one, then we would have to call this function in a loop. For each sandwich we would have to take access of the credit card. Just for an example if you go to a shop and buy 10 sandwiches, and for those 10 sandwiches you have to pay 10 times from your credit card separately, wouldn’t that be hectic for you and for the shop at the same time? </p><figure id="bd6f9e7b-f486-41cc-9379-e2e80642fe06" class="image"><a href="Unleashing%20the%20Power%20of%20Functional%20Programming%E2%80%9D%20e5dc100799524b7a808325838817c525/Untitled.png"><img style="width:1920px" src="Unleashing%20the%20Power%20of%20Functional%20Programming%E2%80%9D%20e5dc100799524b7a808325838817c525/Untitled.png" style="background-color: black;"/></a></figure><p id="fb6409df-d19e-43d6-a5c9-dc382e36cec4" class="">So, to resolve this issue instead of returning just the sandwich, we can return both sandwich and an instance of Charge(declared further).</p><pre id="705dcd9b-c223-4f25-b21c-7dc8c9267489" class="code"><code>class Cafe:
+    def buySandwich(cc: CreditCard): (Sandwich, Charge) =
+    val sandwich = Sandwich()
+    (cup, Charge(cc, sandwich.price))</code></pre>
+    <pre id="8ae60572-43f0-412d-9ec6-f82298273621" class="code"><code>case class Charge(cc: CreditCard, amount: Double):
+    def combine(other: Charge): Charge =
+    if cc == other.cc then
+        Charge(cc, amount + other.amount)  // returning the Charge instance with the 
+    // amount added to it, as in case class we can create an instance with out new keyword.
+    else
+        throw Exception(&quot;Can&#x27;t combine charges with different cards&quot;)</code>
+                                    </pre><p id="912a0af5-a438-4568-90f7-dbb2355e7815" class="">This is the case class where we take the cc(CreditCard type) as well as the amount(Double type). Also here we have a function combine that is used for combining the prices of the orders if the credit card is same, so that we wouldn’t have to pay separately. </p><pre id="4cdd5d78-8218-4f70-b807-29b5b5f3a64f" class="code"><code>class Cafe:
+    
+    //already implemented previously.
+    def buySandwich(cc: CreditCard): (Sandwich, Charge) = ...  
+    
+    def buySandwiches(
+    cc: CreditCard, n: Int
+    ): (List[Sandwich], Charge) = {
+    // function for creating n copies of buySandwich(cc)
+    val purchases: List[(Sandwich, Charge)] = List.fill(n)(buySandwich(cc)) 
+        
+        // Separating sandwiches and charges as 2 different list    
+        val (sandwiches, charges) = purchases.unzip 
+
+        //reducing charges and combining the amount to be paid in total
+    val reduced = charges.reduce((c1, c2) =&gt; c1.combine(c2))
+    
+        // Returning result tuple.
+        (sandwiches, reduced)
+
+}</code></pre>
+                                <p id="8ca4db1d-05a4-4429-9185-ead72f81856b" class="">Here we are implementing the buySandwiches function that is used for ordering multiple sandwiches. As we can notice here that instead of writing another code for buying multiple sandwiches we are using the buySandwich function and then combining the charge later on, and because of this we are able to just order n number of sandwiches and get back the total amount to be paid instead of paying separately.</p><p id="8275487d-c506-460e-afc5-727328391c3f" class="">Also here the <em>Charge</em> has its own benefits, as we can use the <em>Charge</em> instance for any type of item in the <em><span style="border-bottom:0.05em solid">Cafe</span></em>, be it coffee or tea, which shows us the power of functional programming.</p><p id="acd38b19-ff48-4be3-b2c3-816c9fc1ab57" class="">By this example you must have got an idea how good practice in functional programming can help us make systems that are readable, reliable, modular, and testable.</p><p id="14ba4129-f1de-4e37-92ce-db8e1874c13a" class="">
+                                </p><p id="26b7d415-1cd5-47b2-9f38-3e38141faa50" class=""><strong>Where to use Functional Programming.</strong></p><p id="42aaa1bc-825d-497e-b0c9-8701356b27fe" class="">The functional programming paradigm can be cup-applied in various scenarios where its principles align with the problem you&#x27;re trying to solve. Here are some common contexts where using the functional paradigm can be particularly beneficial:</p><ol type="1" id="1d9eb21f-fcc5-42e3-ae18-ed7e77d4b2c6" class="numbered-list" start="1"><li><strong>Data Transformation and Processing</strong>: When dealing with data transformation, filtering, mapping, and aggregation tasks, functional programming&#x27;s emphasis on immutability, higher-order functions, and composability can lead to more concise and expressive code.</li></ol><ol type="1" id="3d52d025-7637-4d2a-aa33-ecd32bad86c1" class="numbered-list" start="2"><li><strong>Concurrency and Parallelism</strong>: Functional programming&#x27;s avoidance of mutable state and side effects makes it suitable for concurrent and parallel programming. The absence of shared state reduces the risk of race conditions and simplifies synchronisation.</li></ol><ol type="1" id="67e6c284-100c-446f-a644-764c73df2ccf" class="numbered-list" start="3"><li><strong>Mathematical and Algorithmic Tasks</strong>: Functional programming&#x27;s mathematical foundations and focus on pure functions make it well-suited for tasks that involve mathematical computations, such as cryptography, signal processing, and simulations.</li></ol><ol type="1" id="a43a18ad-4a4f-4522-acad-9f022d93eeb1" class="numbered-list" start="4"><li><strong>Event-Driven Applications</strong>: Functional Reactive Programming (FRP) is a subset of functional programming that&#x27;s ideal for event-driven and reactive applications, like user interfaces, real-time data streaming, and sensor data processing.</li></ol><ol type="1" id="482d25c0-5c21-43c9-9266-3763e6abd85e" class="numbered-list" start="5"><li><strong>Distributed Systems</strong>: In distributed systems, where data consistency and parallelism are critical, functional programming&#x27;s immutability and deterministic behavior can help manage complexity.</li></ol><ol type="1" id="f786ca60-ec01-4cfe-9242-4daa9a1511f2" class="numbered-list" start="6"><li><strong>Domain-Specific Languages (DSLs)</strong>: Functional programming can lead to more expressive and domain-specific languages for specific problem areas, making code easier to read and understand.</li></ol><ol type="1" id="b6e843f3-4a41-451d-85b0-3a6ce3973bde" class="numbered-list" start="7"><li><strong>Testing and Debugging</strong>: The predictability of pure functions and the avoidance of side effects make functional code easier to test and debug, as there are fewer unexpected interactions.</li></ol><ol type="1" id="98cb44c2-b6f0-424e-96a1-00347c1f4be7" class="numbered-list" start="8"><li><strong>Functional Reactive Programming (FRP)</strong>: As mentioned earlier, FRP is ideal for handling streams of events and asynchronous data, making it suitable for building responsive user interfaces and real-time systems.</li></ol><ol type="1" id="41552b33-6760-4d3f-9c46-227aa7c0c017" class="numbered-list" start="9"><li><strong>Functional Libraries and Frameworks</strong>: Some programming languages offer functional libraries and frameworks that excel in specific domains. For example, Elixir and the Phoenix framework are used for building highly concurrent and fault-tolerant web applications.</li></ol><ol type="1" id="682e2a42-a587-4d51-9c31-628acd43c07a" class="numbered-list" start="10"><li><strong>Functional Scripting</strong>: Functional programming languages or constructs can be used for scripting tasks that involve processing and transforming data.</li></ol><ol type="1" id="e0f1f098-3b85-40e2-a381-4d06427023f9" class="numbered-list" start="11"><li><strong>Functional Data Analysis</strong>: Functional programming is often used in data analysis tasks, where data transformations and manipulations are key.</li></ol><ol type="1" id="5b08d5e7-7e53-45cc-a889-3ebcc350910e" class="numbered-list" start="12"><li><strong>Education and Learning</strong>: Teaching functional programming can provide a solid foundation in programming concepts and improve problem-solving skills.</li></ol><p id="6b20bffd-fc60-429a-985f-32e04892bed1" class="">However, it&#x27;s important to note that functional programming is not always the best choice for every situation. Sometimes, other paradigms like imperative or object-oriented programming might be more suitable, depending on the nature of the problem and the context. Many modern programming languages support a mix of paradigms, allowing you to choose the best approach for different parts of your application.</p><h1 id="362657d7-092e-41ac-9401-3a5d1835c572" class=""><strong>Conclusion </strong></h1><p id="0f453134-cad9-4a24-8079-444c946712eb" class="">In wrapping up our exploration of the functional programming paradigm, we&#x27;ve embarked on a journey that has taken us through its fundamental concepts, real-world applications, illustrative examples, and the numerous advantages it brings to the table.</p><p id="5de13fd8-b670-4a9c-8ac9-ede0eb0abcb3" class="">Finally, functional programming is more than just a coding style; it&#x27;s a philosophy that challenges conventional programming norms by placing functions at the heart of computation. By emphasising pure functions, immutability, and composability, this paradigm offers a unique lens through which we can approach software development.</p><p id="debccce7-9a0f-4250-a842-285d10fede89" class="">
+                                </p><p id="4701f0de-7b1d-4355-a82e-a619972a9dbc" class=""><em><strong>We turn your ideas into reality as a product development company. Craft excellence with our expertise. Contact us at </strong></em><em><strong><a href="mailto:info@datatroops.io">info@datatroops.io</a></strong></em><em><strong> to shape a brighter future together!</strong></em></p><p id="d5937d44-932b-458e-ab7c-8d5f86d4c0d4" class="">
+                                </p></div></div>
+                                <!--===== Single Blog Item End =========-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--====================  Blog Area End  ====================-->
+
+
+
+
+
+
+
+
+            <!--========== Call to Action Area Start ============-->
+            <div class="cta-image-area_one section-space--ptb_80 cta-bg-image_one">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="cta-content md-text-center">
+                                <h3 class="heading text-white">Assess your business potentials and find opportunities <span class="text-color-secondary">for bigger success</span></h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="cta-button-group--one text-center">
+                                <a href="#" class="btn btn--white btn-one"><span class="btn-icon me-2"><i class="far fa-comment-alt-dots"></i></span> Let's talk</a>
+                                <a href="#" class="btn btn--secondary  btn-two"><span class="btn-icon me-2"><i class="far fa-info-circle"></i></span> Get info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--========== Call to Action Area End ============-->
+
+
+
+
+
+
+
+
+        </div>
+
+ <!--====================  footer area ====================-->
+ <div class="footer-area-wrapper reveal-footer bg-gray">
+    <div class="footer-area section-space--ptb_80">
+        <div class="container">
+            <div class="row footer-widget-wrapper">
+                <div class="col-lg-4 col-md-6 col-sm-6 footer-widget">
+                    <!-- <div class="footer-widget__logo mb-30"> -->
+                        <!-- <img src="assets/images/logo/light-logo.png" width="160" height="48" class="img-fluid" alt=""> -->
+                    <!-- </div> -->
+                    <ul class="footer-widget__list">
+                        <li>Datatroops, 2nd Floor, C6, Sector 67, Mohali - 160062, Punjab, India</li>
+                        <li><a href="mailto:info@datatroops.io" class="hover-style-link">info@datatroops.io</a></li>
+                        <li><a href="tel:123344556" class="hover-style-link text-black font-weight--bold">(+91) 7009447110</a></li>
+                        <li><a href="https://www.datatroops.io/" class="hover-style-link text-color-primary">www.Datatroops.io</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                    <h6 class="footer-widget__title mb-20">IT Services</h6>
+                    <ul class="footer-widget__list" style="padding-left : 0px;">
+                        <li><a href="#" class="hover-style-link">Managed IT</a></li>
+                        <li><a href="#" class="hover-style-link">IT Support</a></li>
+                        <li><a href="#" class="hover-style-link">IT Consultancy</a></li>
+                        <li><a href="#" class="hover-style-link">Cloud Computing</a></li>
+                        <li><a href="#" class="hover-style-link">Cyber Security</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                    <h6 class="footer-widget__title mb-20">Quick links</h6>
+                    <ul class="footer-widget__list" style="padding-left : 0px;">
+                        <li><a href="#" class="hover-style-link">Pick up locations</a></li>
+                        <li><a href="#" class="hover-style-link">Terms of Payment</a></li>
+                        <li><a href="#" class="hover-style-link">Privacy Policy</a></li>
+                        <li><a href="#" class="hover-style-link">Where to Find Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 footer-widget">
+                    <h6 class="footer-widget__title mb-20">Support</h6>
+                    <ul class="footer-widget__list" style="padding-left : 0px;">
+                        <li><a href="#" class="hover-style-link">Forum Support</a></li>
+                        <li><a href="#" class="hover-style-link">Help & FAQ</a></li>
+                        <li><a href="#" class="hover-style-link">Contact Us</a></li>
+                        <!-- <li><a href="#" class="hover-style-link">Pricing and plans</a></li> -->
+                        <li><a href="#" class="hover-style-link">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-2 col-md-4 col-sm-6 footer-widget"> -->
+                    <!-- <div class="footer-widget__title section-space--mb_50"></div> -->
+                    <!-- <ul class="footer-widget__list"> -->
+                        <!-- <li><a href="#" class="image_btn"><img class="img-fluid" src="assets/images/icons/aeroland-button-google-play.webp" alt=""></a></li> -->
+                        <!-- <li><a href="#" class="image_btn"><img class="img-fluid" src="assets/images/icons/aeroland-button-app-store.webp" alt=""></a></li> -->
+                    <!-- </ul> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright-area section-space--pb_30">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="copyright-text">&copy; 2022 Datatroops. <a href="https://hasthemes.com/">All Rights Reserved.</a></span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list ht-social-networks solid-rounded-icon">
+
+                        <li class="item">
+                            <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="social-link hint--bounce hint--top hint--primary">
+                                <i class="fab fa-twitter link-icon"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-link hint--bounce hint--top hint--primary">
+                                <i class="fab fa-facebook-f link-icon"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link hint--bounce hint--top hint--primary">
+                                <i class="fab fa-instagram link-icon"></i>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="https://www.linkedin.com/company/datatroops" target="_blank" aria-label="Linkedin" class="social-link hint--bounce hint--top hint--primary">
+                                <i class="fab fa-linkedin link-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--====================  End of footer area  ====================-->
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--====================  scroll top ====================-->
+    <a href="#" class="scroll-top" id="scroll-top">
+        <i class="arrow-top fal fa-long-arrow-up"></i>
+        <i class="arrow-bottom fal fa-long-arrow-up"></i>
+    </a>
+    <!--====================  End of scroll top  ====================-->
+
+
+    <!--====================  mobile menu overlay ====================-->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-overlay__inner">
+            <div class="mobile-menu-overlay__header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-8">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="assets/images/logo/logo-dark.webp" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-4">
+                            <!-- mobile menu content -->
+                            <div class="mobile-menu-content text-end">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu-overlay__body">
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="has-children">
+                            <a href="index.html">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index-infotechno.html"><span>Infotechno</span></a></li>
+                                <li><a href="index-processing.html"><span>Processing</span></a></li>
+                                <li><a href="index-appointment.html"><span>Appointment</span></a></li>
+                                <li><a href="index-services.html"><span>Services</span></a></li>
+                                <li><a href="index-resolutions.html"><span>Resolutions</span></a></li>
+                                <li><a href="index-cybersecurity.html"><span>cybersecurity</span></a></li>
+                                <li><a href="index-modern-it-company.html"><span>Modern IT Company</span></a></li>
+                                <li><a href="index-machine-learning.html"><span>Machine Learning</span></a></li>
+                                <li><a href="index-software-innovation.html"><span>Software Innovation</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Company</a>
+                            <ul class="sub-menu">
+                                <li class="has-children">
+                                    <a href="about-us-01.html"><span>About us</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us-01.html"><span>About us 01</span></a></li>
+                                        <li><a href="about-us-02.html"><span>About us 02</span></a></li>
+                                        <li class="has-children">
+                                            <a href="#"><span>Submenu Level Two</span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                                <li><a href="#"><span>Submenu Level Three</span></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html"><span>Contact us</span></a></li>
+                                <li><a href="leadership.html"><span>Leadership</span></a></li>
+                                <li><a href="why-choose-us.html"><span>Why choose us</span></a></li>
+                                <li><a href="our-history.html"><span>Our history</span></a></li>
+                                <li><a href="faqs.html"><span>FAQs</span></a></li>
+                                <li><a href="careers.html"><span>Careers</span></a></li>
+                                <li><a href="pricing-plans.html"><span>Pricing plans</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">IT solutions</a>
+                            <ul class="sub-menu">
+                                <li><a href="it-services.html"><span>IT Services</span></a></li>
+                                <li><a href="managed-it-service.html"><span>Managed IT Services</span></a></li>
+                                <li><a href="industries.html"><span>Industries</span></a></li>
+                                <li><a href="business-solution.html"><span>Business solution</span></a></li>
+                                <li><a href="it-services-details.html"><span>IT Services Details</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="#">Elements</a>
+                            <ul class="sub-menu">
+                                <li class="has-children">
+                                    <a href="#">Element Group 01</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-accordion.html"><span>Accordions & Toggles</span></a></li>
+                                        <li><a href="element-box-icon.html"><span>Box Icon</span></a></li>
+                                        <li><a href="element-box-image.html"><span>Box Image</span></a></li>
+                                        <li><a href="element-box-large-image.html"><span>Box Large Image</span></a></li>
+                                        <li><a href="element-buttons.html"><span>Buttons</span></a></li>
+                                        <li><a href="element-cta.html"><span>Call to action</span></a></li>
+                                        <li><a href="element-client-logo.html"><span>Client Logo</span></a></li>
+                                        <li><a href="element-countdown.html"><span>Countdown</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 02</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-counters.html"><span>Counters</span></a></li>
+                                        <li><a href="element-dividers.html"><span>Dividers</span></a></li>
+                                        <li><a href="element-flexible-image-slider.html"><span>Flexible image slider</span></a></li>
+                                        <li><a href="element-google-map.html"><span>Google Map</span></a></li>
+                                        <li><a href="element-gradation.html"><span>Gradation</span></a></li>
+                                        <li><a href="element-instagram.html"><span>Instagram</span></a></li>
+                                        <li><a href="element-lists.html"><span>Lists</span></a></li>
+                                        <li><a href="element-message-box.html"><span>Message box</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 03</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-popup-video.html"><span>Popup Video</span></a></li>
+                                        <li><a href="element-pricing-box.html"><span>Pricing Box</span></a></li>
+                                        <li><a href="element-progress-bar.html"><span>Progress Bar</span></a></li>
+                                        <li><a href="element-progress-circle.html"><span>Progress Circle</span></a></li>
+                                        <li><a href="element-rows-columns.html"><span>Rows & Columns</span></a></li>
+                                        <li><a href="element-social-networks.html"><span>Social Networks</span></a></li>
+                                        <li><a href="element-tabs.html"><span>Tabs</span></a></li>
+                                        <li><a href="element-team-member.html"><span>Team member</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-children">
+                                    <a href="#">Element Group 04</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="element-testimonials.html"><span>Testimonials</span></a></li>
+                                        <li><a href="element-timeline.html"><span>Timeline</span></a></li>
+                                        <li><a href="element-carousel-sliders.html"><span>Carousel Sliders</span></a></li>
+                                        <li><a href="element-typed-text.html"><span>Typed Text</span></a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="javascript:void(0)">Case Studies</a>
+                            <ul class="sub-menu">
+                                <li><a href="case-studies.html"><span>Case Studies 01</span></a></li>
+                                <li><a href="case-studies-02.html"><span>Case Studies 02</span></a></li>
+                                <li><a href="single-smart-vision.html"><span>Single Layout</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-children">
+                            <a href="javascript:void(0)">Blogs</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-list-large-image.html"><span>List Large Image</span></a></li>
+                                <li><a href="blog-list-left-large-image.html"><span>Left Large Image</span></a></li>
+                                <li><a href="blog-grid-classic.html"><span>Grid Classic</span></a></li>
+                                <li><a href="blog-grid-masonry.html"><span>Grid Masonry</span></a></li>
+                                <li class="has-children">
+                                    <a href="blog-post-layout-one.html"><span>Single Layouts</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-post-layout-one.html"><span>Left Sidebar</span></a></li>
+                                        <li><a href="blog-post-right-sidebar.html"><span>Right Sidebar</span></a></li>
+                                        <li><a href="blog-post-no-sidebar.html"><span>No Sidebar</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of mobile menu overlay  ====================-->
+
+
+
+
+
+
+
+    <!--====================  search overlay ====================-->
+    <div class="search-overlay" id="search-overlay">
+
+        <div class="search-overlay__header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-6 ms-auto col-4">
+                        <!-- search content -->
+                        <div class="search-content text-end">
+                            <span class="mobile-navigation-close-icon" id="search-close-trigger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-overlay__inner">
+            <div class="search-overlay__body">
+                <div class="search-overlay__form">
+                    <form action="#">
+                        <input type="text" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================  End of search overlay  ====================-->
+
+    <!-- JS
+    ============================================ -->
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+    <!-- wow JS -->
+    <script src="assets/js/plugins/wow.min.js"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="assets/js/plugins/swiper.min.js"></script>
+
+    <!-- Light gallery JS -->
+    <script src="assets/js/plugins/lightgallery.min.js"></script>
+
+    <!-- Waypoints JS -->
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+
+    <!-- Counter down JS -->
+    <script src="assets/js/plugins/countdown.min.js"></script>
+
+    <!-- Isotope JS -->
+    <script src="assets/js/plugins/isotope.min.js"></script>
+
+    <!-- Masonry JS -->
+    <script src="assets/js/plugins/masonry.min.js"></script>
+
+    <!-- ImagesLoaded JS -->
+    <script src="assets/js/plugins/images-loaded.min.js"></script>
+
+    <!-- Wavify JS -->
+    <script src="assets/js/plugins/wavify.js"></script>
+
+    <!-- jQuery Wavify JS -->
+    <script src="assets/js/plugins/jquery.wavify.js"></script>
+
+    <!-- circle progress JS -->
+    <script src="assets/js/plugins/circle-progress.min.js"></script>
+
+    <!-- counterup JS -->
+    <script src="assets/js/plugins/counterup.min.js"></script>
+
+    <!-- animation text JS -->
+    <script src="assets/js/plugins/animation-text.min.js"></script>
+
+    <!-- Vivus JS -->
+    <script src="assets/js/plugins/vivus.min.js"></script>
+
+    <!-- Some plugins JS -->
+    <script src="assets/js/plugins/some-plugins.js"></script>
+
+
+    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+
+    <!--         
+    <script src="assets/js/plugins/plugins.min.js"></script> 
+    -->
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
