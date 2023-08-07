@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unlocking Business Potential: A Deep Dive into Key Performance Indicators</title>
+    <title>Understanding Kafka Producer, Consumer using GraphDSL</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -88,10 +88,6 @@ h2 {
 h3 {
 	font-size: 1.25rem;
 	margin-top: 1.25rem;
-}
-
-p,code,figcaption,li,td{
-    /* font-size:20px; */
 }
 
 .source {
@@ -220,7 +216,7 @@ td {
 th {
 	color: rgba(55, 53, 47, 0.6);
 }
-
+/* 
 ol,
 ul {
 	margin: 0;
@@ -234,7 +230,7 @@ li > ul:first-child {
 }
 
 ul > li {
-	/* list-style: disc; */
+	list-style: disc;
 }
 
 ul.to-do-list {
@@ -243,9 +239,9 @@ ul.to-do-list {
 
 ul.to-do-list > li {
 	list-style: none;
-}
+} */
 
-.to-do-children-checked {
+/* .to-do-children-checked {
 	text-decoration: line-through;
 	opacity: 0.375;
 }
@@ -276,7 +272,7 @@ ol > li {
 
 .mono ol > li {
 	text-indent: -0.4em;
-}
+} */
 
 .toggle {
 	padding-inline-start: 0em;
@@ -680,7 +676,23 @@ blockquote {
 .select-value-color-pageGlass { background-color: undefined; }
 .select-value-color-washGlass { background-color: undefined; }
 
-	
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
     </style>
 </head>
 
@@ -964,7 +976,7 @@ blockquote {
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb_box text-center">
-                        <h1 class="breadcrumb-title">Unlocking Business Potential: A Deep Dive into Key Performance Indicators</h1>
+                        <h1 class="breadcrumb-title">Understanding Kafka Producer, Consumer using GraphDSL</h1>
                         <!-- breadcrumb-list start -->
                         <!-- <ul class="breadcrumb-list">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -1081,189 +1093,141 @@ blockquote {
                                         <div class="post-meta mt-20">
                                         <div class="post-author">
                                             <a href="#">
-                                                <img class="img-fluid avatar-96" src="assets/images/team/Rohiana.jpeg" alt=""> Rohiana Goyal
+                                                <img class="img-fluid avatar-96" src="assets/images/team/utkarsh.jpg" alt=""> Utkarsh Jindal
                                             </a>
                                         </div>
                                         </div>
                                     </div>
-                                   <div class="page-body"><h3 id="8bf97995-9d3d-4b51-9a2b-dd07424fd5ee" class=""><strong>Introduction</strong></h3><p id="308f8c7e-fd3a-4dea-b951-b7c696379eb1" class="">
-                                </p><p id="bbd9ce66-bff7-4c41-a940-d6a9009a9064" class="">“Dive into the world of KPIs with us – your trusted navigators through success. Let our insights be the fuel to your curiosity, driving you to return for more. Just as KPIs measure growth, our words measure your thirst for knowledge, rewarding it with valuable insights.”</p><p id="fdb4d6ac-229e-47a2-948b-c84b8131e527" class="">
-                                </p><p id="0d288863-3b42-42cc-9edd-78979f35a75e" class="">A <strong>KPI is short for a key performance indicator</strong>, a measurable and quantifiable metric used to track progress towards a specific goal or objective. KPIs help organizations identify strengths and weaknesses, make data-driven decisions, and optimize performance.</p><p id="05fa1b1d-8a01-4c95-a193-93344edfe154" class="">KPIs provide teams with targets to aim for, milestones to gauge progress, and insights to help guide decision-making throughout an organization. By monitoring KPIs, organizations can identify areas of strength and weakness, make data-driven decisions, and take actions to optimize performance.</p><p id="43415ad9-822f-4783-8428-f80c84743268" class="">
-                                </p><p id="e9de1a61-d0d9-4e83-b3c3-cc19b074cce8" class=""><strong>(Note: Table names and Columns can be customized to meet your specific requirements.)</strong></p><p id="dfc97457-ec98-43f5-b6e2-864ef25250df" class="">
-                                </p><p id="cf3df031-5900-421a-a909-ea058ff756ef" class="">Here are some essential KPIs:</p><ol type="1" id="492190b5-3846-4c4d-9db8-226cc9b7b0be" class="numbered-list" start="1"><li><strong>Customer Retention Rate:</strong></li></ol><p id="29f3f6fa-4bbd-4566-bf09-719f3317be01" class="">
-                                </p><p id="743db6a8-b261-40f0-9d10-b016da7cce38" class="">Customer retention rate is a metric that measures the percentage of customers a business successfully retains over a specific period of time. It is a key performance indicator (KPI) used to assess the effectiveness of a company&#x27;s customer relationship management and marketing strategies.</p><p id="315fecd9-192b-4106-b249-48c550046f80" class=""><strong>Formula:</strong></p><pre id="7740ef15-7ffe-49a1-a972-5c1a73a91e55" class="code"><code>Customer Retention Rate = ((Total Customers at the End of the Period - Customers Acquired during the Period) / Total Customers at the Start of the Period) * 100</code></pre><p id="34e2de90-d835-4f76-86b5-0bdfdefa1f74" class=""><strong>SQL Query:</strong></p><pre id="904881e6-658b-4b2a-993d-c32353d00910" class="code"><code>SELECT
-PeriodStart,
-PeriodEnd,
-TotalCustomersStart,
-CustomersAcquired,
-CustomersLost,
-(1 - CAST(CustomersLost AS FLOAT) / TotalCustomersStart) * 100 AS CustomerRetentionRate
-FROM
-CustomerRetention WHERE periodstart = &#x27;2023-01-01&#x27; and periodend = &#x27;2023-01-31&#x27;</code></pre>
-                                <p id="9800e52c-8c03-4979-b504-4623d53a38e8" class=""><strong>No SQL Query:</strong></p><pre id="5e1feae4-98ca-4467-90b1-d3cb874c1866" class="code">
-<code>db.loyaltyProgram.aggregate([
-{
-    $match: {
-        periodstart: ISODate(&quot;2023-01-01&quot;),
-        periodend: ISODate(&quot;2023-01-31&quot;)
-    }
-},
-    {
-        $project: {
-            PeriodStart: 1,
-            PeriodEnd: 1,
-            TotalCustomersStart: 1,
-            CustomersAcquired: 1,
-            CustomersLost: 1,
-            CustomerRetentionRate: {
-            $multiply: [
-                100,
-                {
-                $subtract: [
-                    1,
-                    {
-                    $divide: [&quot;$CustomersLost&quot;, &quot;$TotalCustomersStart&quot;]
-                    }
-                ]}
-            ]}
-        }
-    }
-]);</code></pre>
-                                <p id="69ac5526-5ff7-4f19-a4bd-d8f8799199b7" class="">
-                                </p><ol type="1" id="4a706ef9-00c8-4976-a898-32a5ed0796cd" class="numbered-list" start="2"><li><strong>Repeat Purchase Rate:</strong></li></ol><p id="aeaea45b-0074-4d4b-889b-d1db7dfb23a1" class="">Repeat Purchase Rate is a key performance indicator (KPI) used by businesses to measure the percentage of customers who make more than one purchase within a specific period. It provides insights into customer loyalty and the effectiveness of a company&#x27;s efforts in retaining customers over time. A high repeat purchase rate indicates that customers are satisfied with their initial purchase and are likely to make additional purchases, leading to increased customer lifetime value and revenue.</p><p id="24c67241-14c7-4d77-98e4-38b711c168f6" class=""><strong>Formula:</strong></p><pre id="0f5fb9bf-5207-4dc6-91c9-13c795004beb" class="code"><code>Repeat Purchase Rate = (Number of Customers with More Than One Purchase / Total Number of Unique Customers) * 100</code></pre><p id="ed9ba281-b3ed-44b2-93a1-6d0087e47d8b" class=""><strong>SQL Query:</strong></p><pre id="cb28da4d-b5ef-4811-b0c1-65b43782150e" class="code"><code>WITH CustomerPurchaseCounts AS (
-    SELECT
-    CustomerID,
-    COUNT(DISTINCT OrderID) AS PurchaseCount
-    FROM
-    RepeatPurchaseRate
-    GROUP BY
-    CustomerID
-)
-SELECT
-COUNT(*) AS NumCustomersWithMoreThanOnePurchase,
-COUNT(DISTINCT rp.CustomerID) AS TotalUniqueCustomers,
-(COUNT(*) / COUNT(DISTINCT rp.CustomerID)) * 100 AS RepeatPurchaseRate
-FROM
-RepeatPurchaseRate rp
-JOIN
-CustomerPurchaseCounts cpc ON rp.CustomerID = cpc.CustomerID
-WHERE
-cpc.PurchaseCount &gt; 1;</code></pre>
-                            <p id="4837a65d-ad5b-4333-834c-a7f403a22151" class=""><strong>No SQL Query:</strong></p><pre id="bb1b0738-3750-4010-84be-7ea2ed27bcdd" class="code"><code>db.purchaseHistory.aggregate([
-{
-    $project: {
-        _id: 0,
-        customerID: 1,
-        numPurchases: { $size: &quot;$purchases&quot; }
-    }
-},
-{
-    $match: {
-        numPurchases: { $gt: 1 }
-    }
-},
-{
-    $group: {
-        _id: null,
-        numCustomersWithMoreThanOnePurchase: { $sum: 1 },
-        totalUniqueCustomers: { $sum: 1 }
-    }
-},
-{
-    $project: {
-        _id: 0,
-        numCustomersWithMoreThanOnePurchase: 1,
-        totalUniqueCustomers: 1,
-        repeatPurchaseRate: { $multiply: [ { $divide: [&quot;$numCustomersWithMoreThanOnePurchase&quot;, &quot;$totalUniqueCustomers&quot;] }, 100 ] }
-    }
-}
-]);</code></pre>
-                            <p id="628e88b3-3612-4efd-b8f4-642b514b280f" class="">
-                                </p><ol type="1" id="f1924e64-f20a-4123-b3aa-d770fd954919" class="numbered-list" start="3"><li><strong>Churn Rate:</strong></li></ol><p id="8b2f2a19-9cea-42a1-85ea-9596c8e588a4" class="">Churn Rate is a crucial metric used to measure the rate at which customers or subscribers stop using a service, product, or subscription over a specific period. It is typically expressed as a percentage and is also known as a customer attrition rate or customer turnover rate. A high churn rate indicates that a significant number of customers are leaving, which can negatively impact a company&#x27;s revenue and growth.</p><p id="eb0c8eb6-d373-4a96-8a9b-42845e010acd" class=""><strong>Formula:</strong></p><pre id="837a87fe-de53-424e-930a-740a0cff6a24" class="code"><code>Churn Rate (%) = (Number of Customers Churned / Total Number of Customers at the Start) * 100</code></pre><p id="e92a8624-7bea-4f47-9081-1436e280987e" class=""><strong>SQL Query:</strong></p><pre id="864d8876-a94e-4a3d-8e8e-edf1359b76ac" class="code">
-<code>UPDATE ChurnRate SET ChurnRatePercentage = (NumberOfCustomersChurned / CAST(TotalNumberOfCustomersAtStart AS DECIMAL)) * 100;</code></pre><p id="a45fea11-986f-4690-a846-04cd85aec038" class=""><strong>No SQL Query:</strong></p><pre id="27a722c7-0074-4483-b780-7f79a8f429f8" class="code"><code>
-db.ChurnRate.find().forEach(function(doc) {
-    db.ChurnRate.update(
-    { _id: doc._id },
-        {
-            $set: {
-            churnRatePercentage: (doc.customersChurned / doc.totalCustomersAtStart) * 100
-            }
-    });
-});</code></pre>
-                            <p id="c7ecc42e-8657-4a3e-b075-5bfa9051e06c" class="">
-                                </p><ol type="1" id="5bcb09dd-e270-4903-b869-9bbd5c1f143e" class="numbered-list" start="4"><li><strong>Engagement Rate:</strong></li></ol><p id="053224c9-bd0a-4b7f-87dc-5eb05d8ad998" class="">Engagement Rate is a critical metric used to measure the level of interaction and involvement that an audience or user base has with a particular piece of content, platform, or marketing campaign. It indicates how well the content resonates with the target audience and how actively they are participating or reacting to it. The higher the engagement rate, the more successful the content or campaign is at capturing the attention and interest of the intended audience.</p><p id="b4ef903e-6a3e-42bb-8b8b-7d8a2523c440" class=""><strong>Formula:</strong></p><pre id="8d3ba1a6-d487-4036-badc-570ba075b417" class="code"><code>Engagement Rate (%) = (Total Engagements / Reach) * 100</code></pre><p id="b11b52b0-491c-4984-8796-5101d4c39c8e" class=""><strong>SQL Query:</strong></p><pre id="4239b4c4-4f16-4863-81c6-96ab4861b64c" class="code">
-<code>UPDATE EngagementRate  SET EngagementRatePercentage = (TotalEngagements / CAST(ReachImpressions AS DECIMAL)) * 100;</code></pre><p id="7312094b-cce0-4f9c-b918-ded6fac44ebb" class=""><strong>No SQL Query:</strong></p><pre id="80485fcd-a512-4195-b07e-3fe9fa8714f8" class="code"><code>db.engagementRate.aggregate([
-{
-    $match: {
-        Content: &quot;Blog Post A&quot;,
-        Platform: &quot;Social Media&quot;
-    }
-},
-    {
-        $project: {
-            DateTime: 1,
-            Content: 1,
-            TotalEngagements: 1,
-            ReachImpressions: 1,
-            EngagementRatePercentage: {
-            $multiply: [
-                { $divide: [&quot;$TotalEngagements&quot;, &quot;$ReachImpressions&quot;] },
-                100
-            ]}
-        }
-    }
-])</code></pre>
-                            <p id="2b997745-2f1a-488b-b110-0ec3a9e1f4cd" class="">
-                                </p><ol type="1" id="6002bc8a-d2fe-4440-8fb5-aa42373263f3" class="numbered-list" start="5"><li><strong>Tracking customer Feedback:</strong></li></ol><p id="4ba1f3a7-2b80-41f5-a89b-1bd2c34035d7" class="">The process of tracking customer feedback involves collecting, recording, and analysing feedback from customers about their experiences with your products, services, or brand. This feedback can be gathered through various channels, such as surveys, online reviews, social media mentions, customer support interactions, and direct feedback emails.</p><p id="8598a05c-b1fd-4116-9884-e625b577bb7d" class=""><strong>Formula:</strong></p><p id="2909c90f-1829-4833-b7c2-7b6717c59be8" class="">The formula provided is just one way to calculate a composite Customer Feedback Score. You can adjust the weights and methods based on your specific business needs and priorities.</p><pre id="0844e48b-06d1-487e-91db-069273a26408" class="code"><code>CFS = (Weighted Sentiment Score + Weighted Satisfaction Score + Feedback Response Rate + Resolution Rate) / 4</code></pre><p id="332af8d3-f566-41fa-9794-5605465a698a" class=""><strong>SQL Query:</strong></p><pre id="732aef10-7fbf-4b8f-a1ad-bbec8fca8e39" class="code">
-<code>SELECT AVG((WeightedSentimentScore + WeightedSatisfactionScore + FeedbackResponseRate + ResolutionRate) / 4) AS CompositeFeedbackScore
+                                    <article id="bf6f8d0d-38c3-44fb-91ff-7c17444b72da" class="page sans"><header><h1 class="page-title">Understanding Kafka Producer, Consumer using GraphDSL</h1><p class="page-description"></p></header><div class="page-body"><p id="46f1c469-87cd-4076-b233-2d3428c826a1" class="">
+                                    </p><p id="62f04c95-e958-43c2-b0d2-40c2ecfef5c5" class="">Building real-time data pipelines and streaming applications often uses the Apache Kafka distributed event streaming framework. It enables handling of data streams that is high-throughput, fault-tolerant, and scalable. We will discuss the terms <strong>&quot;Kafka producer&quot;</strong> and <strong>&quot;Kafka consumer&quot;</strong> in this section, as well as give a brief overview of Alpakka Kafka, a well-liked streaming library for integrating Kafka with Akka Streams. We will also discuss about Akka streams’ powerful tool, GraphDSL. Akka Streams and Akka Kafka libraries to interact with Apache kafka, a distributed message broker.</p><p id="a6dfbba3-bf71-451f-b79c-e8b8a991e55a" class="">
+                                    </p><h2 id="f3728038-978c-4dc1-a37d-c353931217f5" class=""><strong>Kafka Producer : (ref : </strong><code>akka.kafka.scaladsl.Producer</code>)</h2><p id="1d0a482a-55b1-44f9-ab19-42380de88f99" class="">Producer is responsible for publishing the data to Kafka topics. Producers send records as key-value pair, where keys are optional and used to partition data, while <strong>values contain the actual data </strong>to be stored in Kafka. The Kafka producer is designed to be highly efficient, and it is possible to batch records and send them in parallel to achieve high throughput.</p><p id="f172172c-05c0-43b5-9a9b-bc6c7fe23dc5" class="">
+                                    </p><p id="d894b36a-ad61-4c1b-aca8-f61c8f7469bf" class="">Let’s deep dive into the code <code>startProducer</code> file :</p><ol type="1" id="7c1463d7-a9c6-4f99-ba4c-98818635ab51" class="numbered-list" start="1"><li>Importing the required libraries and packages :
+                                    It imports akka-related packages and the <code>ExecutionContextExecutor</code> to manage asynchronous operations. <pre id="5586517e-ac2f-409c-b46c-7857a08e6cdd" class="code code-wrap"><code>// Package declaration
+package io.datatroops
+                                    
+// Import required libraries and packages
+import akka.NotUsed
+import akka.actor.ActorSystem
+import akka.stream.Materializer.createMaterializer
+import akka.stream.scaladsl.{Broadcast, GraphDSL, RunnableGraph, Source}
+import akka.stream.{ClosedShape, Materializer}
+import io.datatroops.producer.AlpakkaKafkaProducer
+import io.datatroops.serialisers.StringSerializer.stringSerializer
+import org.apache.kafka.clients.producer.ProducerRecord
+import scala.concurrent.ExecutionContextExecutor</code></pre></li></ol><p id="ec602dc8-74db-40b9-9584-0f1cc997bf18" class="">
+                                    </p><ol type="1" id="2a072bce-0d35-4796-8656-5edebfbfedf0" class="numbered-list" start="2"><li>Initializing the ActorSystem, ExecutionContextExecutor, Materializer: 
+                                    An <code>ActorSystem</code> is initialized, which is required for creating actors and managing their lifecycle. The <code>ExecutionContextExecutor</code> is used to execute asynchronous operations, and the <code>Materializer</code> is created using <code>createMaterializer</code> to execute Akka Streams components.<pre id="5fde4f90-a92d-4ea2-a6aa-532dbba66a4b" class="code code-wrap"><code>// Initialize ActorSystem, ExecutionContextExecutor, Materializer
+implicit val system: ActorSystem = ActorSystem(&quot;kafkaProducerSystem&quot;)
+implicit val ec: ExecutionContextExecutor = system.dispatcher
+implicit val materializer: Materializer = createMaterializer(system)</code></pre></li></ol><ol type="1" id="de78b146-a756-4353-93d0-05ca0e2b19fb" class="numbered-list" start="3"><li>Declaring a Source:<p id="abfdb33c-fbb9-495b-aab6-5e411da55bb3" class="">A source(<code>messageSource</code>) is created using Akka Streams’ Source that generates messages as strings from integer 40 to 45 (As an example). The map function converts each integer to its string representation.</p><pre id="fa362941-ffa4-4e83-817a-1f2969654cfb" class="code"><code>// Create a Source that generates messages as strings from integers 40 to 45
+val messageSource: Source[String, NotUsed] = Source(40 to 45).map(_.toString)</code></pre></li></ol><ol type="1" id="f81d1276-be59-4209-91ba-f022c790498d" class="numbered-list" start="4"><li>AlpakkaKafkaProducer Initialisation:<p id="ce0cde31-d6e7-4f60-b42e-c9ff43a799b9" class="">The <code>AlpakkaKafkaProducer</code> is initialized, which is a custom class representing the kafka producer logic. It provides methods like <code>getProducer</code>, <code>getKafkaSink</code>, <code>getStatusSink</code> for different parts of producer.</p><pre id="e83d6356-5199-403f-8d8d-64cb29bd24b2" class="code"><code>// Initialize the AlpakkaKafkaProducer with key and value serializers
+val alpakkaKafkaProducer = AlpakkaKafkaProducer[String, String]
+val producer = alpakkaKafkaProducer.getProducer
+val kafkaSink = alpakkaKafkaProducer.getKafkaSink
+val kafkaStatusSink = alpakkaKafkaProducer.getStatusSink</code></pre></li></ol><ol type="1" id="4fa1d085-1935-458c-acf6-9bd78413cf5d" class="numbered-list" start="5"><li>Transformation:
+                                    Transformation is done to the data received as messageSource, incremented the numbers by 10.<pre id="020823cd-2466-4083-9a81-a6ed39046343" class="code"><code>// Transformation
+val incrementToFlow = Flow[String].map(message =&gt; ((message.toInt) + 10).toString)</code></pre></li></ol><ol type="1" id="61c1c900-12ef-4ad9-b385-7eced0de9cca" class="numbered-list" start="5"><li>Runnable Graph (Producer):
+                                    A graph is created using Akka Streams’ <code>GraphDSL</code> . The graph includes a <code>Broadcast</code> stage, which takes single input and outputs to two different outlets. The message from the <code>messageSource</code> are broadcasted to both the <code>kafkaSink</code> and <code>kafkaStatusSink.</code><pre id="1aa767c2-b050-454e-8af7-10548675adc6" class="code"><code>// Create a graph for the producer, broadcasting messages to kafkaSink and kafkaStatusSink
+val producerGraph = RunnableGraph.fromGraph(GraphDSL.create() { implicit builder =&gt;
+    import GraphDSL.Implicits._
+    val broadcast = builder.add(Broadcast[String](1))
+    messageSource ~&gt; incrementToFlow ~&gt; broadcast
+    broadcast.out(0) ~&gt; producer ~&gt; kafkaSink
+    ClosedShape
+}).run</code></pre></li></ol><p id="71021a89-6428-440b-a226-da44cc03a121" class="">
+                                    </p><p id="1bc53e5e-822f-4eed-bdef-2d5bb4307644" class="">Let’s check <code>AlpakkaKafkaProducer</code> and check the declarations from it,
+                                    </p><ol type="1" id="9f31f599-3201-46ab-9f73-df4c6c2d1299" class="numbered-list" start="1"><li>AlpakkaKafkaProducer case class: <p id="eed09d0c-13fc-4e54-b1fc-7e4ec19bf1b6" class="">The <code>AlpakkaKafkaProducer</code> class is defined as a case class that represents the kafka producer configuration and logic. It is parameterised with types K and V, representing key and value types of the Kafka records.</p><pre id="64e71db5-8120-40bd-928a-0bf14f8d459c" class="code"><code>// Case class Declaration of AlpakkaKafkaProducer
+case class AlpakkaKafkaProducer[K, V]()(implicit keySerializer: Serializer[K],
+valueSerializer: Serializer[V],system: ActorSystem ) extends Producer[K, V]</code></pre></li></ol><ol type="1" id="f77b4b4d-7e25-4a59-885d-6891c55d1458" class="numbered-list" start="2"><li>BootstrapServers and Topic declaration: 
+                                    The <code>bootstrapServers</code> and <code>topic</code> are set to specify the kafka broker details and the topic to which messages will be sent.<pre id="b34ab1ed-6214-4134-ae36-21a5cf672e97" class="code"><code>// Configure the Kafka broker details
+override val bootstrapServers: String = &quot;localhost:9092&quot;
+override val topic: String = &quot;quickstart-events&quot;</code></pre></li></ol><ol type="1" id="a34252d7-b9b4-4ced-8c52-157e302c71fd" class="numbered-list" start="3"><li>ProducerSettings:
+                                    The <code>ProducerSettings</code> method is defined to get the Kafka producer settings with the provided key and value serializers. It configures the producer with the specified bootstrap servers.<pre id="906b8c75-34d7-4a7e-94ea-44f26e956002" class="code"><code>// Get the producer settings with provided serializers
+override def producerSettings(implicit keySerializer: Serializer[K], valueSerializer: Serializer[V])
+                     : ProducerSettings[K, V] = ProducerSettings(system, keySerializer, valueSerializer)
+                                        .withBootstrapServers(bootstrapServers)</code></pre></li></ol><ol type="1" id="9a99045d-9412-4d05-bf2c-084dc59ba893" class="numbered-list" start="4"><li>getKafkaSink:
+                                    The <code>getKafkaSink</code> is defined to get a Kafka sink, which is used to send messages to the Kafka topic. It uses the <code>plainSink</code> method from Akka Kafka’s <code>Producer</code> object, passing the producer settings.<pre id="d4496d89-6646-48ef-9f08-0cfd7b3becb2" class="code"><code>// Get a Kafka sink to send messages
+override val getKafkaSink: Sink[ProducerRecord[K, V], Future[Done]] = Producer.plainSink(producerSettings)</code></pre></li></ol><ol type="1" id="085c4e73-e8bb-4489-b57c-e9e017f01099" class="numbered-list" start="5"><li>getProducer:
+                                    The <code>getProducer</code> method is defined to get a flow that transforms input messages of type V to Kafka <code>ProducerRecords</code> with keys of type K. The flow uses the map function to create a new <code>ProducerRecord</code> for each message with the specifies topic and message.<pre id="9f373b47-e933-439a-b29e-1ace9eeb53aa" class="code"><code>// Get a flow to transform messages to ProducerRecords
+override def getProducer: Flow[V, ProducerRecord[K, V], NotUsed] = Flow[V].map(msg =&gt; new ProducerRecord[K, V](topic, msg))</code></pre></li></ol><ol type="1" id="a63c569c-d3f6-4c7a-b7f2-8b0148923cd8" class="numbered-list" start="6"><li>getStatusSink:
+                                    The <code>getStatusSink</code> is defined to get a sink that logs the status of sent messages. It uses the <code>Sink.foreach</code> to print the value of each sent <code>ProducerRecord</code> to the console.<pre id="1008b40e-50df-4651-a303-9a91688adbe1" class="code"><code>override def getStatusSink: Sink[ProducerRecord[K, V], Future[Done]] = 
+Sink.foreach[ProducerRecord[K, V]](value =&gt; println(s&quot;${value.value()}&quot;))</code></pre></li></ol><p id="f7bbc2b1-8a36-4cf4-ac89-8981dacc8519" class="">
+                                    </p><p id="265113b3-e105-4cf7-8ce2-8df43242eee2" class="">WorkFlow:
+                                    </p><ul id="14ed975a-b0ed-4128-9dba-fc5c1c86f166" class="bulleted-list"><li style="list-style-type:disc">Initialize Akka Streams components (ActorSystem, Materializer).</li></ul><ul id="fcb70cb8-71a3-4c21-8932-997e4a9cb886" class="bulleted-list"><li style="list-style-type:disc">Create a source that generates messages as strings.</li></ul><ul id="a9c60f54-8293-4262-8aa3-9ac3781d4949" class="bulleted-list"><li style="list-style-type:disc">Initialize the AlpakkaKafkaProducer with key and value serializers.</li></ul><ul id="5521b855-97af-4213-9298-c11140f086e4" class="bulleted-list"><li style="list-style-type:disc">Create a graph to process messages from the Source and broadcast them to both kafka sinks.</li></ul><ul id="6573c20e-a662-4398-9699-5ace7728d1ed" class="bulleted-list"><li style="list-style-type:disc">Run the graph to start producing messages to the Kafka topic.</li></ul><p id="28cfc050-d72a-4f54-b573-24f93b1dbdab" class="">
+                                    </p><h2 id="8ee29364-3131-4342-b3ca-088268edea82" class=""><strong>Kafka Consumer : (ref : </strong><code>akka.kafka.scaladsl.Consumer</code>)</h2><p id="b50a88b6-5825-4d36-a54e-252f9f799445" class="">
+                                    </p><p id="a01d0b23-b3b7-4364-ab36-b464243bbaa6" class="">Kafka Consumer is responsible for subscribing to Kafka topics and processing incoming records. Consumers can be part of a consumer group, allowing them to share the load of processing data from different partitions of a topic. Each record is delivered to one consumer within the group.</p><p id="16d19275-b0c6-4306-a054-7f61ad3592c6" class="">Understanding of code snippet - StartConsumer:
+                                    The StartConsumer code snippet demonstrates how to create a kafka consumer using Akka Streams and Alpakka Kafka. Let’s break down the key components.</p><p id="984d0649-35be-478b-87d0-91f426394e2a" class="">
+                                    </p><ol type="1" id="03c33dc8-a845-4291-8f09-6cafcaa0bb12" class="numbered-list" start="1"><li>Importing Necessary Libraries and Packages:
+                                    We need to import the necessary libraries and packages similar to StartProducer code.<pre id="c17589ee-786f-47b9-a0a4-7dbf1e74e3f2" class="code"><code>// Import required libraries and packages
+  package io.datatroops
+  import akka.actor.ActorSystem
+  import akka.kafka.Subscriptions
+  import akka.kafka.scaladsl.Consumer
+  import akka.stream.Materializer.createMaterializer
+  import scala.concurrent.ExecutionContextExecutor</code></pre></li></ol><p id="3a832eca-2c83-4ab6-af3f-800ed942b686" class="">
+                                    </p><ol type="1" id="6fbfdb86-ffa1-4818-acd5-eb2620dcc9e0" class="numbered-list" start="2"><li>Initializing the ActorSystem, ExecutionContextExecutor, Materializer: 
+                                    An <code>ActorSystem</code> is initialized, which is required for creating actors and managing their lifecycle. The <code>ExecutionContextExecutor</code> is used to execute asynchronous operations, and the <code>Materializer</code> is created using <code>createMaterializer</code> to execute Akka Streams components.<pre id="8b85e6b4-d864-457a-8679-6ce1c0911071" class="code"><code>// Initialize ActorSystem, ExecutionContextExecutor, and Materializer
+implicit val system: ActorSystem = ActorSystem(&quot;kafkaProducerSystem&quot;)
+implicit val ec: ExecutionContextExecutor = system.dispatcher
+implicit val materializer: Materializer = createMaterializer(system)</code></pre></li></ol><ol type="1" id="f913d6ba-747a-441d-97f4-091ba53bf9ff" class="numbered-list" start="3"><li>Initialize AlpakkaKafkaConsumer with key and value deserializers:
+                                    The <code>AlpakkaKafkaConsumer</code>is initialized, which is a custom class representing the kafka consumer logic. It provides methods like <code>consumerSettings</code>, <code>dataEventFlow</code>, and <code>printStoredData</code>.<pre id="97986a21-1497-4de5-bd7f-a1fdc3672c4d" class="code"><code>// Initialize AlpakkaKafkaConsumer with key and value deserializers
+val consumer = AlpakkaKafkaConsumer[String, String]()
+val consumerSetting = consumer.consumerSettings
+val printDataEvent = consumer.dataEventFlow()
+val printStoreData = consumer.printStoredData()</code></pre></li></ol><ol type="1" id="2b4f5f78-3471-474f-891e-be25899b6838" class="numbered-list" start="4"><li>Creating a runnable graph for the consumer, processing data from kafka:<pre id="5c9e379c-5b98-4225-a111-7ebfb4296df3" class="code code-wrap"><code>// Create a graph for the consumer, processing data from Kafka 
+val consumerGraph = RunnableGraph.fromGraph(GraphDSL.create() { implicit builder =&gt;
+    import GraphDSL.Implicits._
+    val broadcast = builder.add(Broadcast[ConsumerRecord[String, String]](3))
+    val subscriptions = Subscriptions.topics(topic)
+    Consumer.plainSource(consumerSetting, subscriptions) ~&gt; broadcast
 
-FROM (
+    // Step 4.1: Print the received data events and ignore the result
+    broadcast.out(1) ~&gt; printDataEvent ~&gt; Sink.ignore
 
-SELECT
+    // Step 4.2: Error handling for messages received from Kafka
+    val errorHandler = builder.add(Sink.foreach[Throwable](exception =&gt; println(s&quot;Faced Error ${exception.getMessage}&quot;)))
 
-(RatingScore * 0.3) AS WeightedSentimentScore,
+    // Step 4.3: Log and throw an exception for any error during message processing
+    broadcast.out(0).map(error =&gt; throw new RuntimeException(s&quot;Failed to receive the message from kafka topic ${error.toString}&quot;)) ~&gt; errorHandler
 
-(CustomerSatisfactionLevel * 0.4) AS WeightedSatisfactionScore,
+    // Step 4.4: Store the received data
+    val dataStore = builder.add(printStoreData)
+    broadcast.out(2) ~&gt; dataStore
+    ClosedShape
+  }).run</code></pre><p id="d2012a85-2391-4922-95a9-b34e798afe51" class="">A Graph is created using Akka Streams’ <code>GraphDSL</code> . The Graph involves multiple stages for processing data from Kafka.<div class="indented"><ul id="82f31748-8fb3-4f3c-974a-dc295ce66a02" class="bulleted-list"><li style="list-style-type:disc">The data received from Kafka is broadcasted to an outlet that flows into the <code>printDataEvent</code> flow. This flow processes and prints the received data events using <code>Sink.ignore</code>, effectively ignoring the output.</li></ul><ul id="d1b35e3d-e347-4e64-9677-8d4f50d79a43" class="bulleted-list"><li style="list-style-type:disc">Another outlet of the broadcast is mapped to the <code>errorHandler</code> sink. The sink handles errors (throwable exceptions) that may occur during message processing. Any exception is printed to the console.</li></ul><ul id="7d4e82bb-cbfb-4372-b577-b0059f6345f2" class="bulleted-list"><li style="list-style-type:disc">The third outlet of the broadcast is connected to the dataStore sink, which processes and stores the received data.</li></ul></div></p><blockquote id="cec4e57c-3284-400f-8589-40bf27fae676" class="">The Runnable Graph is executed by calling run(), and the consumer starts processing and storing messages from the Kafka topic.</blockquote><p id="8faf6490-bee4-4ff6-acca-aa1e4058a52e" class="">
+                                    </p><p id="d5805b3d-be38-4435-a1b7-66ea285c2cde" class="">Certainly! Let&#x27;s explain the other file AlpakkaKafkaConsumer:
+                                    </p><ol type="1" id="75940f9e-9197-40ac-944f-28c3679eaa38" class="numbered-list" start="1"><li>The AlpakkaKafkaConsumer class is defined as a case class that represents the kafka consumer configuration and logic. It is parameterized with types <code>K</code> and <code>V</code>, representing the key and value types of the Kafka records.<pre id="00531d8e-d07b-4b18-af6a-34b705472885" class="code code-wrap"><code>case class AlpakkaKafkaConsumer[K, V]()(implicit keyDeserializer: Deserializer[K], valueDeserializer: Deserializer[V], system: ActorSystem)
+                                      extends Consumer[K, V] </code></pre>
+                                    </li></ol><ol type="1" id="34ea76fe-1e2a-4bbf-a386-1552bb6bff10" class="numbered-list" start="2"><li>The <code>groupId</code>, <code>bootstrapServer</code>, and <code>topic</code> are set to specify the Kafka consumer group, broker details, and the topic from which messages will be consumed.<pre id="36c216fc-8bb9-49d0-b3a8-77f87cfa5194" class="code code-wrap"><code>// Configure the Kafka broker details and consumer group
+override val groupId: String = &quot;group_id&quot;
+override val bootstrapServer: String = &quot;localhost:9092&quot;
+override val topic: String = &quot;quickstart-events&quot;</code></pre></li></ol><ol type="1" id="d3828dd0-10e2-48b5-b51c-f95ab54c4921" class="numbered-list" start="3"><li>The <code>consumerSettings</code> method is defined to get the Kafka consumer settings with the provided key and value deserializers. It configures the consumer with the specified bootstrap servers, consumer group, and offset reset policy.
+                                    <pre id="0a8448d4-60e6-41ba-a497-b61441b29044" class="code code-wrap"><code>// Get the consumer settings with provided deserializers
+override def consumerSettings: ConsumerSettings[K, V] = ConsumerSettings(system, keyDeserializer, valueDeserializer)
+                .withBootstrapServers(bootstrapServer)
+                .withGroupId(groupId)
+                .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, &quot;earliest&quot;)</code></pre></li></ol><ol type="1" id="fceff96f-722a-4c7d-b9b5-f9fa0bf36398" class="numbered-list" start="4"><li>The <code>dataEventFlow</code> method is defined to get a flow that processes the received <code>ConsumerRecord</code>s and extracts the value (message) from each record. The <code>map</code> function is used to extract the value, and the <code>mapMaterializedValue</code> is used to return <code>NotUsed</code> as the materialized value.
+                                    <pre id="4839eba2-26cb-4116-96f2-717a6cc37532" class="code code-wrap"><code>// Get a flow to print the received data events
+def dataEventFlow(): Flow[ConsumerRecord[K, V], V, NotUsed] = {
+                      Flow[ConsumerRecord[K, V]].map { consumerRecord =&gt;
+                        consumerRecord.value()
+                      }
+                        .mapMaterializedValue(_ =&gt; NotUsed)</code></pre></li></ol><ol type="1" id="5a9d29c6-d06d-42e7-bfba-8bf211f43f09" class="numbered-list" start="5"><li>The <code>printStoredData</code> method is defined to get a sink that prints the received data (messages) to the console. It uses <code>Sink.foreach</code> to print the value of each received <code>ConsumerRecord</code> to the console.<pre id="2c483913-19fe-422c-a191-7e036e35d16a" class="code code-wrap"><code>// Get a sink to print the stored data
+def printStoredData(): Sink[ConsumerRecord[K, V], _] = {
+  Sink.foreach[ConsumerRecord[K, V]](data =&gt; println(s&quot;${data.value()}&quot;))
+}</code></pre></li></ol><ol type="1" id="166108ec-a6dd-4645-aeb5-371067eeea89" class="numbered-list" start="6"><li>The <code>kafkaSource</code> method is defined to get a source that reads data from Kafka. It uses Akka Kafka&#x27;s <code>plainSource</code> method, passing the consumer settings and the topic to subscribe to. It returns a source with <code>ConsumerRecord</code>s and <code>Consumer.Control</code>, which can be used for controlling the consumer, such as shutting it down gracefully.<pre id="d3b8599b-b943-4a38-af3d-c98df69a27b7" class="code code-wrap"><code>// Get a source to read data from Kafka
+def kafkaSource(): Source[ConsumerRecord[K, V], Consumer.Control] = {
+  Consumer.plainSource(consumerSettings, Subscriptions.topics(topic))
+}</code></pre><p id="d96c618c-5d42-47a5-95b8-6531e27d296d" class="">
+                                    </p></li></ol><p id="5d6e853f-7538-4d6b-b9e7-3186f8e5e7c4" class="">In summary, the <code>AlpakkaKafkaProducer</code> and <code>AlpakkaKafkaConsumer</code> are custom classes that encapsulate the Kafka producer and consumer logic, respectively. They provide methods to get the required Akka Streams components (such as sources, flows, and sinks) to interact with Kafka topics. These classes abstract away the complexities of setting up the producer and consumer settings and provide a cleaner and more reusable way to work with Kafka within Akka Streams.</p><p id="332b2062-f36f-4881-b13d-a497d7e7911b" class="">
+                                    </p><p id="5eb588c1-f680-4576-bfed-940559b06126" class="">In this comprehensive blog, we explored the concepts of Kafka producer and consumer, and their essential roles within the Kafka ecosystem. </p><p id="09a2cb65-6b8a-4cd7-a9b8-acebf50ab310" class="">Kafka, with its publish-subscribe model, fault tolerance, and scalability, has become a critical component in building modern data architectures. The ability to process real-time data streams and handle large data volumes makes Kafka suitable for a wide range of applications, from real-time analytics to IoT and event-driven architectures.</p><p id="2e0ae484-009b-4755-b5a1-720b9725f2b3" class="">As data-driven applications continue to grow in complexity and scale, Kafka and Alpakka Kafka will remain valuable tools for developers seeking to harness the power of real-time data processing in their applications. Whether in log aggregation, stream processing, IoT, or machine learning, Kafka and Alpakka Kafka have established themselves as indispensable components of the modern data architecture toolkit.</p><p id="dc61e18f-c491-4566-9db6-1134f70a546f" class="">The GraphDSL approach provides more flexibility for designing complex data flow patterns and enables you to build sophisticated processing logic. It is particularly beneficial when dealing with advanced stream processing scenarios, such as conditional branching, fan-in, fan-out, and custom components. In Summary, while a simple approach without GraphDSL is suitable for linear pipelines, using GraphDSL offers enhanced composability and customizability, making it a preferred choice when building complex stream processing graphs with more intricate data flow patterns.</p><p id="96a65ead-c747-42c3-afd5-695bd63f03c5" class="">
+                                    </p></li></ol></div></article>
 
-CASE WHEN FeedbackResponse = &#x27;Response provided&#x27; THEN 1 ELSE 0 END AS FeedbackResponseRate,
+                                    <blockquote id="cec4e57c-3284-400f-8589-40bf27fae676" class="">Elevate your business with DataTroops.io! Harness the potential of your data for smarter decisions and a competitive edge. Reach out at info@datatroops.io to start your data-driven journey today!</blockquote>
 
-CASE WHEN ResolutionStatus = &#x27;Resolved&#x27; THEN 1 ELSE 0 END AS ResolutionRate
-
-FROM CustomerFeedback
-
-) AS Calculations;</code></pre>
-                            <p id="77973fc9-723d-4a3a-af86-eaece50b1550" class=""><strong>No SQL Query:</strong></p><pre id="30dbf423-acb1-4957-983a-3e286d318cfa" class="code"><code>db.CustomerFeedback.aggregate([
-{
-    $project: {
-        WeightedSentimentScore: { $multiply: [&quot;$RatingScore&quot;, 0.3] },
-        WeightedSatisfactionScore: { $multiply: [&quot;$CustomerSatisfactionLevel&quot;, 0.4] },
-        FeedbackResponseRate: { $cond: [{ $eq: [&quot;$FeedbackResponse&quot;, &quot;Response provided&quot;] }, 1, 0] },
-        ResolutionRate: { $cond: [{ $eq: [&quot;$ResolutionStatus&quot;, &quot;Resolved&quot;] }, 1, 0] }
-    }
-},
-{
-    $group: {
-        _id: null,
-        CompositeFeedbackScore: {
-            $avg: {
-                $divide: [
-                    { $add: [&quot;$WeightedSentimentScore&quot;, &quot;$WeightedSatisfactionScore&quot;, &quot;$FeedbackResponseRate&quot;, &quot;$ResolutionRate&quot;] },
-                    4
-                ]
-            }
-        }
-    }
-}
-]);</code></pre>
-                            <p id="7a6d50da-600f-4543-8412-f7a08ef73149" class="">
-                                </p><p id="fa177bda-2af2-4801-be8c-2cb4c9e3aad1" class="">&quot;As we reach the conclusion of our KPIs blog, I want to leave you with this key takeaway: KPIs are not just numbers; they are a language through which businesses communicate their progress, challenges, and aspirations. By embracing the art of measuring and analyzing these metrics, you hold the key to unlocking a world of insights that can transform the way you strategize, innovate, and excel.</p><p id="97c1eb2a-9d59-4058-a994-1c98524fbb94" class="">Looking ahead, we&#x27;re excited to continue our journey of knowledge-sharing. What burning questions do you have about data-driven decision-making? Are there specific industries or KPI types you&#x27;d like us to spotlight in our future blogs? Your feedback fuels our passion for delivering valuable content that empowers you on your business endeavours. Thank you for joining us in unravelling the intricate tapestry of business KPIs, and we can&#x27;t wait to embark on new explorations together!&quot;</p><p id="b9bb46c2-158e-42d4-ae03-ab682d8a3a11" class="">
-                                </p><br><p id="2fbbe9b3-1dae-4b1b-a90f-60693fee25fb" class=""><strong><em>Elevate your business with </em></strong><strong><em><a href="http://datatroops.io/">DataTroops.io</a></em></strong><strong><em>! Harness the potential of your data for smarter decisions and a competitive edge. Reach out at </em></strong><strong><em><a href="mailto:info@datatroops.io">info@datatroops.io</a></em></strong><strong><em> to start your data-driven journey today!</em></strong></p>
                                     </div>
-                                    </div>
-
-                                <!--===== Single Blog Item End =========-->
                             </div>
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
