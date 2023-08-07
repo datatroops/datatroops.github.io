@@ -3381,6 +3381,7 @@ input[type="checkbox"] {
 .navigation-menu > ul {
   display: -webkit-box;
   display: -webkit-flex;
+  width:max-content;
   display: -ms-flexbox;
   display: flex;
 }
