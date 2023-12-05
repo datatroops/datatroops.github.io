@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'CerebriSans';
+    font-family: 'Gilroy';
     src: url(../../fonts/gilroy/Gilroy-Regular.eot);
     src: url(../../fonts/gilroy/Gilroy-Regular.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-Regular.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Regular.woff) format('woff');
     font-weight: 400;
@@ -10,25 +10,25 @@
 }
 
 @font-face {
-    font-family: 'CerebriSans';
-    src: url(../../fonts/cerebrisans/CerebriSans-Italic.eot);
-    src: url(../../fonts/cerebrisans/CerebriSans-Italic.eot#iefix) format('embedded-opentype'), url(../../fonts/cerebrisans/CerebriSans-Italic.ttf) format('truetype'), url(../../fonts/cerebrisans/CerebriSans-Italic.woff) format('woff'), url(../../fonts/cerebrisans/CerebriSans-Italic.svg) format('svg');
+    font-family: 'Gilroy';
+    src: url(../../fonts/gilroy/Gilroy-RegularItalic.eot);
+    src: url(../../fonts/gilroy/Gilroy-RegularItalic.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-RegularItalic.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-RegularItalic.woff) format('woff');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'CerebriSans';
-    src: url(../../fonts/cerebrisans/CerebriSans-Light.eot);
-    src: url(../../fonts/cerebrisans/CerebriSans-Light.eot#iefix) format('embedded-opentype'), url(../../fonts/cerebrisans/CerebriSans-Light.ttf) format('truetype'), url(../../fonts/cerebrisans/CerebriSans-Light.woff) format('woff');
+    font-family: 'Gilroy';
+    src: url(../../fonts/gilroy/Gilroy-Light.eot);
+    src: url(../../fonts/gilroy/Gilroy-Light.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-Light.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Light.woff) format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'CerebriSans';
+    font-family: 'Gilroy';
     src: url(../../fonts/gilroy/Gilroy-Medium.eot);
     src: url(../../fonts/gilroy/Gilroy-Medium.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-Medium.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Medium.woff) format('woff');
     font-weight: 500;
@@ -37,7 +37,7 @@
 }
 
 @font-face {
-    font-family: 'CerebriSans';
+    font-family: 'Gilroy';
     src: url(../../fonts/gilroy/Gilroy-Semibold.eot);
     src: url(../../fonts/gilroy/Gilroy-Semibold.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-SemiBold.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Semibold.woff) format('woff');
     font-weight: 600;
@@ -46,7 +46,7 @@
 }
 
 @font-face {
-    font-family: 'CerebriSans';
+    font-family: 'Gilroy';
     src: url(../../fonts/gilroy/Gilroy-Bold.eot);
     src: url(../../fonts/gilroy/Gilroy-Bold.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-Bold.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Bold.woff) format('woff');
     font-weight: 700;
@@ -55,7 +55,7 @@
 }
 
 @font-face {
-    font-family: 'CerebriSans';
+    font-family: 'Gilroy';
     src: url(../../fonts/gilroy/Gilroy-Extrabold.eot);
     src: url(../../fonts/gilroy/Gilroy-Extrabold.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-ExtraBold.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Extrabold.woff) format('woff');
     font-weight: 800;
@@ -64,9 +64,9 @@
 }
 
 @font-face {
-    font-family: 'CerebriSans';
-    src: url(../../fonts/cerebrisans/CerebriSans-Heavy.eot);
-    src: url(../../fonts/cerebrisans/CerebriSans-Heavy.eot#iefix) format('embedded-opentype'), url(../../fonts/cerebrisans/CerebriSans-Heavy.ttf) format('truetype'), url(../../fonts/cerebrisans/CerebriSans-Heavy.woff) format('woff'), url(../../fonts/cerebrisans/CerebriSans-Heavy.svg) format('svg');
+    font-family: 'Gilroy';
+    src: url(../../fonts/gilroy/Gilroy-Heavy.eot);
+    src: url(../../fonts/gilroy/Gilroy-Heavy.eot#iefix) format('embedded-opentype'), url(../../fonts/gilroy/Gilroy-Heavy.ttf) format('truetype'), url(../../fonts/gilroy/Gilroy-Heavy.woff) format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
