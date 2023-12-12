@@ -2110,14 +2110,14 @@ nav.fill ul li a:hover:after {
 }
 .case-studies-arrow-icon {
   position: relative;
-  width: 10.46px;
-  height: 6.72px;
+  width: 100%;
+  height: 100%;
 }
 .case-studies-arrow-container {
   position: absolute;
-  top: 16.22px;
-  left: 97.33px;
-  width: 10.46px;
+  top: 27%;
+  left: 90%;
+  width: 10%;
   height: 11.95px;
   overflow: hidden;
   display: flex;
@@ -2137,8 +2137,8 @@ nav.fill ul li a:hover:after {
 }
 .case-studies-rectangle-card-parent {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 17%;
+  left: 14%;
   width: 394.02px;
   height: 409.95px;
 }
@@ -2150,6 +2150,14 @@ nav.fill ul li a:hover:after {
   height: 224.55px;
   object-fit: cover;
 }
+.case-studies-company-image {
+  position: absolute;
+  top: 22%;
+  left: 36%;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
 .case-studies-group-card-parent {
   position: relative;
   width: 100%;
@@ -2157,11 +2165,298 @@ nav.fill ul li a:hover:after {
   text-align: center;
   font-size: 14.51px;
   color: #003153;
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   margin-top: 10%;
 }
 
+.case-studies-bg-logo {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  left: 80%;
+  margin-top: -22%;
+  /* opacity: 0.05; */
+}
 
-
+.case-studies-bg-logo-left {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  left: -17%;
+}
 
 /* Case Studies Styling End */
+
+/* Contact Styling Start */
+
+.contact-input-styling {
+  border: none;
+  background: none;
+}
+
+.contact-group-child {
+  position: relative;
+  top: 47%;
+  left: -11%;
+  background-color: #170e03;
+  width: 123%;
+  height: 173%;
+  z-index: -1;
+}
+.contact-group-item {
+  position: absolute;
+  top: 0px;
+  left: calc(50% - 620px);
+  width: 1240px;
+  height: 441px;
+  overflow: hidden;
+}
+.contact-title {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #080501;
+  text-align: center;
+}
+.contact-content {
+  position: absolute;
+  top: 38%;
+  left: 7%;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 32px;
+  opacity: 0.72;
+}
+.contact-number {
+  position: absolute;
+  top: 0px;
+  left: 32px;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+}
+.contact-number-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.contact-detail-parent {
+  position: relative;
+  top: -110%;
+  left: 7%;
+  width: 20%;
+  height: 11%;
+}
+.contact-email-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+}
+.no-contracts-no-sur-group {
+  position: absolute;
+  top: 327px;
+  left: 178.1px;
+  width: 175px;
+  height: 24px;
+}
+.contact-rectangle-div {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  background-color: #00253d;
+  width: 290px;
+  height: 2px;
+  opacity: 0.3;
+}
+.all-limited-links {
+  position: absolute;
+  top: 26px;
+  left: 0px;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+  opacity: 0.3;
+}
+.all-limited-links1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 130%;
+}
+.contact-rectangle-group {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 290px;
+  height: 62px;
+}
+.contact-group-child1 {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  background-color: #00253d;
+  width: 620px;
+  height: 2px;
+  opacity: 0.3;
+}
+.contact-rectangle-container {
+  position: absolute;
+  top: 94px;
+  left: 0px;
+  width: 620px;
+  height: 62px;
+}
+.contact-rectangle-parent1 {
+  position: absolute;
+  top: 0px;
+  left: 53%;
+  width: 290px;
+  height: 62px;
+}
+.contact-group-div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 620px;
+  height: 156px;
+}
+.contact-choose-plan {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 150%;
+  display: inline-block;
+  width: 112px;
+  flex-shrink: 0;
+}
+.contact-choose-plan-wrapper {
+  position: absolute;
+  top: 204px;
+  left: 0px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 48px;
+  text-align: center;
+}
+.contact-form-container {
+  position: absolute;
+  top: 20%;
+  left: 42%;
+  width: 100%;
+  height: auto;
+}
+.contact-frame-child {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  width: 40%;
+  text-align: center;
+}
+.contact-frame-item {
+  position: absolute;
+  top: 0%;
+  left: 46%;
+  width: 10%;
+  height: auto;
+}
+.contact-frame-parent {
+  position: absolute;
+  top: 513px;
+  left: calc(50% - 629.45px);
+  width: 1240px;
+  height: 203px;
+}
+.contact-rectangle-parent {
+  position: absolute;
+  top: 0px;
+  left: 0%;
+  width: 82%;
+  height: 46%;
+  background-color: #ffba08;
+}
+.group-parent {
+  position: relative;
+  width: 100%;
+  height: 968px;
+  text-align: left;
+  font-size: 16px;
+  color: #00253d;
+  font-family: Prompt;
+}
+
+.footer-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  border: 1px solid #FFFFFF;
+  top: 115%;
+  left: 0%;
+}
+
+/* Contact Styling End */
+
+/* Social Media Start */
+
+.filllogosfacebook-circle-fil-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.filllogosfacebook-circle-fil-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 24px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px;
+}
+.filllogosinstagram-fill-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 64px;
+  border-radius: 24px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px;
+}
+.filllogostwitter-fill-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 128px;
+  border-radius: 24px;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px;
+}
+.social-media-frame-parent {
+  position: relative;
+  width: 12%;
+  height: 48px;
+  left: 44%;
+}
+
+/* Social Media End */
