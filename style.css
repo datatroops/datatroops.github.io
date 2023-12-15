@@ -1,7 +1,11 @@
 body {
   margin: 0;
   line-height: normal;
+  /* overflow-x: hidden; */
 }
+
+/* Navbar Start */
+
 
 .header-container {
   position: relative;
@@ -9,37 +13,7 @@ body {
   border-bottom: 1px solid rgba(0, 49, 82, 0.08);
   box-sizing: border-box;
   width: 100%;
-  height: 122px;
-}
-
-.logo-container {
-  position: relative;
-  /* background-color: #003152; */
-  /* width: 100%;     */
-  height: 59px;
-}
-
-.logo {
-  position: relative;
-  /* width: 100%; */
-  height: 59px;
-  object-fit: contain;
-  margin-top: 23px;
-  margin-left: 50%;
-}
-
-.name-logo-container {
-  position: relative;
-  /* background-color: #003152; */
-  /* width: 100%; */
-  height: 167.28px;
-}
-.name-logo {
-  position: relative;
-  /* width: 100%; */
-  height: 22.72px;
-  object-fit: contain;
-  margin-top: 18%;
+  height: auto;
 }
 
 nav > ul > li > a {
@@ -47,10 +21,18 @@ nav > ul > li > a {
   color: #000;
 }
 
+.home-parent {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #000;
+  font-family: Prompt;
+}
+
 .home {
-  position: absolute;
-  left: 0px;
-  bottom: 0;
+  position: relative;
   line-height: 20px;
   text-transform: capitalize;
   font-size: 16px;
@@ -60,9 +42,7 @@ nav > ul > li > a {
 }
 
 .our-services {
-  position: absolute;
-  top: 0px;
-  left: 77px;
+  position: relative;
   line-height: 20px;
   text-transform: capitalize;
   font-size: 16px;
@@ -71,9 +51,7 @@ nav > ul > li > a {
   text-align: left;
 }
 .reviews {
-  position: absolute;
-  top: 0px;
-  left: 202px;
+  position: relative;
   line-height: 20px;
   text-transform: capitalize;
   font-size: 16px;
@@ -82,9 +60,7 @@ nav > ul > li > a {
   text-align: left;
 }
 .contact {
-  position: absolute;
-  top: 0px;
-  left: 293px;
+  position: relative;
   line-height: 20px;
   text-transform: capitalize;
   font-size: 16px;
@@ -93,9 +69,7 @@ nav > ul > li > a {
   text-align: left;
 }
 .blog {
-  position: absolute;
-  top: 0px;
-  left: 387px;
+  position: relative;
   line-height: 20px;
   text-transform: capitalize;
   font-size: 16px;
@@ -103,29 +77,72 @@ nav > ul > li > a {
   color: #000;
   text-align: left;
 }
-.home-parent {
-  position: absolute;
-  width: 100%;
-  height: 20px;
-  text-align: left;
-  left: 36%;
-  top: 37%;
-  font-size: 16px;
-  color: #000;
-  font-family: Prompt;
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
 }
 
-.hire-us-style {
-  box-shadow: 0px 0px 28px #ffba08;
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #ffc952;
+  height: 10%;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #ffc952;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+
+.hire-us-style {
+  box-shadow: 0px 0px 10px #ffba08;
+  position: relative;
   height: 100%;
-  width: 40%;
-  top: 50%;
-  right: 0%;
-  bottom: 0%;
-  left: 40%;
+  width: 75%;
   border: none;
+  font-family: 'Gilroy';
+  font-weight: 700;
   background-color: #ffba08;
+}
+
+@media screen and (max-width: 768px) {
+  .hire-us-style{
+    width:15%;
+    height: 5.5vw;
+    font-size: 1.3vw;
+  }
 }
 
 .hire-us-container {
@@ -133,36 +150,38 @@ nav > ul > li > a {
   width: 100%;
   height: 62px;
   text-align: center;
-  left: 42%;
   font-size: 18px;
   color: #00253d;
-  font-family: Gilroy;
+  font-family: 'Gilroy';
 }
 
+/* Navbar End */
+
+/* Landing Page Start */
+
 .image-container {
-  display: block;
+  display: inline-block;
   width: 100%;
   height: auto;
   object-fit: contain;
+  position: relative;
+  
 }
 
 .image-container img {
-  display: block;
   width: 100%;
   height: auto;
 }
 
+
 .future-begins {
   margin: 0;
+  font-family: 'Prompt';
 }
 
 .overlay-text {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* padding: 10px 20px; */
-  font-size: 84px;
+  position: relative;
+  font-size: 6vw;
   text-align: center;
   letter-spacing: -0.02em;
   line-height: 100%;
@@ -170,12 +189,33 @@ nav > ul > li > a {
   font-weight: 600;
   font-family: Prompt;
   color: #00253d;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -155% );
+}
+
+@media screen and (max-width: 1400px) {
+  .overlay-text{
+    transform: translate( -50%, -140% );
+  }
+}
+
+@media screen and (max-width: 921px) {
+  .overlay-text{
+    transform: translate( -50%, -143% );
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .overlay-text{
+    transform: translate( -50%, -190% );
+  }
 }
 
 .custom-software-systems {
   position: relative;
-  font-size: 18px;
-  font-family: Gilroy;
+  font-size: 1.4vw;
+  font-family: 'Gilroy';
   color: #00253d;
   text-align: center;
   letter-spacing: 0.02em;
@@ -186,18 +226,17 @@ nav > ul > li > a {
   position: relative;
   border-top: 4px solid #ffba08;
   box-sizing: border-box;
-  width: 46%;
-  height: 4px;
-  left: 53%;
+  width: 25%;
+  margin-left: 52%;
 }
 
 .rectangle {
   position: relative;
   background-color: #ffba08;
-  width: 30%;
-  height: 84px;
+  width: 15%;
+  height: 5.5vw;
   border: 0;
-  font-size: 18px;
+  font-size: 1.3vw;
   text-transform: capitalize;
   font-family: Gilroy;
   color: #00253d;
@@ -216,6 +255,8 @@ nav > ul > li > a {
   font-weight: 600;
   letter-spacing: 0.02em;
 }
+
+/* Landing Page End */
 
 /* .overlay-text-services{
   position: relative;
@@ -462,48 +503,6 @@ nav > ul > li > a {
   max-height: 100%;
 }
 
-nav.stroke ul li a,
-nav.fill ul li a {
-  position: relative;
-}
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: #ffc952;
-  height: 2px;
-}
-nav.stroke ul li a:hover:after {
-  width: 100%;
-}
-
-nav.fill ul li a {
-  transition: all 2s;
-}
-
-nav.fill ul li a:after {
-  text-align: left;
-  content: ".";
-  margin: 0;
-  opacity: 0;
-}
-nav.fill ul li a:hover {
-  color: #ffc952;
-  z-index: 1;
-}
-nav.fill ul li a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  -webkit-animation: fill 1s forwards;
-  -moz-animation: fill 1s forwards;
-  opacity: 1;
-}
 
 .line-div-2 {
   position: relative;
@@ -519,6 +518,13 @@ nav.fill ul li a:hover:after {
   top: 0;
   padding: 0.5rem;
   margin: 4px;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 2%;
+  margin-right: 0;
+  margin-left: 0;
+  z-index: 1;
+  background-color: white;
 }
 
 .clients-container-text {
@@ -556,6 +562,8 @@ nav.fill ul li a:hover:after {
   background-color: #f9fafb;
   width: 100%;
   height: auto;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .client-logo {
@@ -563,36 +571,37 @@ nav.fill ul li a:hover:after {
   overflow: hidden;
   flex-shrink: 0; */
   height: auto;
-  width: 100%;
+  width: 40%;
   display: flex;
   align-items: center;
   padding: 15px;
   perspective: 100px;
 }
 
-.client-logo > img {
-  width: 40%;
-  height: auto;
+.client-logo img {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%; 
+  height: auto; 
 }
 
-.clients-slide-container > div {
-  width: 15%;
-}
+
 
 .clients-slide-container {
   position: relative;
   left: 20%;
   display: flex;
-  width: calc(250px * 15);
+  /* width: calc(250px * 15); */
   animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {
-  100% {
+  0% {
     transform: translateX(0);
   }
-  0% {
-    transform: translateX(calc(-250px * 9));
+  100% {
+    transform: translateX(calc(-150px * 4));
   }
 }
 
@@ -2169,6 +2178,34 @@ nav.fill ul li a:hover:after {
   margin-top: 10%;
 }
 
+@media only screen and (max-width: 768px){
+  .case-studies-line-div{
+    display: none;
+  }
+  .case-studies-bg-logo{
+    display: none;
+  }
+  .case-studies-bg-logo-left{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 480px){
+  .case-studies-line-div{
+    display: none;
+  }
+
+  .case-studies-bg-logo{
+    display: none;
+  }
+
+  .case-studies-bg-logo-left{
+    display: none;
+  }
+
+}
+
 .case-studies-bg-logo {
   position: absolute;
   width: 30%;
@@ -2380,13 +2417,13 @@ nav.fill ul li a:hover:after {
 }
 .contact-rectangle-parent {
   position: absolute;
-  top: 0px;
-  left: 0%;
-  width: 82%;
+  top: 30%;
+  left: 8%;
+  width: 83%;
   height: 46%;
   background-color: #ffba08;
 }
-.group-parent {
+.contact-group-parent {
   position: relative;
   width: 100%;
   height: 968px;
@@ -2401,7 +2438,7 @@ nav.fill ul li a:hover:after {
   width: 100%;
   height: 1px;
   border: 1px solid #FFFFFF;
-  top: 115%;
+  top: 90%;
   left: 0%;
 }
 
@@ -2457,6 +2494,7 @@ nav.fill ul li a:hover:after {
   width: 12%;
   height: 48px;
   left: 44%;
+  margin-top: 5%;
 }
 
 /* Social Media End */
