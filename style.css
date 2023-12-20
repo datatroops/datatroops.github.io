@@ -6,7 +6,6 @@ body {
 
 /* Navbar Start */
 
-
 .header-container {
   position: relative;
   background-color: #fff;
@@ -125,25 +124,24 @@ nav.fill ul li a:hover:after {
   opacity: 1;
 }
 
-
 .hire-us-style {
   box-shadow: 0px 0px 10px #ffba08;
   position: relative;
   height: 100%;
   width: 75%;
   border: none;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   font-weight: 700;
   background-color: #ffba08;
 }
 
 @media screen and (max-width: 768px) {
-  .hire-us-style{
-    width:15%;
+  .hire-us-style {
+    width: 15%;
     height: 5.5vw;
     font-size: 1.3vw;
-    box-shadow:none;
-    color: #00253D;
+    box-shadow: none;
+    color: #00253d;
   }
 }
 
@@ -154,7 +152,7 @@ nav.fill ul li a:hover:after {
   text-align: center;
   font-size: 18px;
   color: #00253d;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
 }
 
 /* Navbar End */
@@ -167,7 +165,6 @@ nav.fill ul li a:hover:after {
   height: auto;
   object-fit: contain;
   position: relative;
-  
 }
 
 .image-container img {
@@ -175,10 +172,9 @@ nav.fill ul li a:hover:after {
   height: auto;
 }
 
-
 .future-begins {
   margin: 0;
-  font-family: 'Prompt';
+  font-family: "Prompt";
 }
 
 .overlay-text {
@@ -193,31 +189,31 @@ nav.fill ul li a:hover:after {
   color: #00253d;
   top: 50%;
   left: 50%;
-  transform: translate( -50%, -155% );
+  transform: translate(-50%, -155%);
 }
 
 @media screen and (max-width: 1400px) {
-  .overlay-text{
-    transform: translate( -50%, -140% );
+  .overlay-text {
+    transform: translate(-50%, -140%);
   }
 }
 
 @media screen and (max-width: 921px) {
-  .overlay-text{
-    transform: translate( -50%, -143% );
+  .overlay-text {
+    transform: translate(-50%, -143%);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .overlay-text{
-    transform: translate( -50%, -190% );
+  .overlay-text {
+    transform: translate(-50%, -190%);
   }
 }
 
 .custom-software-systems {
   position: relative;
   font-size: 1.4vw;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   color: #00253d;
   text-align: center;
   letter-spacing: 0.02em;
@@ -240,7 +236,7 @@ nav.fill ul li a:hover:after {
   border: 0;
   font-size: 1.3vw;
   text-transform: capitalize;
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   color: #00253d;
   text-align: center;
   font-weight: 700;
@@ -272,10 +268,9 @@ nav.fill ul li a:hover:after {
   margin-top: -27%;
 }
 
-.services-background-gradient{
+.services-background-gradient {
   padding-top: 4%;
-  background-image: linear-gradient(#EEEEEE
-  ,#FFBA0800);
+  background-image: linear-gradient(#eeeeee, #ffba0800);
 }
 
 .services-container-img {
@@ -302,8 +297,8 @@ nav.fill ul li a:hover:after {
   margin-left: 49%;
 }
 
-@media screen and (max-width: 768px){
-  .services-line{
+@media screen and (max-width: 768px) {
+  .services-line {
     width: 27%;
     margin-left: 37%;
     border-top: 8px solid #ffba08;
@@ -313,7 +308,7 @@ nav.fill ul li a:hover:after {
     margin-top: -20%;
   }
 
-  .card-line{
+  .card-line {
     height: 1.6vw !important;
   }
 
@@ -322,12 +317,12 @@ nav.fill ul li a:hover:after {
     height: 127vw;
   }
 
-  .services-text-container{
+  .services-text-container {
     font-size: 9vw;
     height: 12vw;
   }
 
-  .services-text{
+  .services-text {
     margin-left: 24% !important;
   }
 
@@ -337,12 +332,12 @@ nav.fill ul li a:hover:after {
     height: 7vw;
   }
 
-  .services-background-gradient{
+  .services-background-gradient {
     padding-top: 4%;
     background-image: none;
   }
 
-  .card-container-parent-mobile{
+  .card-container-parent-mobile {
     margin-bottom: -117%;
   }
 
@@ -357,12 +352,11 @@ nav.fill ul li a:hover:after {
     box-sizing: border-box;
     width: 25% !important;
     height: 19.7vw !important;
-    
   }
 
   .card-icon {
     width: 75% !important;
-    margin: 12%; 
+    margin: 12%;
   }
 
   .card-content {
@@ -387,7 +381,7 @@ nav.fill ul li a:hover:after {
     margin-bottom: 1%;
   }
 
-  .card-content-background{
+  .card-content-background {
     width: auto;
     height: 48vw !important;
     margin-left: 61%;
@@ -395,8 +389,7 @@ nav.fill ul li a:hover:after {
   }
 }
 
-@media screen and (max-width: 576px){
-
+@media screen and (max-width: 576px) {
   .card-container {
     z-index: 1 !important;
     margin-bottom: 107%;
@@ -409,9 +402,9 @@ nav.fill ul li a:hover:after {
     border: 1.1px solid #e6e6e6;
     box-sizing: border-box;
     width: 25% !important;
-    height: 19vw !important; 
+    height: 19vw !important;
   }
-  .card-content-background{
+  .card-content-background {
     margin-top: 8%;
   }
 }
@@ -510,7 +503,7 @@ nav.fill ul li a:hover:after {
   z-index: 1;
 }
 
-.card-parent-container{
+.card-parent-container {
   margin-right: 0 !important;
   margin-left: 0 !important;
   margin-top: -39% !important;
@@ -526,7 +519,6 @@ nav.fill ul li a:hover:after {
   position: relative;
   width: 75%;
   margin: 12%;
-  
 }
 .card-icon-box {
   position: relative;
@@ -575,18 +567,17 @@ nav.fill ul li a:hover:after {
   color: #080501;
   font-family: Prompt;
   margin-top: -42%;
-  
 }
 
-.card-content-background{
+.card-content-background {
   width: auto;
   height: 14vw;
   margin-left: 61%;
 }
 
-.card-content-background-parent{
+.card-content-background-parent {
   margin-top: -18%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   z-index: 1;
 }
 
@@ -598,7 +589,7 @@ nav.fill ul li a:hover:after {
   font-size: 1.4vw;
 }
 
-.read-more a{
+.read-more a {
   text-decoration: none;
   color: #080501;
 }
@@ -618,7 +609,6 @@ nav.fill ul li a:hover:after {
   max-width: 100%;
   max-height: 100%;
 }
-
 
 .line-div-2 {
   position: relative;
@@ -698,11 +688,9 @@ nav.fill ul li a:hover:after {
   margin: 0;
   padding: 0;
   display: block;
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
-
-
 
 .clients-slide-container {
   position: relative;
@@ -1343,6 +1331,9 @@ nav.fill ul li a:hover:after {
 /* Technology Styling End */
 
 /* Company Specialization Styling Start  */
+
+/*
+
 .specialization-group-child {
   position: absolute;
   top: 4%;
@@ -1805,7 +1796,6 @@ nav.fill ul li a:hover:after {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* padding: 26.99769401550293px 27.502120971679688px 27.00748634338379px 27.49994659423828px; */
   padding: 4%;
   box-sizing: border-box;
   transform: rotate(103.5deg);
@@ -1864,7 +1854,370 @@ nav.fill ul li a:hover:after {
   left: 1%;
 }
 
+*/
+
 /* Company Speciaization Styling End */
+
+/* Company Speciaization New Styling Start */
+.specialization-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+
+.specialization-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.specialization-line {
+  position: relative;
+  border-top: 5px solid #ffba08;
+  width: 6vw;
+  height: 1vw;
+  margin-left: 2%;
+}
+
+.company-specialization-title {
+  position: relative;
+  font-size: 3.5vw;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: Prompt;
+  color: #080501;
+  text-align: left;
+}
+
+.company-specialization-title-content {
+  margin: 0;
+}
+
+.specialization-description-container {
+  position: relative;
+  width: 100%;
+  font-size: 1.3vw;
+  color: rgba(8, 5, 1, 0.8);
+  margin-top: 5%;
+}
+
+.transform-business {
+  position: relative;
+  font-size: 2vw;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: Prompt;
+  color: #080501;
+  margin-top: 5%;
+}
+
+.specialization-icons-bg {
+  position: relative;
+  border-radius: 2vw;
+  background-color: #ffd387;
+  width: 94%;
+  height: 3vw;
+}
+
+.specialization-icons-container {
+  margin-top: 10% !important;
+}
+
+.light-bulb-icon {
+  position: relative;
+  width: 72%;
+  height: auto;
+  margin-top: -211%;
+  margin-left: 32%;
+}
+
+.specialization-icons-heading {
+  position: relative;
+  line-height: 100%;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.3vw;
+  width: 100%;
+}
+
+.specialization-icons-description-1 {
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.specialization-icons-description-2 {
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.specialization-image-div {
+  position: relative;
+  background-color: #ffba08;
+  width: 100%;
+  height: 13vw;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.specialization-bg-1-container{
+  position: relative;
+  margin-top: -17%;
+}
+
+.specialization-bg-1 {
+  position: relative;
+  width: auto;
+  height: 5vw;
+  object-fit: cover;
+}
+
+.specialization-bg-2-container{
+  position: relative;
+  text-align: right;
+}
+
+.specialization-bg-2 {
+  position: relative;
+  width: auto;
+  height: 11vw;
+  object-fit: cover;
+}
+
+.specialization-bg-3-outer {
+  position: relative;
+  width: auto;
+  height: 6vw;
+  margin-top: -46%;
+  text-align: center;
+}
+
+.specialization-bg-3-img {
+  position: relative;
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+}
+
+.specialization-bg-3-text {
+  position: relative;
+  width: 31%;
+  margin-left: 36%;
+  margin-top: -22%;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.specialization-bg-3-text-2 {
+  position: relative;
+  width: 100%;
+  margin-top: 4%;
+  margin-left: 20%;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.4vw;
+}
+
+.specialization-features-text-1 {
+  position: relative;
+  margin-left: 10%;
+  font-family: Inter;
+  font-size: 1vw;
+  color: rgba(8, 5, 1, 0.8);
+}
+
+.specialization-features-text-2 {
+  position: relative;
+  margin-left: 10%;
+  margin-top: 14%;
+  font-size: 1vw;
+  font-family: Inter;
+  color: rgba(8, 5, 1, 0.8);
+}
+
+/* Specialization Mobile Styling Start */
+
+@media screen and (max-width:768px) {
+
+  .specialization-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+  }
+
+  .specialization-line {
+    position: relative;
+    border-top: 5px solid #ffba08;
+    width: 22vw;
+    height: 1vw;
+    margin-left: 28%;
+  }
+
+  .company-specialization-title {
+    position: relative;
+    font-size: 8vw;
+    margin-left: 9%;
+    margin-top: 6%;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: Prompt;
+    color: #080501;
+    text-align: left;
+  }
+
+  .specialization-description-container {
+    position: relative;
+    width: 80%;
+    font-size: 5vw;
+    color: rgba(8, 5, 1, 0.8);
+    margin-top: 5%;
+    margin-left: 9%;
+  }
+
+  .transform-business {
+    position: relative;
+    font-size: 5vw;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: Prompt;
+    color: #080501;
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+
+  .specialization-icons-bg {
+    position: relative;
+    border-radius: 9vw;
+    background-color: #ffd387;
+    width: 94%;
+    height: 16vw;
+  }
+  
+  .specialization-icons-container {
+    margin-top: 10% !important;
+  }
+  
+  .light-bulb-icon {
+    position: relative;
+    width: 72%;
+    height: auto;
+    margin-top: -167%;
+    margin-left: 27%;
+  }
+
+  .specialization-icons-heading {
+    position: relative;
+    line-height: 100%;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 6.3vw;
+    width: 100%;
+  }
+
+  .specialization-container-icon-mobile-1{
+    margin-top: 5% !important;
+    margin-left: 5% !important;
+  }
+
+  .specialization-container-icon-mobile-2{
+    margin-top: 10% !important;
+    margin-bottom: 10%;
+    margin-left: 5% !important;
+  }
+
+  .specialization-image-div {
+    position: relative;
+    background-color: #ffba08;
+    width: 100%;
+    height: 13vw;
+  }
+
+  .row{
+    margin-right: 0 !important;
+  }
+
+  .specialization-image-container-mobile{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+/* Specialization Mobile Styling End */
+
+.specialization-image-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.specialization-img-1-container{
+  object-fit: cover;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  margin-left: 18%;
+}
+
+.specialization-img-1{
+  width: 100%;
+  height: auto;
+}
+
+.specialization-logo-container {
+  position: relative;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 12%;
+  height: auto;
+  padding: 3%;
+  margin-left: 43%;
+  z-index: 1;
+  margin-top: -5%;
+}
+
+.specialization-logo {
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.specialization-img-group{
+  display: flex;
+  flex-direction: row;
+  margin-top: -4%;
+}
+
+.specialization-img-2-container {
+  position: relative;
+  width: 33%;
+  height: auto;
+  margin-left: 15%;
+}
+
+.specialization-img-2{
+  width: 100%;
+  height: auto;
+}
+
+.specialization-img-3-container {
+  position: relative;
+  width: 38%;
+  height: auto;
+  margin-left: 2%;
+}
+
+.specialization-img-3{
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* Company Speciaization New Styling End */
 
 /* Our Blogs Styling Start*/
 
@@ -2294,32 +2647,30 @@ nav.fill ul li a:hover:after {
   margin-top: 10%;
 }
 
-@media only screen and (max-width: 768px){
-  .case-studies-line-div{
+@media only screen and (max-width: 768px) {
+  .case-studies-line-div {
     display: none;
   }
-  .case-studies-bg-logo{
+  .case-studies-bg-logo {
     display: none;
   }
-  .case-studies-bg-logo-left{
+  .case-studies-bg-logo-left {
     display: none;
   }
 }
 
-
-@media only screen and (max-width: 480px){
-  .case-studies-line-div{
+@media only screen and (max-width: 480px) {
+  .case-studies-line-div {
     display: none;
   }
 
-  .case-studies-bg-logo{
+  .case-studies-bg-logo {
     display: none;
   }
 
-  .case-studies-bg-logo-left{
+  .case-studies-bg-logo-left {
     display: none;
   }
-
 }
 
 .case-studies-bg-logo {
@@ -2553,7 +2904,7 @@ nav.fill ul li a:hover:after {
   position: relative;
   width: 100%;
   height: 1px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   top: 90%;
   left: 0%;
 }
