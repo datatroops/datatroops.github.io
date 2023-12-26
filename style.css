@@ -328,8 +328,8 @@ nav.fill ul li a:hover:after {
 
   .card-container {
     z-index: 1;
-    margin-bottom: 98%;
-    height: 7vw;
+    margin-bottom: 17%;
+    height: 100%;
   }
 
   .services-background-gradient {
@@ -392,8 +392,8 @@ nav.fill ul li a:hover:after {
 @media screen and (max-width: 576px) {
   .card-container {
     z-index: 1 !important;
-    margin-bottom: 107%;
-    height: 7vw;
+    margin-bottom: 15%;
+    height: 100%;
     width: 84% !important;
   }
 
@@ -562,7 +562,7 @@ nav.fill ul li a:hover:after {
 .card-content-container {
   position: relative;
   width: 100%;
-  height: 17vw;
+  height: 100%;
   text-align: center;
   color: #080501;
   font-family: Prompt;
@@ -579,6 +579,7 @@ nav.fill ul li a:hover:after {
   margin-top: -18%;
   background-color: #ffffff;
   z-index: 1;
+  height: 100%;
 }
 
 .read-more {
@@ -1341,6 +1342,7 @@ nav.fill ul li a:hover:after {
   display: flex;
   flex-direction: column;
   margin-left: 10%;
+  width: 60%;
 }
 
 .specialization-line {
@@ -1353,7 +1355,7 @@ nav.fill ul li a:hover:after {
 
 .company-specialization-title {
   position: relative;
-  font-size: 3.5vw;
+  font-size: 2.6vw;
   line-height: 100%;
   font-weight: 600;
   font-family: Prompt;
@@ -1385,10 +1387,10 @@ nav.fill ul li a:hover:after {
 
 .specialization-icons-bg {
   position: relative;
-  border-radius: 2vw;
+  border-radius: 50%;
   background-color: #ffd387;
-  width: 94%;
-  height: 3vw;
+  width: 2.7vw;
+  height: 2.7vw;
 }
 
 .specialization-icons-container {
@@ -1399,8 +1401,8 @@ nav.fill ul li a:hover:after {
   position: relative;
   width: 72%;
   height: auto;
-  margin-top: -211%;
-  margin-left: 32%;
+  margin-top: -170%;
+  margin-left: 20%;
 }
 
 .specialization-icons-heading {
@@ -1436,7 +1438,7 @@ nav.fill ul li a:hover:after {
 
 .specialization-bg-1-container {
   position: relative;
-  margin-top: -17%;
+  margin-top: -14%;
 }
 
 .specialization-bg-1 {
@@ -1512,6 +1514,7 @@ nav.fill ul li a:hover:after {
 
 .company-specialization-section {
   margin-bottom: 10%;
+  position: relative;
 }
 
 /* Specialization Mobile Styling Start */
@@ -1521,6 +1524,7 @@ nav.fill ul li a:hover:after {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
+    width: 100%;
   }
 
   .specialization-line {
@@ -1565,9 +1569,9 @@ nav.fill ul li a:hover:after {
 
   .specialization-icons-bg {
     position: relative;
-    border-radius: 9vw;
+    border-radius: 50%;
     background-color: #ffd387;
-    width: 94%;
+    width: 14vw;
     height: 14vw;
   }
 
@@ -1700,6 +1704,7 @@ nav.fill ul li a:hover:after {
 .specialization-image-container {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .specialization-img-1-container {
@@ -2507,7 +2512,7 @@ input:focus{
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 80%;
   margin-left: 30%;
   margin-top: 27%;
   margin-bottom: 10%;
@@ -2608,7 +2613,7 @@ input:focus{
 .contact-form-bg{
   background-color: #170E03;
   width: 100%;
-  height: 60vw;
+  height: 50vw;
   margin-top: -15%;
   display: flex;
   flex-direction: column;
@@ -2661,12 +2666,35 @@ input:focus{
   margin-right: 11%;
 }
 
+@media only screen and (max-width: 1100px){
+  .contact-number{
+    margin-left: 24%;
+  }
+
+  .contact-email{
+    margin-left: 24%;
+  }
+
+  .send-message-button {
+    width: 42%;
+    margin-top: 3%;
+  }
+
+  .contact-input-styling{
+    width: 93%;
+  }
+
+  .contact-rectangle-div{
+    width: 90%;
+  }
+}
+
 
 @media only screen and (max-width: 768px) {
   .contact-parent {
     display: flex;
     flex-direction: column;
-    height: 155vw;
+    height: 142vw;
     margin-left: 11%;
   }
 
@@ -2773,7 +2801,7 @@ input:focus{
   .contact-form-bg{
     background-color: #170E03;
     width: 100%;
-    height: 200vw;
+    height: 180vw;
     margin-top: -76%;
     display: flex;
     flex-direction: column;
@@ -2821,9 +2849,9 @@ input:focus{
   
   .social-media-logo-parent {
     position: relative;
-    width: auto;
+    width: 10vw;
     height: 10vw;
-    border-radius: 5vw;
+    border-radius: 50%;
     border: 1px solid #fff;
     padding: 6%;
     padding-top: 4%;
