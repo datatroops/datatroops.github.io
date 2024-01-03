@@ -2506,6 +2506,7 @@ input:focus{
   margin-top: 8%;
   margin-left: 25%;
   width: 100%;
+  /* margin-bottom: 10%; */
 }
 
 .contact-number {
@@ -2514,7 +2515,7 @@ input:focus{
   flex-direction: row;
   width: 80%;
   margin-left: 30%;
-  margin-top: 27%;
+  margin-top: 15%;
   margin-bottom: 10%;
 }
 
@@ -2593,6 +2594,7 @@ input:focus{
   width: 34%;
   height: auto;
   margin-top: 7%;
+  margin-bottom: 10%;
   padding: 0;
   border: none;
 }
@@ -2649,7 +2651,7 @@ input:focus{
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 12%;
+  width: 10%;
   height: 4vw;
   margin-top: 3%;
   margin-left: 45%;
@@ -2658,12 +2660,13 @@ input:focus{
 .social-media-logo-parent {
   position: relative;
   width: auto;
-  height: 3vw;
+  height: 2.5vw;
   border-radius: 2vw;
   border: 1px solid #fff;
   padding: 6%;
   padding-top: 4%;
   margin-right: 11%;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1100px){
@@ -2849,9 +2852,9 @@ input:focus{
   
   .social-media-logo-parent {
     position: relative;
-    width: 10vw;
-    height: 10vw;
-    border-radius: 50%;
+    width: auto;
+    height: 9vw;
+    border-radius: 5vw;
     border: 1px solid #fff;
     padding: 6%;
     padding-top: 4%;

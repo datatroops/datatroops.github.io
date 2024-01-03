@@ -21,14 +21,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Gilroy:wght@300;400;500;600;700&display=swap"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap"
@@ -45,6 +45,61 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500&display=swap"
     />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+
+    <!-- Font Family CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/gilroy.css">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/linea-icons.css">
+
+    <!-- Swiper slider CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+
+    <!-- animate-text CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/animate-text.css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+
+    <!-- Light gallery CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PN1B4MN3FK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-PN1B4MN3FK");
+    </script>
+    <style>
+      #thank_you{
+          height: 2rem;
+          background-color: var(--bg-color);
+          margin-bottom:1rem;
+          text-align: center;
+          }
+          #disName{
+          display: inline;
+          font-size: 1rem;
+          color: #003153;
+          font-style: underline;
+          }
+          #thank_you p{
+          display: inline;
+          font-size: 1rem;
+          color: #444444;
+          }
+    </style>
+    <script src="https://kit.fontawesome.com/5c46b192b1.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -59,12 +114,12 @@
                 <img
                   style="width: 30%"
                   class="img-fluid mx-2"
-                  src="./public/mask-group@2x.png"
+                  src="./public/LogoBlue.png"
                   alt="logo1"
                 />
                 <img
                   class="img-fluid mx-2"
-                  src="./public/Mask group-1.jpg"
+                  src="./public/LogoBlue full.png"
                   alt="logo2"
                 />
               </div>
@@ -80,11 +135,23 @@
                 class="list-unstyled d-flex justify-content-center align-items-center"
                 style="padding: 0; margin: 0"
               >
-                <li class="home mx-3"><a href="#">Home</a></li>
-                <li class="our-services mx-3"><a href="#">Our Services</a></li>
-                <li class="reviews mx-3"><a href="#">Reviews</a></li>
-                <li class="contact mx-3"><a href="#">Contact</a></li>
-                <li class="blog mx-3"><a href="#">Blog</a></li>
+                <li class="home mx-3"><a href="index.html">Home</a></li>
+                <li class="our-services mx-3">
+                  <a href="#our-services-section">Our Services</a>
+                </li>
+                <!-- <li class="reviews mx-3"><a href="#">Reviews</a></li> -->
+                <li>
+                  <a href="technology.html"><span>Technology</span></a>
+                </li>
+                
+                <li class="contact mx-3">
+                  <a href="about-us.html">About Us</a>
+                </li>
+                <li>
+                  <a href="careers.html"><span>Careers</span></a>
+              </li>
+
+                <!-- <li class="blog mx-3"><a href="#">Blog</a></li> -->
               </ul>
             </nav>
           </div>
@@ -93,7 +160,9 @@
             style="margin-left: 3%"
             class="col-md-2 col-lg-2 col-sm-0 hire-us-container mt-4 d-none d-md-block"
           >
-            <button class="hire-us-style"><b>Contact Us</b></button>
+            <button class="hire-us-style" onclick="openContactUsPage()">
+              <b>Contact Us</b>
+            </button>
           </div>
         </div>
       </section>
@@ -131,13 +200,20 @@
                 id="navbarNavAltMarkup"
               >
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a class="nav-link active" aria-current="page" href="index.html"
                     >Home</a
                   >
-                  <a class="nav-link active" href="#">Our Services</a>
-                  <a class="nav-link active" href="#">Reviews</a>
-                  <a class="nav-link active" href="#">Contact</a>
-                  <a class="nav-link active" href="#">Blog</a>
+                  <a class="nav-link active" href="#our-services-section"
+                    >Our Services</a
+                  >
+                  <a class="nav-link active" href="technology.html"
+                    >Technology</a
+                  >
+                  <a class="nav-link active" href="about-us.html">About Us</a>
+                  
+                  <a class="nav-link active" href="careers.html"><span>Careers</span></a>
+                
+                  <!-- <a class="nav-link active" href="#">Blog</a>   -->
                 </div>
               </div>
             </div>
@@ -164,10 +240,13 @@
             Custom Software Systems and Incredible User Experiences
           </p>
           <div>
-            <button class="d-md-none hire-us-style p-0 m-0">
+            <button
+              class="d-md-none hire-us-style p-0 m-0"
+              onclick="openContactUsPage()"
+            >
               <b>Contact Us</b>
             </button>
-            <button class="rectangle p-0">Let's Get Started</button>
+            <button class="rectangle p-0" onclick="openContactUsPage()">Hire US </button>
           </div>
         </div>
       </div>
@@ -181,7 +260,9 @@
         <div>
           <div class="services-text-container">
             <div class="services-line"></div>
-            <div class="services-text">Our Services</div>
+            <div class="services-text" id="our-services-section">
+              Our Services
+            </div>
           </div>
         </div>
 
@@ -214,21 +295,21 @@
             </div>
             <div class="card-content-background-parent">
               <div>
-              <img
-                class="card-content-background"
-                src="./public/introv1shape1png@2x.png"
-                alt=""
-              />
+                <img
+                  class="card-content-background"
+                  src="./public/introv1shape1png@2x.png"
+                  alt=""
+                />
               </div>
               <div>
                 <div class="card-content-container">
-                  <div class="card-heading">High Performance
-  Systems</div>
+                  <div class="card-heading">High Performance Systems</div>
                   <div class="card-content">
-                    Engineer business systems that scale to millions of operations with millisecond response times.
+                    Engineer business systems that scale to millions of
+                    operations with millisecond response times.
                   </div>
                   <div class="read-more-parent">
-                    <div class="read-more"><a href="">Read More</a></div>
+                    <div class="read-more"><a href="technology.html">Read More</a></div>
                     <img
                       class="read-more-icon"
                       src="./public/group-1171274829.svg"
@@ -257,29 +338,30 @@
             </div>
             <div class="card-content-background-parent">
               <div>
-              <img
-                class="card-content-background"
-                src="./public/introv1shape1png@2x.png"
-                alt=""
-              />
-            </div>
-            <div class="card-content-container">
-              <div class="card-heading">Data Engineering, Strategy and Analytics </div>
-              <div class="card-content">
-                Enabling scale and performance for the data-driven enterprise.
-              </div>
-              <div class="read-more-parent">
-                <div class="read-more"><a href="">Read More</a></div>
                 <img
-                  class="read-more-icon"
-                  src="./public/group-1171274829.svg"
+                  class="card-content-background"
+                  src="./public/introv1shape1png@2x.png"
                   alt=""
                 />
               </div>
+              <div class="card-content-container">
+                <div class="card-heading">
+                  Data Engineering, Strategy and Analytics
+                </div>
+                <div class="card-content">
+                  Enabling scale and performance for the data-driven enterprise.
+                </div>
+                <div class="read-more-parent">
+                  <div class="read-more"><a href="technology.html">Read More</a></div>
+                  <img
+                    class="read-more-icon"
+                    src="./public/group-1171274829.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
-            </div>
-            <div>
-            </div>
+            <div></div>
           </div>
           <div class="mx-4 col-sm-10 col-12 col-md-3 col-lg-3 card-container">
             <img
@@ -299,29 +381,30 @@
             </div>
             <div class="card-content-background-parent">
               <div>
-              <img
-                class="card-content-background"
-                src="./public/introv1shape1png@2x.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <div class="card-content-container">
-                <div class="card-heading">Web/Mobile App Development</div>
-                <div class="card-content">
-                  Lorem ipsum dolor sit amet, consectetur elit. Venenatis diam
-                  massa accumsan ac facilisis odio laoreet. Eu mauris malesuad
-                </div>
-                <div class="read-more-parent">
-                  <div class="read-more"><a href="">Read More</a></div>
-                  <img
-                    class="read-more-icon"
-                    src="./public/group-1171274829.svg"
-                    alt=""
-                  />
+                <img
+                  class="card-content-background"
+                  src="./public/introv1shape1png@2x.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div class="card-content-container">
+                  <div class="card-heading">Web/Mobile App Development</div>
+                  <div class="card-content">
+                    Crafting Exceptional Web/Mobile Apps - Where Innovation
+                    Meets Impeccable Design. Explore the limitless possibilities
+                    of your digital vision.
+                  </div>
+                  <div class="read-more-parent">
+                    <div class="read-more"><a href="technology.html">Read More</a></div>
+                    <img
+                      class="read-more-icon"
+                      src="./public/group-1171274829.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -342,16 +425,20 @@
           </div>
           <div class="specialization-description-container">
             <p class="d-none d-md-block">
-              We create extraordinary impact for our clients through a collaborative and co-creative process
-               that uses a thin-slice strategy to provide value with incremental change on an accelerated timetable.
+              We create extraordinary impact for our clients through a
+              collaborative and co-creative process that uses a thin-slice
+              strategy to provide value with incremental change on an
+              accelerated timetable.
             </p>
             <!-- <p class="d-none d-md-block">
               know about how to start a consulting business
             </p> -->
 
             <p class="d-md-none">
-              We create extraordinary impact for our clients through a collaborative and co-creative process
-               that uses a thin-slice strategy to provide value with incremental change on an accelerated timetable.
+              We create extraordinary impact for our clients through a
+              collaborative and co-creative process that uses a thin-slice
+              strategy to provide value with incremental change on an
+              accelerated timetable.
             </p>
           </div>
           <div class="transform-business">
@@ -369,9 +456,12 @@
                   />
                 </div>
                 <div class="col-9">
-                  <div class="specialization-icons-heading">Strong Engineering Solutions</div>
+                  <div class="specialization-icons-heading">
+                    Strong Engineering Solutions
+                  </div>
                   <p class="specialization-icons-description-1">
-                    Expertise in building Responsive, Resilient, Message-Driven and Elastic solution
+                    Expertise in building Responsive, Resilient, Message-Driven
+                    and Elastic solution
                   </p>
                   <!-- <p class="specialization-icons-description-2">
                     Resilient
@@ -401,7 +491,10 @@
           <div class="row mt-4 specialization-image-container-mobile">
             <div class="d-md-none col-6">
               <div class="specialization-features-text-1">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing tech lorem</p>
+                <p>
+                  Elevate your IT Project Solution and Web Design with
+                  cutting-edge technology.
+                </p>
               </div>
               <div class="specialization-features-text-2">
                 <ul>
@@ -464,7 +557,10 @@
             </div>
             <div class="d-none d-md-block col-6">
               <div class="specialization-features-text-1">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing tech lorem</p>
+                <p>
+                  Elevate your IT Project Solution and Web Design with
+                  cutting-edge technology.
+                </p>
               </div>
               <div class="specialization-features-text-2">
                 <ul>
@@ -514,7 +610,7 @@
 
     <!-- Contact Section Start -->
     <section>
-      <div class="contact-parent">
+      <div class="contact-parent" id="contact-details-section">
         <div class="contact-details">
           <div class="contact-title">Let’s talk!</div>
           <div class="contact-content d-none d-md-block">
@@ -522,10 +618,10 @@
           </div>
 
           <div class="contact-number contact-icons-hide">
-            <div>
+            <!-- <div>
               <img alt="Phone-icon" src="./public/phonefill-1.svg" />
-            </div>
-            <div>+0123 4567 8910</div>
+            </div> -->
+            <div>Datatroops, 2nd Floor, C6, Sector 67, Mohali - 160062, Punjab, India</div>
           </div>
 
           <div class="contact-email contact-icons-hide">
@@ -535,13 +631,15 @@
             <div>info@datatroops.io</div>
           </div>
         </div>
-        <div class="contact-form">
+        <div class="contact-form"  id="contactStart">
+          <form class="fs-form" action="https://formsubmit.co/utkarsh.jindal@datatroops.io" method="POST" name="contactForm" id="contactForm">
           <div class="form-group-1">
             <div class="form-field">
               <div class="input-field-title">Name</div>
               <div class="contact-input-styling-container">
                 <input
-                  class="contact-input-styling"
+                        id="con_name"
+                        class="contact-input-styling"
                   type="text"
                   placeholder="John Doe"
                 />
@@ -554,7 +652,8 @@
                 <input
                   class="contact-input-styling"
                   type="email"
-                  placeholder="example@flowbase.com"
+                  id="con_email"
+                  placeholder="info@datatroops.io"
                 />
               </div>
               <div class="contact-rectangle-div"></div>
@@ -567,24 +666,37 @@
             </div>
             <div class="contact-input-styling-container">
               <input
-                class="contact-input-styling-2"
+                      id="con_message"
+                      class="contact-input-styling-2"
                 type="text"
                 placeholder="Hi There..."
               />
             </div>
             <div class="contact-rectangle-div-2"></div>
           </div>
-          <button class="send-message-button">
-          <div class="send-message-container">
-            <div class="send-message">Send Message</div>
+
+          <button type="submit" class="send-message-button" id="submit-button">
+            <div class="send-message-container">
+              <div class="send-message">Send Message</div>
+            </div>
+          </button>
+
+<!--            <input type="hidden" name="_subject" value="New submission!" />-->
+<!--            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />-->
+
+<!--            &lt;!&ndash; ... other hidden fields ... &ndash;&gt;-->
+
+          </form>
+          <div id="thank_you" style="display:none;">
+            <div id="disName"></div>
+            <p>&nbsp;Thank you for reaching out!, we will contact you soon!</p>
           </div>
-        </button>
-          <div class="contact-number d-md-none">
+          <!-- <div class="contact-number d-md-none">
             <div>
               <img alt="Phone-icon" src="./public/phonefill-1.svg" />
             </div>
             <div>+0123 4567 8910</div>
-          </div>
+          </div> -->
 
           <div class="contact-email d-md-none">
             <div>
@@ -596,35 +708,29 @@
       </div>
       <div class="contact-form-bg">
         <div class="footer-image-mobile">
-          <img
-            class="contact-frame-logo"
-            alt=""
-            src="./public/mask-group9@2x.png"
-          />
+          <img class="contact-frame-logo" alt="" src="./public/LogoWhite.png" />
         </div>
         <div class="contact-frame-text">
-          Lorem ipsum dolor sit amet, consectetur adip elit. Posuere dolor
-          massa, pellentesque aliquam nisl facilisis sed.
+          Innovate for the Future with Our Expertise - Crafting High-Performance
+          Systems, Data Engineering Excellence, and Impactful Web/Mobile Apps.
+          Your journey to success begins here.
         </div>
         <div class="footer-line"></div>
         <div class="social-media-frame-parent">
           <div class="social-media-logo-parent">
-            <a target="_blank" href="https://www.facebook.com/datatroopslabs/">
-              <img
-                alt="Facebook"
-                src="./public/filllogosfacebookcirclefill.svg"
-              />
+            <a target="_blank" href="https://www.linkedin.com/company/datatroops">
+              <i id="linkedin-icon" class="fa-brands fa-linkedin" style="color:white; width:17px; vertical-align:middle"></i>
             </a>
           </div>
           <div class="social-media-logo-parent">
             <a target="_blank" href="https://www.instagram.com/datatroops.io/">
-            <img alt="Instagram" src="./public/filllogosinstagramfill.svg" />
-          </a>
+              <img alt="Instagram" src="./public/filllogosinstagramfill.svg" />
+            </a>
           </div>
           <div class="social-media-logo-parent">
             <a target="_blank" href="https://twitter.com/datatroops_labs">
-            <img alt="Twitter" src="./public/filllogostwitterfill.svg" />
-          </a>
+              <img alt="Twitter" src="./public/filllogostwitterfill.svg" />
+            </a>
           </div>
         </div>
       </div>
@@ -632,6 +738,7 @@
     <!-- Contact Section End -->
 
     <!-- Scripts Start -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -667,6 +774,127 @@
         return direction;
       }
     </script>
+
+    <!-- <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script> -->
+
+    <script type="text/javascript">
+      (function (I, L, T, i, c, k, s) {
+        if (I.iticks) return;
+        I.iticks = { host: c, settings: s, clientId: k, cdn: L, queue: [] };
+        var h = T.head || T.documentElement;
+        var e = T.createElement(i);
+        var l = I.location;
+        e.async = true;
+        e.src = (L || c) + "/client/inject-v2.min.js";
+        h.insertBefore(e, h.firstChild);
+        I.iticks.call = function (a, b) {
+          I.iticks.queue.push([a, b]);
+        };
+      })(
+        window,
+        "https://cdn-v1.intelliticks.com/prod/common",
+        document,
+        "script",
+        "https://app.intelliticks.com",
+        "dfreL4iFCNGK5DiT6_c",
+        {}
+      );
+    </script>
+
+
+    <script>
+      function openContactUsPage() {
+        window.location.href = "contact-us.html";
+      }
+
+      function isEmpty(element) {
+        if (element.value == "") {
+          alert("Please fill all required details");
+          return true;
+        }
+        return false;
+      }
+
+      document.getElementById('submit-button').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById('con_name');
+        let email = document.getElementById('con_email');
+        let message = document.getElementById('con_message');
+
+        if (isEmpty(name) || isEmpty(email) || isEmpty(message)) {
+          console.log("Form validation failed");
+        } else {
+          console.log("Submitting form...");
+
+          // Create a FormData object to store the form data
+          let formData = new FormData();
+          formData.append('name', name.value);
+          formData.append('email', email.value);
+          formData.append('message', message.value);
+
+          // Use the fetch API to send a POST request
+          fetch('https://formsubmit.co/info@datatroops.io', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            // Handle the response as needed
+            let thank = document.getElementById("thank_you");
+            let disName = document.getElementById("disName");
+            thank.style.display = 'block';
+            disName.innerHTML = name.value.toUpperCase();
+          })
+          .catch(error => {
+            console.error('Error submitting form:', error);
+            // Handle the error as needed
+          });
+        }
+      });
+    </script>
+<!--    <script>-->
+<!--      function openContactUsPage() {-->
+<!--        window.location.href = "contact-us.html";-->
+<!--      }-->
+<!--    </script>-->
+<!--    <script>-->
+<!--      function isEmpty(element) {-->
+<!--      if (element.value == "") {-->
+<!--      alert("Please fill all required details");-->
+<!--      return 1;-->
+<!--      }-->
+<!--      return 0;-->
+<!--      }-->
+<!--      document.getElementById('submit-button').addEventListener('click', function (e) {-->
+<!--        e.preventDefault();-->
+<!--          let name=document.getElementById('con_name');-->
+<!--          let email=document.getElementById('con_email');-->
+<!--          let message=document.getElementById('con_message');-->
+<!--          if(isEmpty(name)) console.log("No");-->
+<!--          else if(isEmpty(email))  console.log("No");-->
+<!--          else if(isEmpty(message))  console.log("No");-->
+<!--          else {-->
+<!--              console.log("Name:", name.value);-->
+<!--              console.log("Email:", email.value);-->
+<!--              console.log("Message:", message.value);-->
+<!--              let thank= document.getElementById("thank_you");-->
+<!--              let disName= document.getElementById("disName");-->
+<!--              thank.style.display='block';-->
+<!--              disName.innerHTML=name.value.toUpperCase();-->
+<!--          }-->
+<!--      });-->
+<!--    </script>-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
