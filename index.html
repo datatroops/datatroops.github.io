@@ -86,18 +86,104 @@
           background-color: var(--bg-color);
           margin-bottom:1rem;
           text-align: center;
-          }
-          #disName{
-          display: inline;
-          font-size: 1rem;
-          color: #003153;
-          font-style: underline;
-          }
-          #thank_you p{
-          display: inline;
-          font-size: 1rem;
-          color: #444444;
-          }
+      }
+
+      #disName{
+        display: inline;
+        font-size: 1rem;
+        color: #003153;
+        font-style: underline;
+      }
+      
+      #thank_you p{
+        display: inline;
+        font-size: 1rem;
+        color: #444444;
+      }
+
+      /* technology part styling */
+      .technology-section{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #3d3d3d;
+        font-family: "Space Grotesk", sans-serif;
+        color: #fff;
+      }
+
+      .tech-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .column {
+        width: 400px;
+        padding: 20px;
+        background-color: rgba(41, 41, 41, 0.7);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .serverless-tech {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+      }
+
+      .serverless-tech-2 {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+      }
+
+      h4 {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 35px;
+        font-size: 18px;
+      }
+
+      .tech-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        background-color: hsla(0, 0%, 15%, 0.15);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .tech-card img {
+        width: 33%;
+        padding: 3%;
+      }
+
+      .tech-card p {
+        margin: 10px 0;
+        text-align: center;
+        font-size: small;
+      }
+
+      @media (max-width: 768px) {
+        .tech-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .column {
+          width: 100%;
+        }
+      }
+      /* technology part styling ends */
+
+    </style>
+     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
     </style>
     <script src="https://kit.fontawesome.com/5c46b192b1.js" crossorigin="anonymous"></script>
   </head>
@@ -426,6 +512,161 @@
       </div>
     </section>
     <!-- Our Services End -->
+
+  <!-- Technology Stack Start -->
+   <section class="technology-section">
+     <div class="tech-container">
+      <div class="column">
+        <h4>Backend Technologies</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/scala.png" alt="scala" />
+            <p>Scala</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/akka.png" alt="akka-http" />
+            <p>Akka-HTTP</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/play.svg" alt="play" />
+            <p>Play</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/rust.png" alt="rust" />
+            <p>Rust</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/rocket-5-removebg-preview.png" alt="rocket" />
+            <p>Rocket</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/javascript.png" alt="javascript" />
+            <p>JavaScript</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/nodejs.png" alt="nodejs" />
+            <p>NodeJs</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/express.png" alt="express" />
+            <p>Express</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/python.png" alt="python" />
+            <p>Python</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/django.png" alt="django" />
+            <p>Django</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Frontend Technologies</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/angular.png" alt="angular" />
+            <p>Angular Js</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/react.png" alt="react" />
+            <p>React Js</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/next.png" alt="next" />
+            <p>Next Js</p>
+          </div>
+        </div>
+        <h4>Data Streaming Technologies</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/spark.png" alt="spark" />
+            <p>Apache Spark</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/flink.png" alt="flink" />
+            <p>Apache Flink</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kafka.png" alt="kafka" />
+            <p>Kafka</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kinesis.png" alt="kinesis" />
+            <p>Kinesis</p>
+          </div>
+          <div class="tech-card" style="padding: 0%;">
+            <img src="./assets/technology-images/cqrs-4.png" alt="cqrs" />
+            <p>CQRS</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/airflow.png" alt="airflow" />
+            <p>Airflow</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/hadoop.png" alt="hadoop" />
+            <p>Hadoop</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/pandas.png" alt="pandas" />
+            <p>Pandas</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/nifi-3.png" alt="nifi" />
+            <p>Nifi</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+
+        <h4>Cloud</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/aws.png" alt="aws" />
+            <p>AWS tech-stack</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/gcp.png" alt="gcp" />
+            <p>GCP tech-stack</p>
+          </div>
+        </div>
+
+        <h4>Monitoring</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/grafana.png" alt="grafana" />
+            <p>Grafana</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/graphite.png" alt="graphite" />
+            <p>Graphite</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/Kibana.png" alt="kibana" />
+            <p>Kibana</p>
+          </div>
+        </div>
+
+        <h4>Deployment</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/jenkin.png" alt="jenkins" />
+            <p>Jenkins</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/docker.png" alt="docker" />
+            <p>Docker</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kubernetes.png" alt="kubernetes" />
+            <p>Kubernetes</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </section>
+   <!-- Technology Stack End -->
 
     <!-- Company Specialization Start -->
     <section class="company-specialization-section">
