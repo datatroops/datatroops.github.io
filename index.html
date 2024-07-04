@@ -46,26 +46,26 @@
       href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500&display=swap"
     />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
 
     <!-- Font Family CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/gilroy.css">
+    <link rel="stylesheet" href="assets/css/vendor/gilroy.css" />
 
     <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/linea-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/linea-icons.css" />
 
     <!-- Swiper slider CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
 
     <!-- animate-text CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/animate-text.css">
+    <link rel="stylesheet" href="assets/css/plugins/animate-text.css" />
 
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
 
     <!-- Light gallery CSS -->
-    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -81,29 +81,29 @@
       gtag("config", "G-PN1B4MN3FK");
     </script>
     <style>
-      #thank_you{
-          height: 2rem;
-          background-color: var(--bg-color);
-          margin-bottom:1rem;
-          text-align: center;
+      #thank_you {
+        height: 2rem;
+        background-color: var(--bg-color);
+        margin-bottom: 1rem;
+        text-align: center;
       }
 
-      #disName{
+      #disName {
         display: inline;
         font-size: 1rem;
         color: #003153;
         font-style: underline;
       }
-      
-      #thank_you p{
+
+      #thank_you p {
         display: inline;
         font-size: 1rem;
         color: #444444;
       }
 
       /* technology part styling */
-      .technology-section{
-        margin-top: 10%;
+      .technology-section {
+        margin-top: -2%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -169,6 +169,10 @@
         font-size: small;
       }
 
+      .services-text-tech {
+        font-size: 3vw;
+      }
+
       @media (max-width: 768px) {
         .tech-container {
           flex-direction: column;
@@ -178,14 +182,31 @@
         .column {
           width: 100%;
         }
+
+        .services-text-container {
+          font-size: 9vw;
+          height: 12vw;
+        }
+
+        .services-text {
+          margin-left: 24% !important;
+        }
+
+        .services-text-tech {
+          margin-right: 5%;
+          margin-bottom: 5%;
+          font-size: 6vw;
+        }
       }
       /* technology part styling ends */
-
     </style>
-     <style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
     </style>
-    <script src="https://kit.fontawesome.com/5c46b192b1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5c46b192b1.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -229,13 +250,13 @@
                 <li>
                   <a href="technology.html"><span>Technology</span></a>
                 </li>
-                
+
                 <li class="contact mx-3">
                   <a href="about-us.html">About Us</a>
                 </li>
                 <li>
                   <a href="careers.html"><span>Careers</span></a>
-              </li>
+                </li>
 
                 <!-- <li class="blog mx-3"><a href="#">Blog</a></li> -->
               </ul>
@@ -286,7 +307,10 @@
                 id="navbarNavAltMarkup"
               >
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="index.html"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
                     >Home</a
                   >
                   <a class="nav-link active" href="#our-services-section"
@@ -296,9 +320,11 @@
                     >Technology</a
                   >
                   <a class="nav-link active" href="about-us.html">About Us</a>
-                  
-                  <a class="nav-link active" href="careers.html"><span>Careers</span></a>
-                
+
+                  <a class="nav-link active" href="careers.html"
+                    ><span>Careers</span></a
+                  >
+
                   <!-- <a class="nav-link active" href="#">Blog</a>   -->
                 </div>
               </div>
@@ -312,15 +338,15 @@
     <!--Banner Start-->
     <section>
       <div class="banner">
-        <div class="col-xs-2 col-sm-3 col-md-3 col-lg-4"></div>  
-        <div class="col-xs-10 col-sm-9 col-md-9 col-lg-8" style="display: flex;">
-            <span class="banner-text">
-              Check it out! Our newly launched product
-            </span>
-            <a href="https://prodktive.com/" target="_blank" class="btn-banner">
-              Click Here
-            </a>
-          </div>
+        <div class="col-xs-2 col-sm-3 col-md-3 col-lg-4"></div>
+        <div class="col-xs-10 col-sm-9 col-md-9 col-lg-8" style="display: flex">
+          <span class="banner-text">
+            Check it out! Our newly launched product
+          </span>
+          <a href="https://prodktive.com/" target="_blank" class="btn-banner">
+            Click Here
+          </a>
+        </div>
       </div>
     </section>
 
@@ -347,7 +373,9 @@
             >
               <b>Contact Us</b>
             </button>
-            <button class="rectangle p-0" onclick="openContactUsPage()">Hire US </button>
+            <button class="rectangle p-0" onclick="openContactUsPage()">
+              Hire US
+            </button>
           </div>
         </div>
       </div>
@@ -410,7 +438,9 @@
                     operations with millisecond response times.
                   </div>
                   <div class="read-more-parent">
-                    <div class="read-more"><a href="technology.html">Read More</a></div>
+                    <div class="read-more">
+                      <a href="technology.html">Read More</a>
+                    </div>
                     <img
                       class="read-more-icon"
                       src="./public/group-1171274829.svg"
@@ -453,7 +483,9 @@
                   Enabling scale and performance for the data-driven enterprise.
                 </div>
                 <div class="read-more-parent">
-                  <div class="read-more"><a href="technology.html">Read More</a></div>
+                  <div class="read-more">
+                    <a href="technology.html">Read More</a>
+                  </div>
                   <img
                     class="read-more-icon"
                     src="./public/group-1171274829.svg"
@@ -497,7 +529,9 @@
                     of your digital vision.
                   </div>
                   <div class="read-more-parent">
-                    <div class="read-more"><a href="technology.html">Read More</a></div>
+                    <div class="read-more">
+                      <a href="technology.html">Read More</a>
+                    </div>
                     <img
                       class="read-more-icon"
                       src="./public/group-1171274829.svg"
@@ -513,160 +547,185 @@
     </section>
     <!-- Our Services End -->
 
-  <!-- Technology Stack Start -->
-   <section class="technology-section">
-     <div class="tech-container">
-      <div class="column">
-        <h4>Backend Technologies</h4>
-        <div class="serverless-tech">
-          <div class="tech-card">
-            <img src="./assets/technology-images/scala.png" alt="scala" />
-            <p>Scala</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/akka.png" alt="akka-http" />
-            <p>Akka-HTTP</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/play.svg" alt="play" />
-            <p>Play</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/rust.png" alt="rust" />
-            <p>Rust</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/rocket-5-removebg-preview.png" alt="rocket" />
-            <p>Rocket</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/javascript.png" alt="javascript" />
-            <p>JavaScript</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/nodejs.png" alt="nodejs" />
-            <p>NodeJs</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/express.png" alt="express" />
-            <p>Express</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/python.png" alt="python" />
-            <p>Python</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/django.png" alt="django" />
-            <p>Django</p>
+    <!-- Technology Stack Start -->
+    <section
+      style="margin-top: 10%; margin-bottom: 1%; background-color: #3d3d3d"
+    >
+      <div>
+        <div class="services-text-container">
+          <div
+            class="services-text services-text-tech"
+            style="margin-top: 2%; color: white"
+            id="our-services-section"
+          >
+            Our Technologies
           </div>
         </div>
       </div>
-      <div class="column">
-        <h4>Frontend Technologies</h4>
-        <div class="serverless-tech">
-          <div class="tech-card">
-            <img src="./assets/technology-images/angular.png" alt="angular" />
-            <p>Angular Js</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/react.png" alt="react" />
-            <p>React Js</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/next.png" alt="next" />
-            <p>Next Js</p>
+    </section>
+    <section class="technology-section">
+      <div class="tech-container">
+        <div class="column">
+          <h4>Backend Technologies</h4>
+          <div class="serverless-tech">
+            <div class="tech-card">
+              <img src="./assets/technology-images/scala.png" alt="scala" />
+              <p>Scala</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/akka.png" alt="akka-http" />
+              <p>Akka-HTTP</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/play.svg" alt="play" />
+              <p>Play</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/rust.png" alt="rust" />
+              <p>Rust</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="./assets/technology-images/rocket-5-removebg-preview.png"
+                alt="rocket"
+              />
+              <p>Rocket</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="./assets/technology-images/javascript.png"
+                alt="javascript"
+              />
+              <p>JavaScript</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/nodejs.png" alt="nodejs" />
+              <p>NodeJs</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/express.png" alt="express" />
+              <p>Express</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/python.png" alt="python" />
+              <p>Python</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/django.png" alt="django" />
+              <p>Django</p>
+            </div>
           </div>
         </div>
-        <h4>Data Streaming Technologies</h4>
-        <div class="serverless-tech-2">
-          <div class="tech-card">
-            <img src="./assets/technology-images/spark.png" alt="spark" />
-            <p>Apache Spark</p>
+        <div class="column">
+          <h4>Frontend Technologies</h4>
+          <div class="serverless-tech">
+            <div class="tech-card">
+              <img src="./assets/technology-images/angular.png" alt="angular" />
+              <p>Angular Js</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/react.png" alt="react" />
+              <p>React Js</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/next.png" alt="next" />
+              <p>Next Js</p>
+            </div>
           </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/flink.png" alt="flink" />
-            <p>Apache Flink</p>
+          <h4>Data Streaming Technologies</h4>
+          <div class="serverless-tech-2">
+            <div class="tech-card">
+              <img src="./assets/technology-images/spark.png" alt="spark" />
+              <p>Apache Spark</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/flink.png" alt="flink" />
+              <p>Apache Flink</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/kafka.png" alt="kafka" />
+              <p>Kafka</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/kinesis.png" alt="kinesis" />
+              <p>Kinesis</p>
+            </div>
+            <div class="tech-card" style="padding: 0%">
+              <img src="./assets/technology-images/cqrs-4.png" alt="cqrs" />
+              <p>CQRS</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/airflow.png" alt="airflow" />
+              <p>Airflow</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/hadoop.png" alt="hadoop" />
+              <p>Hadoop</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/pandas.png" alt="pandas" />
+              <p>Pandas</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/nifi-3.png" alt="nifi" />
+              <p>Nifi</p>
+            </div>
           </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/kafka.png" alt="kafka" />
-            <p>Kafka</p>
+        </div>
+        <div class="column">
+          <h4>Cloud</h4>
+          <div class="serverless-tech">
+            <div class="tech-card">
+              <img src="./assets/technology-images/aws.png" alt="aws" />
+              <p>AWS tech-stack</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/gcp.png" alt="gcp" />
+              <p>GCP tech-stack</p>
+            </div>
           </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/kinesis.png" alt="kinesis" />
-            <p>Kinesis</p>
+
+          <h4>Monitoring</h4>
+          <div class="serverless-tech-2">
+            <div class="tech-card">
+              <img src="./assets/technology-images/grafana.png" alt="grafana" />
+              <p>Grafana</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="./assets/technology-images/graphite.png"
+                alt="graphite"
+              />
+              <p>Graphite</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/kibana.png" alt="kibana" />
+              <p>Kibana</p>
+            </div>
           </div>
-          <div class="tech-card" style="padding: 0%;">
-            <img src="./assets/technology-images/cqrs-4.png" alt="cqrs" />
-            <p>CQRS</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/airflow.png" alt="airflow" />
-            <p>Airflow</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/hadoop.png" alt="hadoop" />
-            <p>Hadoop</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/pandas.png" alt="pandas" />
-            <p>Pandas</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/nifi-3.png" alt="nifi" />
-            <p>Nifi</p>
+
+          <h4>Deployment</h4>
+          <div class="serverless-tech-2">
+            <div class="tech-card">
+              <img src="./assets/technology-images/jenkin.png" alt="jenkins" />
+              <p>Jenkins</p>
+            </div>
+            <div class="tech-card">
+              <img src="./assets/technology-images/docker.png" alt="docker" />
+              <p>Docker</p>
+            </div>
+            <div class="tech-card">
+              <img
+                src="./assets/technology-images/kubernetes.png"
+                alt="kubernetes"
+              />
+              <p>Kubernetes</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="column">
-
-        <h4>Cloud</h4>
-        <div class="serverless-tech">
-          <div class="tech-card">
-            <img src="./assets/technology-images/aws.png" alt="aws" />
-            <p>AWS tech-stack</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/gcp.png" alt="gcp" />
-            <p>GCP tech-stack</p>
-          </div>
-        </div>
-
-        <h4>Monitoring</h4>
-        <div class="serverless-tech-2">
-          <div class="tech-card">
-            <img src="./assets/technology-images/grafana.png" alt="grafana" />
-            <p>Grafana</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/graphite.png" alt="graphite" />
-            <p>Graphite</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/kibana.png" alt="kibana" />
-            <p>Kibana</p>
-          </div>
-        </div>
-
-        <h4>Deployment</h4>
-        <div class="serverless-tech-2">
-          <div class="tech-card">
-            <img src="./assets/technology-images/jenkin.png" alt="jenkins" />
-            <p>Jenkins</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/docker.png" alt="docker" />
-            <p>Docker</p>
-          </div>
-          <div class="tech-card">
-            <img src="./assets/technology-images/kubernetes.png" alt="kubernetes" />
-            <p>Kubernetes</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-   </section>
-   <!-- Technology Stack End -->
+    </section>
+    <!-- Technology Stack End -->
 
     <!-- Company Specialization Start -->
     <section class="company-specialization-section">
@@ -877,7 +936,10 @@
             <!-- <div>
               <img alt="Phone-icon" src="./public/phonefill-1.svg" />
             </div> -->
-            <div>Datatroops, 2nd Floor, C6, Sector 67, Mohali - 160062, Punjab, India</div>
+            <div>
+              Datatroops, 2nd Floor, C6, Sector 67, Mohali - 160062, Punjab,
+              India
+            </div>
           </div>
 
           <div class="contact-email contact-icons-hide">
@@ -887,63 +949,72 @@
             <div>info@datatroops.io</div>
           </div>
         </div>
-        <div class="contact-form"  id="contactStart">
-          <form class="fs-form" action="https://formsubmit.co/utkarsh.jindal@datatroops.io" method="POST" name="contactForm" id="contactForm">
-          <div class="form-group-1">
-            <div class="form-field">
-              <div class="input-field-title">Name</div>
+        <div class="contact-form" id="contactStart">
+          <form
+            class="fs-form"
+            action="https://formsubmit.co/utkarsh.jindal@datatroops.io"
+            method="POST"
+            name="contactForm"
+            id="contactForm"
+          >
+            <div class="form-group-1">
+              <div class="form-field">
+                <div class="input-field-title">Name</div>
+                <div class="contact-input-styling-container">
+                  <input
+                    id="con_name"
+                    class="contact-input-styling"
+                    type="text"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="contact-rectangle-div"></div>
+              </div>
+              <div class="form-field">
+                <div class="input-field-title">Email</div>
+                <div class="contact-input-styling-container">
+                  <input
+                    class="contact-input-styling"
+                    type="email"
+                    id="con_email"
+                    placeholder="info@datatroops.io"
+                  />
+                </div>
+                <div class="contact-rectangle-div"></div>
+              </div>
+            </div>
+
+            <div class="form-field-2">
+              <div class="input-field-title input-field-title-2-mobile">
+                Message
+              </div>
               <div class="contact-input-styling-container">
                 <input
-                        id="con_name"
-                        class="contact-input-styling"
+                  id="con_message"
+                  class="contact-input-styling-2"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Hi There..."
                 />
               </div>
-              <div class="contact-rectangle-div"></div>
+              <div class="contact-rectangle-div-2"></div>
             </div>
-            <div class="form-field">
-              <div class="input-field-title">Email</div>
-              <div class="contact-input-styling-container">
-                <input
-                  class="contact-input-styling"
-                  type="email"
-                  id="con_email"
-                  placeholder="info@datatroops.io"
-                />
+
+            <button
+              type="submit"
+              class="send-message-button"
+              id="submit-button"
+            >
+              <div class="send-message-container">
+                <div class="send-message">Send Message</div>
               </div>
-              <div class="contact-rectangle-div"></div>
-            </div>
-          </div>
+            </button>
 
-          <div class="form-field-2">
-            <div class="input-field-title input-field-title-2-mobile">
-              Message
-            </div>
-            <div class="contact-input-styling-container">
-              <input
-                      id="con_message"
-                      class="contact-input-styling-2"
-                type="text"
-                placeholder="Hi There..."
-              />
-            </div>
-            <div class="contact-rectangle-div-2"></div>
-          </div>
+            <!--            <input type="hidden" name="_subject" value="New submission!" />-->
+            <!--            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />-->
 
-          <button type="submit" class="send-message-button" id="submit-button">
-            <div class="send-message-container">
-              <div class="send-message">Send Message</div>
-            </div>
-          </button>
-
-<!--            <input type="hidden" name="_subject" value="New submission!" />-->
-<!--            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off" />-->
-
-<!--            &lt;!&ndash; ... other hidden fields ... &ndash;&gt;-->
-
+            <!--            &lt;!&ndash; ... other hidden fields ... &ndash;&gt;-->
           </form>
-          <div id="thank_you" style="display:none;">
+          <div id="thank_you" style="display: none">
             <div id="disName"></div>
             <p>&nbsp;Thank you for reaching out!, we will contact you soon!</p>
           </div>
@@ -974,8 +1045,15 @@
         <div class="footer-line"></div>
         <div class="social-media-frame-parent">
           <div class="social-media-logo-parent">
-            <a target="_blank" href="https://www.linkedin.com/company/datatroops">
-              <i id="linkedin-icon" class="fa-brands fa-linkedin" style="color:white; width:17px; vertical-align:middle"></i>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/datatroops"
+            >
+              <i
+                id="linkedin-icon"
+                class="fa-brands fa-linkedin"
+                style="color: white; width: 17px; vertical-align: middle"
+              ></i>
             </a>
           </div>
           <div class="social-media-logo-parent">
@@ -994,7 +1072,6 @@
     <!-- Contact Section End -->
 
     <!-- Scripts Start -->
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1067,7 +1144,6 @@
       );
     </script>
 
-
     <script>
       function openContactUsPage() {
         window.location.href = "contact-us.html";
@@ -1081,76 +1157,78 @@
         return false;
       }
 
-      document.getElementById('submit-button').addEventListener('click', function (e) {
-        e.preventDefault();
+      document
+        .getElementById("submit-button")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
 
-        let name = document.getElementById('con_name');
-        let email = document.getElementById('con_email');
-        let message = document.getElementById('con_message');
+          let name = document.getElementById("con_name");
+          let email = document.getElementById("con_email");
+          let message = document.getElementById("con_message");
 
-        if (isEmpty(name) || isEmpty(email) || isEmpty(message)) {
-          console.log("Form validation failed");
-        } else {
-          console.log("Submitting form...");
+          if (isEmpty(name) || isEmpty(email) || isEmpty(message)) {
+            console.log("Form validation failed");
+          } else {
+            console.log("Submitting form...");
 
-          // Create a FormData object to store the form data
-          let formData = new FormData();
-          formData.append('name', name.value);
-          formData.append('email', email.value);
-          formData.append('message', message.value);
+            // Create a FormData object to store the form data
+            let formData = new FormData();
+            formData.append("name", name.value);
+            formData.append("email", email.value);
+            formData.append("message", message.value);
 
-          // Use the fetch API to send a POST request
-          fetch('https://formsubmit.co/info@datatroops.io', {
-            method: 'POST',
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            // Handle the response as needed
-            let thank = document.getElementById("thank_you");
-            let disName = document.getElementById("disName");
-            thank.style.display = 'block';
-            disName.innerHTML = name.value.toUpperCase();
-          })
-          .catch(error => {
-            console.error('Error submitting form:', error);
-            // Handle the error as needed
-          });
-        }
-      });
+            // Use the fetch API to send a POST request
+            fetch("https://formsubmit.co/info@datatroops.io", {
+              method: "POST",
+              body: formData,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                // Handle the response as needed
+                let thank = document.getElementById("thank_you");
+                let disName = document.getElementById("disName");
+                thank.style.display = "block";
+                disName.innerHTML = name.value.toUpperCase();
+              })
+              .catch((error) => {
+                console.error("Error submitting form:", error);
+                // Handle the error as needed
+              });
+          }
+        });
     </script>
-<!--    <script>-->
-<!--      function openContactUsPage() {-->
-<!--        window.location.href = "contact-us.html";-->
-<!--      }-->
-<!--    </script>-->
-<!--    <script>-->
-<!--      function isEmpty(element) {-->
-<!--      if (element.value == "") {-->
-<!--      alert("Please fill all required details");-->
-<!--      return 1;-->
-<!--      }-->
-<!--      return 0;-->
-<!--      }-->
-<!--      document.getElementById('submit-button').addEventListener('click', function (e) {-->
-<!--        e.preventDefault();-->
-<!--          let name=document.getElementById('con_name');-->
-<!--          let email=document.getElementById('con_email');-->
-<!--          let message=document.getElementById('con_message');-->
-<!--          if(isEmpty(name)) console.log("No");-->
-<!--          else if(isEmpty(email))  console.log("No");-->
-<!--          else if(isEmpty(message))  console.log("No");-->
-<!--          else {-->
-<!--              console.log("Name:", name.value);-->
-<!--              console.log("Email:", email.value);-->
-<!--              console.log("Message:", message.value);-->
-<!--              let thank= document.getElementById("thank_you");-->
-<!--              let disName= document.getElementById("disName");-->
-<!--              thank.style.display='block';-->
-<!--              disName.innerHTML=name.value.toUpperCase();-->
-<!--          }-->
-<!--      });-->
-<!--    </script>-->
+    <!--    <script>-->
+    <!--      function openContactUsPage() {-->
+    <!--        window.location.href = "contact-us.html";-->
+    <!--      }-->
+    <!--    </script>-->
+    <!--    <script>-->
+    <!--      function isEmpty(element) {-->
+    <!--      if (element.value == "") {-->
+    <!--      alert("Please fill all required details");-->
+    <!--      return 1;-->
+    <!--      }-->
+    <!--      return 0;-->
+    <!--      }-->
+    <!--      document.getElementById('submit-button').addEventListener('click', function (e) {-->
+    <!--        e.preventDefault();-->
+    <!--          let name=document.getElementById('con_name');-->
+    <!--          let email=document.getElementById('con_email');-->
+    <!--          let message=document.getElementById('con_message');-->
+    <!--          if(isEmpty(name)) console.log("No");-->
+    <!--          else if(isEmpty(email))  console.log("No");-->
+    <!--          else if(isEmpty(message))  console.log("No");-->
+    <!--          else {-->
+    <!--              console.log("Name:", name.value);-->
+    <!--              console.log("Email:", email.value);-->
+    <!--              console.log("Message:", message.value);-->
+    <!--              let thank= document.getElementById("thank_you");-->
+    <!--              let disName= document.getElementById("disName");-->
+    <!--              thank.style.display='block';-->
+    <!--              disName.innerHTML=name.value.toUpperCase();-->
+    <!--          }-->
+    <!--      });-->
+    <!--    </script>-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
