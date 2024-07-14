@@ -125,13 +125,13 @@ nav.fill ul li a:hover:after {
 }
 
 .hire-us-style {
-  box-shadow: 0px 0px 10px #ffba08;
+  box-shadow: 0px 0px 3px #ffba08;
   position: relative;
   height: 100%;
   width: 75%;
   border: none;
   font-family: "Gilroy";
-  font-weight: 700;
+  font-weight: 500;
   background-color: #ffba08;
 }
 
