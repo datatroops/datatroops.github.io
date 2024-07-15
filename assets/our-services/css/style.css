@@ -1785,24 +1785,17 @@ a:visited {
     }
 }
 
+@media (max-width: 1280px) {
+    .button-section__wrapper {
+        padding-right: 3.75rem;
+        padding-left: 3.75rem;
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .button-section__wrapper {
         grid-column-gap: 2.625rem;
         grid-template-columns: repeat(10, minmax(0, 1fr));
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .button-section__wrapper {
-        grid-column-gap: 0.75rem;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .button-section__wrapper {
-        padding-right: 1.25em;
-        padding-left: 1.25em;
     }
 }
 
@@ -1813,10 +1806,18 @@ a:visited {
     }
 }
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 767px) {
     .button-section__wrapper {
-        padding-right: 3.75rem;
-        padding-left: 3.75rem;
+        grid-column-gap: 0.75rem;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-section__wrapper {
+        padding-right: 1.25em;
+        padding-left: 1.25em;
     }
 }
 
