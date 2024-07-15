@@ -90,12 +90,29 @@
 
     <link rel="stylesheet" href="./assets/our-services/css/style.css" />
     <style>
-     
       @media screen and (max-width: 992px) {
-        #technology-stack .row{
-        margin-left:0px;
+        #technology-stack .row {
+          margin-left: 0px;
+        }
       }
-}
+      #thank_you {
+        height: 2rem;
+        margin-top: 1.5rem;
+        background-color: var(--bg-color);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      #disName {
+        display: inline;
+        font-size: 1.5rem;
+        color: #003153;
+        font-style: underline;
+      }
+      #thank_you p {
+        display: inline;
+        font-size: 1.5rem;
+        color: #444444;
+      }
     </style>
   </head>
   <body>
@@ -715,6 +732,9 @@
                     data-error="There was an error. Message not sent."
                     data-ga-submit-event="form_submitted_lead"
                     data-ga-input-event="form_start_lead"
+                    action="https://formsubmit.co/info@datatroops.io"
+                    method="POST"
+                    name="contactForm"
                   >
                     <fieldset class="contact-form__form">
                       <input
@@ -749,7 +769,15 @@
                             >Privacy Policy</a
                           >.
                         </p></span
-                      ><input
+                      >
+                      <div id="thank_you" style="display: none">
+                        <div id="disName"></div>
+                        <p>
+                          &nbsp;thank you for reaching out!, we will contact you
+                          soon!
+                        </p>
+                      </div>
+                      <input
                         type="hidden"
                         name="_sml_guardian"
                         style="display: none !important"
@@ -1120,6 +1148,14 @@
               method: "POST",
               body: formData,
             })
+              .then((response) => {
+                if (response.status == 200) {
+                  let thank = document.getElementById("thank_you");
+                  let disName = document.getElementById("disName");
+                  thank.style.display = "block";
+                  disName.innerHTML = name.value.toUpperCase();
+                }
+              })
               .then((response) => response.json())
               .then((data) => {
                 let thank = document.getElementById("thank_you");
