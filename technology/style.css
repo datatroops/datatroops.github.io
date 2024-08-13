@@ -148,6 +148,8 @@
 @media screen and (max-width: 767px) {
     .alternate .views-row {
         text-align: center;
+        padding: 17px 0;
+        /* In case of buttons, remove this */
     }
 }
 
@@ -160,7 +162,8 @@
 .alternate .views-row {
     overflow: hidden;
     clear: both;
-    padding: 55px 0;
+    padding: 40px 0;
+    /* padding: 55px 0; */  /* In case of buttons */
     font-size: 16px;
     border-bottom: 1px solid #e5e5e5;
     line-height: 1.7;
@@ -228,7 +231,8 @@
 
 @media only screen and (max-width: 800px) {
     .alternate .views-row .content-text {
-        margin-bottom: 40px;
+        margin-bottom: 10px; 
+        /* margin-bottom: 40px */ /* In case of buttons*/
         text-align: center !important;
     }
 }
