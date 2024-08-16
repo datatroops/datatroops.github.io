@@ -78,31 +78,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-
-
-const dots = document.querySelectorAll('.slider-dots .dot');
-const slides = document.querySelectorAll('.slider-carousel .slider-card');
-let currentIndex = 0;
-
-function setActiveDot(index) {
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-}
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-    setActiveDot(index);
-}
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentIndex = index;
-        showSlide(currentIndex);
-    });
-});
-
-// Initial setup
-showSlide(currentIndex);
