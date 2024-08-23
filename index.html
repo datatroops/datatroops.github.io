@@ -162,6 +162,20 @@
       font-size: 3vw;
     }
 
+    @media (max-width: 900px) and (min-width: 500px)
+    {
+      .column{
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services-text-container{
+        height: 7vw;
+      }
+    }
+
+
     @media (max-width: 768px) {
       .tech-container {
         flex-direction: column;
@@ -193,6 +207,149 @@
     .card-container {
       padding: 20px;
     }
+
+    @media (max-width: 1200px){
+        .card-container {
+        padding: 0px; 
+      } 
+    }
+
+/* navbar styling  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+    padding: 0px 4rem;
+    /* background-color: #333; */
+    color: white;
+    font-size: 18px;
+    font-family: Prompt;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    /* color: white; */
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+} */
+
+.nav-links a:hover {
+    color: #975ca5;
+}
+
+.contact-button a {
+    /* color: white; */
+    color: black;
+    text-decoration: none;
+    background-color: #ffba08;
+    padding: 15px 25px;
+    /* border-radius: 5px; */
+}
+
+/* .contact-button a:hover {
+    background-color: #0056b3;
+} */
+
+.contact-button a:hover {
+    /* background-color: #975ca5; */
+  font-weight: 550;
+
+}
+
+.contact-button a{
+  box-shadow: 0px 0px 3px #ffba08;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .nav-links {
+   gap:0px;
+}
+}
+
+@media (max-width: 800px) {
+  .nav-links a {
+   padding: 5px;
+}
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+    .contact-button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+  .laptop-nav{
+    display: none;
+  }
+}
+
+
+.stroke a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #ffc952;
+  height: 10%;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: auto;
+    max-height: 40px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.logo-name {
+    height: auto;
+    max-height: 40px; /* Adjust size as needed */
+}
+
+
   </style>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
@@ -212,47 +369,25 @@
   <!-- Navbar Start -->
   <div style="width: 100%">
     <section class="d-none d-md-block">
-      <div class="header-container row">
-        <div class="col-sm-12 col-md-2 col-lg-2 mt-4 ms-5 mb-4">
-          <div class="row d-none d-md-block">
-            <div class="mx-lg-4 col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center">
-              <img style="width: 30%" class="img-fluid mx-2" src="./public/LogoBlue.png" alt="logo1" />
-              <img class="img-fluid mx-2" src="./public/LogoBlue full.png" alt="logo2" />
+      <nav class="navbar laptop-nav">
+          <div class="col-sm-12 col-md-2 col-lg-2 mt-4 mb-4">
+            <div class="row d-none d-md-block">
+              <div class="col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center">
+                <img style="width: 30%" class="img-fluid mx-2" src="./public/LogoBlue.png" alt="logo1" />
+                <img class="img-fluid mx-2" src="./public/LogoBlue full.png" alt="logo2" />
+              </div>
             </div>
           </div>
+        <div class="nav-links stroke" style="margin-left: 1rem;">
+            <a href="./index.html">Home</a>
+            <a href="./services.html">Services</a>
+            <a href="./technology/index.html">Technology</a>
+            <a href="./about-us.html">About Us</a>
         </div>
-
-        <div style="margin-left: 7%"
-          class="col-md-6 col-lg-6 home-parent mt-5 d-flex justify-content-center align-items-center d-none d-md-block">
-          <nav class="stroke">
-            <ul class="list-unstyled d-flex justify-content-center align-items-center" style="padding: 0; margin: 0">
-              <li class="home mx-3"><a href="index.html">Home</a></li>
-              <li class="our-services mx-3">
-                <a href="services.html">Our Services</a>
-              </li>
-              <!-- <li class="reviews mx-3"><a href="#">Reviews</a></li> -->
-              <li>
-                <a href="./technology/index.html"><span>Technology</span></a>
-              </li>
-
-              <li class="contact mx-3">
-                <a href="about-us.html">About Us</a>
-              </li>
-              <!-- <li>
-                  <a href="careers.html"><span>Careers</span></a>
-                </li> -->
-
-              <!-- <li class="blog mx-3"><a href="#">Blog</a></li> -->
-            </ul>
-          </nav>
+        <div class="contact-button">
+            <a href="./contact-us.html">Contact Us</a>
         </div>
-
-        <div style="margin-left: 3%" class="col-md-2 col-lg-2 col-sm-0 hire-us-container mt-4 d-none d-md-block">
-          <button class="hire-us-style" onclick="openContactUsPage()">
-            <b>Contact Us</b>
-          </button>
-        </div>
-      </div>
+    </nav>
     </section>
 
     <section class="d-md-none">
@@ -274,12 +409,6 @@
                 <a class="nav-link active" href="services.html">Our Services</a>
                 <a class="nav-link active" href="./technology/index.html">Technology</a>
                 <a class="nav-link active" href="about-us.html">About Us</a>
-
-                <!-- <a class="nav-link active" href="careers.html"
-                    ><span>Careers</span></a
-                  > -->
-
-                <!-- <a class="nav-link active" href="#">Blog</a>   -->
               </div>
             </div>
           </div>
@@ -322,7 +451,7 @@
             <b>Contact Us</b>
           </button>
           <button class="rectangle p-0" onclick="openContactUsPage()">
-            Hire US
+            Hire Us
           </button>
         </div>
       </div>
@@ -1020,7 +1149,7 @@
           </div>
         </div>
       </div>
-      <div class="specialization-image-container d-none d-md-block">
+      <div class="specialization-image-container d-none d-md-block" style="margin: auto;">
         <div class="specialization-img-1-container">
           <img class="specialization-img-1" alt="bg-1" src="./public/aboutv1img1jpg@2x.png" />
         </div>
