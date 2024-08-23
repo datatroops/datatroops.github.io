@@ -2492,8 +2492,8 @@ input:focus{
   font-weight: 600;
   color: #080501;
   text-align: center;
-  margin-top: 20%;
-  margin-left: 14%;
+  margin-top: 8%;
+  margin-left: 2%;
   width: 100%;
 }
 
@@ -2504,7 +2504,7 @@ input:focus{
   line-height: 100%;
   opacity: 0.72;
   margin-top: 8%;
-  margin-left: 25%;
+  margin-left: 16%;
   width: 100%;
   /* margin-bottom: 10%; */
 }
@@ -2513,8 +2513,8 @@ input:focus{
   position: relative;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  margin-left: 30%;
+  width: 100%;
+  margin-left: 16%;
   margin-top: 15%;
   margin-bottom: 10%;
 }
@@ -2524,7 +2524,7 @@ input:focus{
   display: flex;
   flex-direction: row;
   width: 50%;
-  margin-left: 30%;
+  margin-left: 16%;
 }
 
 .contact-form {
@@ -2602,7 +2602,7 @@ input:focus{
 .send-message-container {
   position: relative;
   background-color: #fff;
-  padding: 1vw 3vw;
+  padding: 1vw 2vw;
 }
 
 .send-message {
@@ -2671,11 +2671,11 @@ input:focus{
 
 @media only screen and (max-width: 1100px){
   .contact-number{
-    margin-left: 24%;
+    margin-left: 16%;
   }
 
   .contact-email{
-    margin-left: 24%;
+    margin-left: 16%;
   }
 
   .send-message-button {
@@ -2697,7 +2697,7 @@ input:focus{
   .contact-parent {
     display: flex;
     flex-direction: column;
-    height: 142vw;
+    height: 110vw;
     margin-left: 11%;
   }
 

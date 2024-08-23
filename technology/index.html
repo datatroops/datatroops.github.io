@@ -168,72 +168,185 @@
           gap: 10px;
         }
       }
+
+            /* navbar styling  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+    padding: 0px 4rem;
+    /* background-color: #333; */
+    color: white;
+    font-size: 18px;
+    font-family: Prompt;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    /* color: white; */
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* .nav-links a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+} */
+
+.nav-links a:hover {
+    color: #975ca5;
+}
+
+.contact-button a {
+    /* color: white; */
+    color: black;
+    text-decoration: none;
+    background-color: #ffba08;
+    padding: 15px 25px;
+    /* border-radius: 5px; */
+}
+
+/* .contact-button a:hover {
+    background-color: #0056b3;
+} */
+
+.contact-button a:hover {
+    /* background-color: #975ca5; */
+  font-weight: 550;
+
+}
+
+.contact-button a{
+  box-shadow: 0px 0px 3px #ffba08;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .nav-links {
+   gap:0px;
+}
+}
+
+@media (max-width: 800px) {
+  .nav-links a {
+   padding: 5px;
+}
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+    .contact-button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+  .laptop-nav{
+    display: none;
+  }
+}
+
+
+.stroke a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #ffc952;
+  height: 10%;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: auto;
+    max-height: 40px; /* Adjust size as needed */
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.logo-name {
+    height: auto;
+    max-height: 40px; /* Adjust size as needed */
+}
+
+
+.navbar {
+    background-color: transparent;
+    border-bottom: 0px solid rgba(0, 49, 82, 0.08);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background-color: transparent;
+    }
+}
     </style>
   </head>
   <body>
     <div>
       <!-- Navbar Laptop View -->
       <section class="d-none d-md-block">
-        <div class="header-container row">
-          <div class="col-sm-12 col-md-2 col-lg-2 mt-4 ms-5 mb-4">
+        <nav class="navbar laptop-nav">
+          <div class="col-sm-12 col-md-2 col-lg-2 mt-4 mb-4">
             <div class="row d-none d-md-block">
-              <div
-                class="mx-lg-4 col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center"
-              >
-                <img
-                  loading="lazy"
-                  style="width: 30%"
-                  class="img-fluid mx-2"
-                  src="../assets/our-services/images/logos/datatroops-logo-white.png"
-                  alt="logo1"
-                />
-                <img
-                  loading="lazy"
-                  class="img-fluid mx-2"
-                  src="../assets/our-services/images/logos/datatroops-logo-text-white.png"
-                  alt="logo2"
-                />
+              <div class="col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center">
+                <img style="width: 30%" class="img-fluid mx-2" src="../assets/our-services/images/logos/datatroops-logo-white.png" alt="logo1" />
+                <img class="img-fluid mx-2" src="../assets/our-services/images/logos/datatroops-logo-text-white.png" alt="logo2" />
               </div>
             </div>
           </div>
-
-          <div
-            style="margin-left: 7%"
-            class="col-md-6 col-lg-6 home-parent mt-5 d-flex justify-content-center align-items-center d-none d-md-block"
-          >
-            <nav class="stroke">
-              <ul
-                class="list-unstyled d-flex justify-content-center align-items-center"
-                style="padding: 0; margin: 0"
-              >
-                <li class="home mx-3"><a href="../index.html">Home</a></li>
-                <li class="our-services mx-3">
-                  <a href="../services.html">Services</a>
-                </li>
-
-                <li class="mx-3">
-                  <a href="#"><span>Technology</span></a>
-                </li>
-
-                <li class="contact mx-3">
-                  <a href="../about-us.html">About Us</a>
-                </li>
-                <!-- <li class="mx-3">
-                  <a href="../careers.html"><span>Careers</span></a>
-                </li> -->
-              </ul>
-            </nav>
-          </div>
-
-          <div
-            style="margin-left: 3%"
-            class="col-md-2 col-lg-2 col-sm-0 hire-us-container mt-4 d-none d-md-block"
-          >
-            <button class="hire-us-style" onclick="openContactUsPage()">
-              <b>Contact Us</b>
-            </button>
-          </div>
+          <div class="nav-links stroke" style="margin-left: 1rem;">
+            <a href="../index.html">Home</a>
+            <a href="../services.html">Services</a>
+            <a href="./index.html">Technology</a>
+            <a href="../about-us.html">About Us</a>
         </div>
+        <div class="contact-button">
+            <a href="../contact-us.html">Contact Us</a>
+        </div>
+    </nav>
       </section>
 
       <!-- Navbar Mobile View -->
