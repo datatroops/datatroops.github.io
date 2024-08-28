@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Info -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="DataTroops is a premier technology business that offers cutting-edge services in Big Data, Event-Driven Systems, Distributed Micro-services, and ETL. Our team of highly skilled and experienced individuals is committed to providing innovative solutions that help businesses survive in the digital age." />
+  <meta name="keywords"
+    content="scala, akka-http, play, rust, rocket, javascript, nodejs, express, python, django, angular react, typescript, apache spark, apache flink, kafka, kinesis, cqrs, airflow, hadoop, pandas, nifi, aws, gcp, grafana, graphite, kibana, jenkins, docker, kubernetes" />
+  <meta name="author" content="https://www.datatroops.io/" />
+  <!-- Meta Info ended -->
+
+  <!-- Tab Icon -->
+  <link rel="icon" href="./assets/datatroops-logo/LogoSymbolYellow.svg" type="image/x-icon" />
+
+  <title>DataTroops</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM Sans:wght@400;500&display=swap" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+
+  <!-- Font Family CSS -->
+  <link rel="stylesheet" href="assets/css/vendor/gilroy.css" />
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="assets/css/vendor/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/linea-icons.css" />
+
+  <!-- Swiper slider CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+
+  <!-- animate-text CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/animate-text.css" />
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
+
+  <!-- Light gallery CSS -->
+  <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN1B4MN3FK"></script>
+
+  <link rel="stylesheet" href="assets/our-services/css/style.css" />
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-PN1B4MN3FK");
+  </script>
+  <style>
+    #thank_you {
+      height: 2rem;
+      background-color: var(--bg-color);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    #disName {
+      display: inline;
+      font-size: 1rem;
+      color: #003153;
+      font-style: underline;
+    }
+
+    #thank_you p {
+      display: inline;
+      font-size: 1rem;
+      color: #444444;
+    }
+
+    /* technology part styling */
+    .technology-section {
+      margin-top: -2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #3d3d3d;
+      font-family: "Space Grotesk", sans-serif;
+      color: #fff;
+    }
+
+    .tech-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .column {
+      width: 400px;
+      padding: 20px;
+      background-color: rgba(41, 41, 41, 0.7);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .serverless-tech {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+    }
+
+    .serverless-tech-2 {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+
+    h4 {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 35px;
+      font-size: 18px;
+    }
+
+    .tech-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100px;
+      background-color: hsla(0, 0%, 15%, 0.15);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tech-card img {
+      width: 33%;
+      padding: 3%;
+    }
+
+    .tech-card p {
+      margin: 10px 0;
+      text-align: center;
+      font-size: small;
+    }
+
+    .services-text-tech {
+      font-size: 3vw;
+    }
+
+    @media (max-width: 900px) and (min-width: 500px) {
+      .column {
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services-text-container {
+        height: 7vw;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tech-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .services-text-container {
+        font-size: 9vw;
+        height: 12vw;
+      }
+
+      .our-services-text {
+        margin-bottom: 1rem;
+      }
+
+      .services-text {
+        margin-left: 24% !important;
+      }
+
+      .services-text-tech {
+        margin-right: 5%;
+        margin-bottom: 5%;
+        font-size: 6vw;
+      }
+    }
+
+    /* technology part styling ends */
+
+    .card-container {
+      padding: 20px;
+    }
+
+    @media (max-width: 1200px) {
+      .card-container {
+        padding: 0px;
+      }
+    }
+
+    /* navbar styling  */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 4rem;
+      color: white;
+      font-size: 18px;
+      font-family: Prompt;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #975ca5;
+    }
+
+    .contact-button a {
+      color: black;
+      text-decoration: none;
+      background-color: #ffba08;
+      padding: 15px 25px;
+    }
+
+    .contact-button a:hover {
+      font-weight: 550;
+    }
+
+    .contact-button a {
+      box-shadow: 0px 0px 3px #ffba08;
+      font-weight: 500;
+    }
+
+    /* Responsive design */
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 0px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .nav-links a {
+        padding: 5px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px 0;
+      }
+
+      .contact-button {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .laptop-nav {
+        display: none;
+      }
+    }
+
+    .stroke a:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: ".";
+      color: transparent;
+      background: #ffc952;
+      height: 10%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: auto;
+      max-height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-name {
+      height: auto;
+      max-height: 40px;
+    }
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+  </style>
+  <script src="https://kit.fontawesome.com/5c46b192b1.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./slider/style.css" />
+  <script src="./slider/script.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+
+  <link rel="stylesheet" href="slider.css" />
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div style="width: 100%">
+    <section class="d-none d-md-block">
+      <nav class="navbar laptop-nav">
+        <div class="col-sm-12 col-md-2 col-lg-2 mt-4 mb-4">
+          <div class="row d-none d-md-block">
+            <div class="col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center">
+              <img style="width: 30%" class="img-fluid mx-2" src="./public/LogoBlue.png" alt="logo1" />
+              <img class="img-fluid mx-2" src="./public/LogoBlue full.png" alt="logo2" />
+            </div>
+          </div>
+        </div>
+        <div class="nav-links stroke" style="margin-left: 1rem">
+          <a href="./index.html">Home</a>
+          <a href="./services.html">Services</a>
+          <a href="./technology/index.html">Technology</a>
+          <a href="./about-us.html">About Us</a>
+        </div>
+        <div class="contact-button">
+          <a href="./contact-us.html">Contact Us</a>
+        </div>
+      </nav>
+    </section>
+
+    <section class="d-md-none">
+      <div>
+        <nav class="navbar bg-body-tertiary d-md-none p-0 mt-4">
+          <div class="container-fluid p-0" style="background-color: #ffffff">
+            <button style="border: none" class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span><img src="./public/Frame.svg" alt="" /></span>
+            </button>
+            <a style="width: 70%" class="navbar-brand me-0" href="#">
+              <img style="width: 10%; height: auto" src="./public/mask-group@2x.png" alt="logo1" />
+              <img style="width: 55%; height: auto" src="./public/mask-group8@2x.png" alt="logo2" />
+            </a>
+            <div class="collapse navbar-collapse ms-4" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" href="services.html">Our Services</a>
+                <a class="nav-link active" href="./technology/index.html">Technology</a>
+                <a class="nav-link active" href="about-us.html">About Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Landing Page Start -->
+  <section>
+    <div class="image-container">
+      <img alt="background-image" src="./datatroops_jpg/yellow-dots-with-white-bg.jpg" />
+
+      <div class="overlay-text">
+        <p class="future-begins">Future Begins,</p>
+        <p class="future-begins">When We Innovate</p>
+        <div class="d-none d-md-block line-div"></div>
+        <p class="d-none d-md-block custom-software-systems" style="font-weight: 500">
+          Custom Software Systems and Incredible User Experiences
+        </p>
+        <div>
+          <button class="d-md-none hire-us-style p-0 m-0" onclick="openContactUsPage()">
+            <b>Contact Us</b>
+          </button>
+          <button class="rectangle p-0" onclick="openContactUsPage()">
+            Hire Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Landing page End -->
+
+  <!-- Our Services Start -->
+  <section>
+    <div class="services-container services-background-gradient">
+      <div>
+        <div class="services-text-container our-services-text">
+          <div class="services-line"></div>
+          <div class="services-text" id="our-services-section">
+            Our Services
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container-parent-mobile">
+        <img class="services-container-img" src="./public/introv1shape2png1@2x.png" alt="" />
+      </div>
+
+      <div class="row card-parent-container card-parent-container justify-content-center">
+        <div class="mx-4 col-sm-10 col-md-3 col-lg-3 card-container">
+          <img class="intro-v1-img1jpg-icon" alt="" src="./datatroops_png/intro-v1-img1.jpg.png" />
+          <div class="card-line"></div>
+          <div class="card-icon-box">
+            <div class="card-icon">
+              <img class="privacy-1-icon" alt="" src="./datatroops_jpg/privacy 1.jpg" />
+            </div>
+          </div>
+          <div class="card-content-background-parent">
+            <div>
+              <img class="card-content-background" src="./public/introv1shape1png@2x.png" alt="" />
+            </div>
+            <div>
+              <div class="card-content-container">
+                <div class="card-heading">High Performance Systems</div>
+                <div class="card-content">
+                  Engineer business systems that scale to millions of
+                  operations with millisecond response times.
+                </div>
+                <div class="read-more-parent">
+                  <div class="read-more">
+                    <a href="./services.html">Read More</a>
+                  </div>
+                  <img class="read-more-icon" src="./public/group-1171274829.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-4 col-sm-10 col-12 col-md-3 col-lg-3 card-container">
+          <img class="intro-v1-img1jpg-icon" alt="" src="./datatroops_png/intro-v1-img1.jpg-1.png" />
+          <div class="card-line"></div>
+          <div class="card-icon-box">
+            <div class="card-icon">
+              <img class="privacy-1-icon" alt="" src="./datatroops_jpg/image 48.jpg" />
+            </div>
+          </div>
+          <div class="card-content-background-parent">
+            <div>
+              <img class="card-content-background" src="./public/introv1shape1png@2x.png" alt="" />
+            </div>
+            <div class="card-content-container">
+              <div class="card-heading">
+                Data Engineering, Strategy and Analytics
+              </div>
+              <div class="card-content">
+                Enabling scale and performance for the data-driven enterprise.
+              </div>
+              <div class="read-more-parent">
+                <div class="read-more">
+                  <a href="./services.html">Read More</a>
+                </div>
+                <img class="read-more-icon" src="./public/group-1171274829.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div class="mx-4 col-sm-10 col-12 col-md-3 col-lg-3 card-container">
+          <img class="intro-v1-img1jpg-icon" alt="" src="./datatroops_png/intro-v1-img1.jpg-2.png" />
+          <div class="card-line"></div>
+          <div class="card-icon-box">
+            <div class="card-icon">
+              <img class="privacy-1-icon" alt="" src="./datatroops_jpg/Screen_Shot_2023-09-04_at_4.28 1.jpg" />
+            </div>
+          </div>
+          <div class="card-content-background-parent">
+            <div>
+              <img class="card-content-background" src="./public/introv1shape1png@2x.png" alt="" />
+            </div>
+            <div>
+              <div class="card-content-container">
+                <div class="card-heading">Web/Mobile App Development</div>
+                <div class="card-content">
+                  Crafting Exceptional Web/Mobile Apps - Where Innovation
+                  Meets Impeccable Design. Explore the limitless possibilities
+                  of your digital vision.
+                </div>
+                <div class="read-more-parent">
+                  <div class="read-more">
+                    <a href="./services.html">Read More</a>
+                  </div>
+                  <img class="read-more-icon" src="./public/group-1171274829.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-container" style="padding: 1rem; margin-top: 3rem; height: 50vh">
+      <div class="swiper-wrapper">
+        <div class="slider-item swiper-slide">
+          <div class="slider-image-wrapper">
+            <img class="slider-image" src="./datatroops_png/intro-v1-img1.jpg.png" alt="SliderImg" />
+          </div>
+          <div class="slider-item-content" style="padding: 20px">
+            <h1>High Performance Systems</h1>
+            <p>
+              Engineer business systems that scale to millions of operations
+              with millisecond response times.
+            </p>
+          </div>
+        </div>
+        <div class="slider-item swiper-slide">
+          <div class="slider-image-wrapper">
+            <img class="slider-image" src="./datatroops_png/intro-v1-img1.jpg-1.png" alt="SliderImg" />
+          </div>
+          <div class="slider-item-content" style="padding: 24px">
+            <h1>Data Engineering, Strategy and Analytics</h1>
+            <p>
+              Enabling scale and performance for the data-driven enterprise.
+            </p>
+          </div>
+        </div>
+        <div class="slider-item swiper-slide">
+          <div class="slider-image-wrapper">
+            <img class="slider-image" src="./datatroops_png/intro-v1-img1.jpg-2.png" alt="SliderImg" />
+          </div>
+          <div class="slider-item-content" style="padding: 16px">
+            <h1>Web/Mobile App Development</h1>
+            <p>
+              Crafting Exceptional Web/Mobile Apps - Where Innovation Meets
+              Impeccable Design. Explore the limitless possibilities of your
+              digital vision.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Our Services End -->
+
+  <!-- Technology Stack Start -->
+  <section style="margin-top: 10%; margin-bottom: 1%; background-color: #3d3d3d">
+    <div>
+      <div class="services-text-container">
+        <div class="services-text services-text-tech" style="margin-top: 2%; color: white" id="our-services-section">
+          Our Technologies
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="technology-section">
+    <div class="tech-container">
+      <div class="column">
+        <h4>Backend Technologies</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/scala.png" alt="scala" />
+            <p>Scala</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/akka.png" alt="akka-http" />
+            <p>Akka-HTTP</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/play.svg" alt="play" />
+            <p>Play</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/rust.png" alt="rust" />
+            <p>Rust</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/rocket-5-removebg-preview.png" alt="rocket" />
+            <p>Rocket</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/javascript.png" alt="javascript" />
+            <p>JavaScript</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/nodejs.png" alt="nodejs" />
+            <p>NodeJs</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/express.png" alt="express" />
+            <p>Express</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/python.png" alt="python" />
+            <p>Python</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/django.png" alt="django" />
+            <p>Django</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Frontend Technologies</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/angular.png" alt="angular" />
+            <p>Angular Js</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/react.png" alt="react" />
+            <p>React Js</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/next.png" alt="next" />
+            <p>Next Js</p>
+          </div>
+        </div>
+        <h4>Data Streaming Technologies</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/spark.png" alt="spark" />
+            <p>Apache Spark</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/flink.png" alt="flink" />
+            <p>Apache Flink</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kafka.png" alt="kafka" />
+            <p>Kafka</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kinesis.png" alt="kinesis" />
+            <p>Kinesis</p>
+          </div>
+          <div class="tech-card" style="padding: 0%">
+            <img src="./assets/technology-images/cqrs-4.png" alt="cqrs" />
+            <p>CQRS</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/airflow.png" alt="airflow" />
+            <p>Airflow</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/hadoop.png" alt="hadoop" />
+            <p>Hadoop</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/pandas.png" alt="pandas" />
+            <p>Pandas</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/nifi-3.png" alt="nifi" />
+            <p>Nifi</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <h4>Cloud</h4>
+        <div class="serverless-tech">
+          <div class="tech-card">
+            <img src="./assets/technology-images/aws.png" alt="aws" />
+            <p>AWS tech-stack</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/gcp.png" alt="gcp" />
+            <p>GCP tech-stack</p>
+          </div>
+        </div>
+
+        <h4>Monitoring</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/grafana.png" alt="grafana" />
+            <p>Grafana</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/graphite.png" alt="graphite" />
+            <p>Graphite</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kibana.png" alt="kibana" />
+            <p>Kibana</p>
+          </div>
+        </div>
+
+        <h4>Deployment</h4>
+        <div class="serverless-tech-2">
+          <div class="tech-card">
+            <img src="./assets/technology-images/jenkin.png" alt="jenkins" />
+            <p>Jenkins</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/docker.png" alt="docker" />
+            <p>Docker</p>
+          </div>
+          <div class="tech-card">
+            <img src="./assets/technology-images/kubernetes.png" alt="kubernetes" />
+            <p>Kubernetes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Technology Stack End -->
+
+  <!-- Company Specialization Start -->
+  <section class="company-specialization-section">
+    <div class="specialization-container">
+      <div class="specialization-content-container">
+        <div class="specialization-line"></div>
+        <div class="company-specialization-title">
+          <p class="company-specialization-title-content">Our Company</p>
+          <p class="company-specialization-title-content">
+            specializes in IT Solutions
+          </p>
+        </div>
+        <div class="specialization-description-container">
+          <p class="d-none d-md-block">
+            We create extraordinary impact for our clients through a
+            collaborative and co-creative process that uses a thin-slice
+            strategy to provide value with incremental change on an
+            accelerated timetable.
+          </p>
+          <p class="d-md-none">
+            We create extraordinary impact for our clients through a
+            collaborative and co-creative process that uses a thin-slice
+            strategy to provide value with incremental change on an
+            accelerated timetable.
+          </p>
+        </div>
+        <div class="transform-business">
+          Ready to transform your business?
+        </div>
+        <div class="row specialization-icons-container">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="row specialization-container-icon-mobile-1">
+              <div class="col-3">
+                <div class="specialization-icons-bg"></div>
+                <img class="light-bulb-icon" alt="" src="./public/light-bulb@2x.png" />
+              </div>
+              <div class="col-9">
+                <div class="specialization-icons-heading">
+                  Strong Engineering Solutions
+                </div>
+                <p class="specialization-icons-description-1">
+                  Expertise in building Responsive, Resilient, Message-Driven
+                  and Elastic solution
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="row specialization-container-icon-mobile-2">
+              <div class="col-3">
+                <div class="specialization-icons-bg"></div>
+                <img class="light-bulb-icon" alt="" src="./datatroops_png/Headphones.png" />
+              </div>
+              <div class="col-9">
+                <div class="specialization-icons-heading">Quick Support</div>
+                <p class="specialization-icons-description-1">
+                  Keep the production humming with 24*7 SRE support
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 specialization-image-container-mobile">
+          <div class="d-md-none col-6">
+            <div class="specialization-features-text-1">
+              <p>
+                Elevate your IT Project Solution and Web Design with
+                cutting-edge technology.
+              </p>
+            </div>
+            <div class="specialization-features-text-2">
+              <ul>
+                <li>Reactive Application</li>
+                <li>Data Engineering</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-md-none col-6 specialization-image-div">
+            <div class="specialization-bg-2-container">
+              <img class="specialization-bg-2" alt="bg-2" src="./public/aboutv1shape2png@2x.png" />
+            </div>
+            <div class="specialization-bg-3-outer">
+              <img class="specialization-bg-3-img" alt="" src="./public/image@2x.png" />
+              <div class="specialization-bg-3-text">95%</div>
+            </div>
+            <div class="specialization-bg-3-text-2">IT Project Solution</div>
+            <div class="specialization-bg-1-container">
+              <img class="specialization-bg-1" alt="bg-1" src="./public/aboutv1shape1png@2x.png" />
+            </div>
+          </div>
+
+          <div class="d-none d-md-block col-6 specialization-image-div">
+            <div class="specialization-bg-2-container">
+              <img class="specialization-bg-2" alt="bg-2" src="./public/aboutv1shape2png@2x.png" />
+            </div>
+            <div class="specialization-bg-3-outer">
+              <img class="specialization-bg-3-img" alt="" src="./public/image@2x.png" />
+              <div class="specialization-bg-3-text">95%</div>
+            </div>
+            <div class="specialization-bg-3-text-2">IT Project Solution</div>
+            <div class="specialization-bg-1-container">
+              <img class="specialization-bg-1" alt="bg-1" src="./public/aboutv1shape1png@2x.png" />
+            </div>
+          </div>
+          <div class="d-none d-md-block col-6">
+            <div class="specialization-features-text-1">
+              <p>
+                Elevate your IT Project Solution and Web Design with
+                cutting-edge technology.
+              </p>
+            </div>
+            <div class="specialization-features-text-2">
+              <ul>
+                <li>Reactive Application</li>
+                <li>Data Engineering</li>
+                <li>Web Development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="specialization-image-container d-none d-md-block" style="margin: auto">
+        <div class="specialization-img-1-container">
+          <img class="specialization-img-1" alt="bg-1" src="./public/aboutv1img1jpg@2x.png" />
+        </div>
+        <div class="specialization-logo-container">
+          <img class="specialization-logo" alt="" src="./public/Mask group.jpg" />
+        </div>
+        <div class="specialization-img-group">
+          <div class="specialization-img-2-container">
+            <img class="specialization-img-2" alt="" src="./public/aboutv1img2jpg@2x.png" />
+          </div>
+          <div class="specialization-img-3-container">
+            <img class="specialization-img-3" src="./public/aboutv1img3jpg@2x.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Company Specialization End -->
+
+  <!-- Contact Section Start -->
+  <section>
+    <footer
+      class="tether-element-attached-top tether-element-attached-center tether-target-attached-top tether-target-attached-center"
+      style="background-color: #fbfbfb">
+      <section id="contact-form" class="footer__section content__section section-contact">
+        <div class="viewport">
+          <div class="section__grid grid--two-columns">
+            <div class="grid__item item--contact-data">
+              <div class="block-contact">
+                <h3 class="contact__title">Let's do things together!</h3>
+                <ul class="contact__list" style="padding-left: 0rem">
+                  <li class="list__item">
+                    <a>Say hello to us!</a>
+                  </li>
+
+                  <li class="list__item">
+                    <a href="mailto:info@datatroops.io">info@datatroops.io</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid__item item--form">
+              <form class="contact-form-footer ovee-component" action="#" data-contact-form=""
+                data-getform="0377d391-2b91-431f-823f-a230e8d3b971"
+                data-thankyou="Thanks for getting in touch! We’ll respond to your inquiry within a few business days."
+                data-error="There was an error. Message not sent." data-ga-submit-event="form_submitted_lead"
+                data-ga-input-event="form_start_lead" action="https://formsubmit.co/info@datatroops.io" method="POST"
+                name="contactForm">
+                <fieldset class="contact-form__form" style="border: 0px">
+                  <input class="input contact-form__input" type="text" name="name" placeholder="Name" required=""
+                    id="con_name" /><input class="input contact-form__input" type="email" name="email"
+                    placeholder="E-mail" required="" id="con_email" /><textarea name="message" placeholder="Message"
+                    class="contact-form__message" required="" id="con_message"></textarea><span
+                    class="contact-form__agreement">
+                    <p>
+                      Your personal data collected in this form will be used
+                      only to contact you and talk about your project.
+                    </p>
+                  </span>
+                  <div id="thank_you" style="display: none">
+                    <div id="disName"></div>
+                    <p>
+                      &nbsp;thank you for reaching out!, we will contact you
+                      soon!
+                    </p>
+                  </div>
+                  <input type="hidden" name="_sml_guardian" style="display: none !important" /><button
+                    class="button contact-form__button" type="submit" id="submit-button">
+                    Send message
+                  </button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="viewport">
+          <div class="footer-section__middle">
+            <div class="footer-section__info">
+              <h3 class="footer-section__company-name header--no-margin">
+                DataTroops LLP
+              </h3>
+              <span class="footer-section__address">DataTroops, 2nd Floor, C6, Sector 67<br />Mohali, India -
+                160062</span>
+            </div>
+            <div class="footer-section__menu" id="footer-section--menu-items">
+              <div class="footer-section__menu-column">
+                <span class="footer-section__menu-heading"> Services </span>
+                <ul class="footer-section__menu-options">
+                  <li>
+                    <a class="footer-section__menu-option" href="./services/backend-development.html">Backend
+                    </a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Frontend</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Web Development</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Data & Analytics</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Architecture Consulting</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Stream Processing</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section__menu-column">
+                <span class="footer-section__menu-heading">
+                  Technologies
+                </span>
+                <ul class="footer-section__menu-options">
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Scala</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Java</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Apache Kafka</a>
+                  </li>
+
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Rust</a>
+                  </li>
+                  <li>
+                    <a class="footer-section__menu-option" href="#">Kotlin</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section__menu-column">
+                <span class="footer-section__menu-heading"> At glance </span>
+                <ul class="footer-section__menu-options">
+                  <li>
+                    <a class="footer-section__menu-option"
+                      href="./about-us.html#about-delivering-wrapper-heading-id">Why choose us</a>
+                  </li>
+                  <li class="">
+                    <a class="footer-section__menu-option" href="./about-us.html">About us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section__menu-column">
+                <ul class="">
+                  <li class="">
+                    <a class="footer-section__menu-heading" href="#">
+                      Services
+                    </a>
+                  </li>
+
+                  <li class="">
+                    <a style="cursor: pointer" class="footer-section__menu-heading" onclick="openContactUsPage()">
+                      Contact us
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-section__bottom">
+            <div class="footer-section__copyrights">
+              <p class="">© 2022 DataTroops. All rights reserved.</p>
+            </div>
+            <div class="footer-section__socials">
+              <div class="block-socialmedia block-socialmedia--footer">
+                <ul class="socialmedia__list">
+                  <li class="">
+                    <a target="_blank" href="https://twitter.com/datatroops_labs" data-gtmevent="footer-sm-click"
+                      data-gtmvalue="twitter" title="Twitter" class="">
+                      <figure class="socialmedia__ico ui-ico ico--twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                          <path fill="white"
+                            d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z" />
+                        </svg>
+                      </figure>
+                    </a>
+                  </li>
+                  <li class="">
+                    <a target="_blank" data-gtmevent="footer-sm-click" data-gtmvalue="linkedin"
+                      href="https://www.linkedin.com/company/datatroops" title="LinkedIn">
+                      <figure class="socialmedia__ico ui-ico ico--linkedin">
+                        <svg version="1.1" class="ico-linkedin" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-949 471.7 20.9 19.3"
+                          enable-background="new -949 471.7 20.9 19.3" xml:space="preserve">
+                          <rect class="svg__ico" x="-948.5" y="477.9" fill="#FFFFFF" width="4.1" height="13"></rect>
+                          <path class="svg__ico" fill="#FFFFFF"
+                            d="M-933.3,477.9c-2.3,0-3.8,1.3-4.1,2.2v-2h-4.6c0.1,1,0,13,0,13h4.6v-7.1c0-0.4,0-0.7,0.1-1.1 c0.3-1,1.2-1.6,2.2-1.6c1.6,0,2.3,1.2,2.3,2.9v6.7h4.7v-7.2C-928.1,479.7-930.4,477.9-933.3,477.9z">
+                          </path>
+                          <path class="svg__ico" fill="#FFFFFF"
+                            d="M-946.3,471.7c-0.1,0-0.1,0-0.2,0c-1.3-0.1-2.4,0.9-2.5,2.1c0,0,0,0.1,0,0.1c0,1.2,1,2.3,2.2,2.3 c0.1,0,0.1,0,0.2,0c1.2,0.1,2.4-0.8,2.5-2c0-0.1,0-0.2,0-0.2C-944.1,472.8-945.1,471.8-946.3,471.7z">
+                          </path>
+                        </svg>
+                      </figure>
+                    </a>
+                  </li>
+                  <li class="" style="margin-right: 1.625rem">
+                    <a target="_blank" data-gtmevent="footer-sm-click" data-gtmvalue="instagram"
+                      href="https://www.instagram.com/datatroops.io/" title="Instagram">
+                      <figure class="socialmedia__ico ui-ico ico--instagram">
+                        <svg viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                          <g class="svg__ico" fill="#FFFFFF">
+                            <path
+                              d="M127.999746,23.06353 C162.177385,23.06353 166.225393,23.1936027 179.722476,23.8094161 C192.20235,24.3789926 198.979853,26.4642218 203.490736,28.2166477 C209.464938,30.5386501 213.729395,33.3128586 218.208268,37.7917319 C222.687141,42.2706052 225.46135,46.5350617 227.782844,52.5092638 C229.535778,57.0201472 231.621007,63.7976504 232.190584,76.277016 C232.806397,89.7746075 232.93647,93.8226147 232.93647,128.000254 C232.93647,162.177893 232.806397,166.225901 232.190584,179.722984 C231.621007,192.202858 229.535778,198.980361 227.782844,203.491244 C225.46135,209.465446 222.687141,213.729903 218.208268,218.208776 C213.729395,222.687649 209.464938,225.461858 203.490736,227.783352 C198.979853,229.536286 192.20235,231.621516 179.722476,232.191092 C166.227425,232.806905 162.179418,232.936978 127.999746,232.936978 C93.8200742,232.936978 89.772067,232.806905 76.277016,232.191092 C63.7971424,231.621516 57.0196391,229.536286 52.5092638,227.783352 C46.5345536,225.461858 42.2700971,222.687649 37.7912238,218.208776 C33.3123505,213.729903 30.538142,209.465446 28.2166477,203.491244 C26.4637138,198.980361 24.3784845,192.202858 23.808908,179.723492 C23.1930946,166.225901 23.0630219,162.177893 23.0630219,128.000254 C23.0630219,93.8226147 23.1930946,89.7746075 23.808908,76.2775241 C24.3784845,63.7976504 26.4637138,57.0201472 28.2166477,52.5092638 C30.538142,46.5350617 33.3123505,42.2706052 37.7912238,37.7917319 C42.2700971,33.3128586 46.5345536,30.5386501 52.5092638,28.2166477 C57.0196391,26.4642218 63.7971424,24.3789926 76.2765079,23.8094161 C89.7740994,23.1936027 93.8221066,23.06353 127.999746,23.06353 M127.999746,0 C93.2367791,0 88.8783247,0.147348072 75.2257637,0.770274749 C61.601148,1.39218523 52.2968794,3.55566141 44.1546281,6.72008828 C35.7374966,9.99121548 28.5992446,14.3679613 21.4833489,21.483857 C14.3674532,28.5997527 9.99070739,35.7380046 6.71958019,44.1551362 C3.55515331,52.2973875 1.39167714,61.6016561 0.769766653,75.2262718 C0.146839975,88.8783247 0,93.2372872 0,128.000254 C0,162.763221 0.146839975,167.122183 0.769766653,180.774236 C1.39167714,194.398852 3.55515331,203.703121 6.71958019,211.845372 C9.99070739,220.261995 14.3674532,227.400755 21.4833489,234.516651 C28.5992446,241.632547 35.7374966,246.009293 44.1546281,249.28042 C52.2968794,252.444847 61.601148,254.608323 75.2257637,255.230233 C88.8783247,255.85316 93.2367791,256 127.999746,256 C162.762713,256 167.121675,255.85316 180.773728,255.230233 C194.398344,254.608323 203.702613,252.444847 211.844864,249.28042 C220.261995,246.009293 227.400247,241.632547 234.516143,234.516651 C241.632039,227.400755 246.008785,220.262503 249.279912,211.845372 C252.444339,203.703121 254.607815,194.398852 255.229725,180.774236 C255.852652,167.122183 256,162.763221 256,128.000254 C256,93.2372872 255.852652,88.8783247 255.229725,75.2262718 C254.607815,61.6016561 252.444339,52.2973875 249.279912,44.1551362 C246.008785,35.7380046 241.632039,28.5997527 234.516143,21.483857 C227.400247,14.3679613 220.261995,9.99121548 211.844864,6.72008828 C203.702613,3.55566141 194.398344,1.39218523 180.773728,0.770274749 C167.121675,0.147348072 162.762713,0 127.999746,0 Z M127.999746,62.2703115 C91.698262,62.2703115 62.2698034,91.69877 62.2698034,128.000254 C62.2698034,164.301738 91.698262,193.730197 127.999746,193.730197 C164.30123,193.730197 193.729689,164.301738 193.729689,128.000254 C193.729689,91.69877 164.30123,62.2703115 127.999746,62.2703115 Z M127.999746,170.667175 C104.435741,170.667175 85.3328252,151.564259 85.3328252,128.000254 C85.3328252,104.436249 104.435741,85.3333333 127.999746,85.3333333 C151.563751,85.3333333 170.666667,104.436249 170.666667,128.000254 C170.666667,151.564259 151.563751,170.667175 127.999746,170.667175 Z M211.686338,59.6734287 C211.686338,68.1566129 204.809755,75.0337031 196.326571,75.0337031 C187.843387,75.0337031 180.966297,68.1566129 180.966297,59.6734287 C180.966297,51.1902445 187.843387,44.3136624 196.326571,44.3136624 C204.809755,44.3136624 211.686338,51.1902445 211.686338,59.6734287 Z">
+                            </path>
+                          </g>
+                        </svg>
+                      </figure>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </section>
+  <!-- Contact Section End -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      slidesPerView: 1,
+      direction: getDirection(),
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+      return direction;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="slider.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: true,
+        speed: 300,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    (function (I, L, T, i, c, k, s) {
+      if (I.iticks) return;
+      I.iticks = { host: c, settings: s, clientId: k, cdn: L, queue: [] };
+      var h = T.head || T.documentElement;
+      var e = T.createElement(i);
+      var l = I.location;
+      e.async = true;
+      e.src = (L || c) + "/client/inject-v2.min.js";
+      h.insertBefore(e, h.firstChild);
+      I.iticks.call = function (a, b) {
+        I.iticks.queue.push([a, b]);
+      };
+    })(
+      window,
+      "https://cdn-v1.intelliticks.com/prod/common",
+      document,
+      "script",
+      "https://app.intelliticks.com",
+      "dfreL4iFCNGK5DiT6_c",
+      {}
+    );
+  </script>
+
+  <script>
+    function openContactUsPage() {
+      window.location.href = "contact-us.html";
+    }
+
+    function isEmpty(element) {
+      if (element.value == "") {
+        alert("Please fill all required details");
+        return true;
+      }
+      return false;
+    }
+
+    document
+      .getElementById("submit-button")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById("con_name");
+        let email = document.getElementById("con_email");
+        let message = document.getElementById("con_message");
+
+        if (isEmpty(name) || isEmpty(email) || isEmpty(message)) {
+          console.log("Form validation failed");
+        } else {
+          console.log("Submitting form...");
+
+          // Create a FormData object to store the form data
+          let formData = new FormData();
+          formData.append("name", name.value);
+          formData.append("email", email.value);
+          formData.append("message", message.value);
+
+          // Use the fetch API to send a POST request
+          fetch("https://formsubmit.co/info@datatroops.io", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // Handle the response as needed
+              let thank = document.getElementById("thank_you");
+              let disName = document.getElementById("disName");
+              thank.style.display = "block";
+              disName.innerHTML = name.value.toUpperCase();
+            })
+            .catch((error) => {
+              console.error("Error submitting form:", error);
+              // Handle the error as needed
+            });
+        }
+      });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
