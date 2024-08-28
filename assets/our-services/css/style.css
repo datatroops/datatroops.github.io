@@ -2382,7 +2382,7 @@ h3 {
     grid-column: span 2;
 }
 
-p {
+.footer-section p {
     font-size: 0.938em;
     line-height: 1.6;
     letter-spacing: 0.01em;
