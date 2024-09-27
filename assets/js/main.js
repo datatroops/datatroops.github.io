@@ -409,17 +409,17 @@
 
  
     var brandLogoSlider = new Swiper('.brand-logo-slider__container', {
-        slidesPerView : 6,
+        slidesPerView : 5,
         loop: true,
         speed: 1000,
-        spaceBetween : 30,
+        spaceBetween : 50,
         autoplay: {
             delay: 3000,
         },
 
         breakpoints: {
             1499:{
-                slidesPerView : 6
+                slidesPerView : 5
             },
 
             991:{
