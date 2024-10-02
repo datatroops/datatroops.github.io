@@ -1331,6 +1331,58 @@ nav.fill ul li a:hover:after {
 
 /* Technology Styling End */
 
+/* Our clients */
+
+.our-clients-container {
+  margin-top: 3%;
+}
+
+.clients-served-line {
+  position: relative;
+  border-top: 5px solid #ffba08;
+  width: 6vw;
+  height: 1vw;
+  margin-left: 47.5%;
+}
+
+.our-clients-title {
+  position: relative;
+  font-size: 2.6vw;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: Prompt;
+  color: #080501;
+  text-align: center;
+  /* margin-left: 11%; */
+}
+
+@media (max-width: 768px) {
+
+  .our-clients-container {
+    margin-top: 8%;
+  }
+
+  .clients-served-line {
+    position: relative;
+    border-top: 5px solid #ffba08;
+    width: 22vw;
+    height: 1vw;
+    margin-left: 40%;
+  }
+
+  .our-clients-title {
+    position: relative;
+    font-size: 8vw;
+    margin-top: 2%;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: Prompt;
+    color: #080501;
+    text-align: center;
+  }
+}
+
+
 /* Company Speciaization Styling Start */
 .specialization-container {
   display: flex;
@@ -1350,7 +1402,7 @@ nav.fill ul li a:hover:after {
   border-top: 5px solid #ffba08;
   width: 6vw;
   height: 1vw;
-  margin-left: 2%;
+  margin-left: 15%;
 }
 
 .company-specialization-title {
@@ -1539,7 +1591,7 @@ nav.fill ul li a:hover:after {
     position: relative;
     font-size: 8vw;
     margin-left: 9%;
-    margin-top: 6%;
+    margin-top: 2%;
     line-height: 125%;
     font-weight: 600;
     font-family: Prompt;
