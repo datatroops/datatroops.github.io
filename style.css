@@ -1331,6 +1331,58 @@ nav.fill ul li a:hover:after {
 
 /* Technology Styling End */
 
+/* Our clients */
+
+.our-clients-container {
+  margin-top: 3%;
+}
+
+.clients-served-line {
+  position: relative;
+  border-top: 5px solid #ffba08;
+  width: 6vw;
+  height: 1vw;
+  margin-left: 47.5%;
+}
+
+.our-clients-title {
+  position: relative;
+  font-size: 2.6vw;
+  line-height: 100%;
+  font-weight: 600;
+  font-family: Prompt;
+  color: #080501;
+  text-align: center;
+  /* margin-left: 11%; */
+}
+
+@media (max-width: 768px) {
+
+  .our-clients-container {
+    margin-top: 8%;
+  }
+
+  .clients-served-line {
+    position: relative;
+    border-top: 5px solid #ffba08;
+    width: 22vw;
+    height: 1vw;
+    margin-left: 40%;
+  }
+
+  .our-clients-title {
+    position: relative;
+    font-size: 8vw;
+    margin-top: 2%;
+    line-height: 125%;
+    font-weight: 600;
+    font-family: Prompt;
+    color: #080501;
+    text-align: center;
+  }
+}
+
+
 /* Company Speciaization Styling Start */
 .specialization-container {
   display: flex;
@@ -1350,7 +1402,7 @@ nav.fill ul li a:hover:after {
   border-top: 5px solid #ffba08;
   width: 6vw;
   height: 1vw;
-  margin-left: 2%;
+  margin-left: 15%;
 }
 
 .company-specialization-title {
@@ -1539,7 +1591,7 @@ nav.fill ul li a:hover:after {
     position: relative;
     font-size: 8vw;
     margin-left: 9%;
-    margin-top: 6%;
+    margin-top: 2%;
     line-height: 125%;
     font-weight: 600;
     font-family: Prompt;
@@ -2032,9 +2084,6 @@ nav.fill ul li a:hover:after {
   margin-left: 22%;
 }
 
-.swiper-slide {
-  width: 100% !important;
-}
 
 /* Client Testimonials Styling End*/
 
@@ -2900,4 +2949,168 @@ input:focus{
   background-color: #003153; 
   color: white; 
   display: flex;
+}
+
+/*=============================================
+=            16. Brand Logo Css             =
+=============================================*/
+.site-wrapper-reveal {
+  position: relative;
+  z-index: 2;
+  background: #FFFFFF;
+  padding-top: 50px;
+}
+
+.brand-logo-slider__one .brand-logo-slider__container {
+  padding: 15px 0;
+}
+
+.brand-logo-slider__one .brand-logo {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  text-align: center;
+  position: relative;
+  /*&--slider{
+            margin-bottom: 0;
+        }*/
+}
+
+.brand-logo-slider__one .brand-logo__image {
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.brand-logo-slider__one .brand-logo__image-hover {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+      -ms-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.brand-logo-slider__one .brand-logo:hover .brand-logo__image {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.8, 0.8);
+      -ms-transform: scale(0.8, 0.8);
+          transform: scale(0.8, 0.8);
+}
+
+.brand-logo-slider__one .brand-logo:hover .brand-logo__image-hover {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none !important;
+      -ms-transform: none !important;
+          transform: none !important;
+}
+
+.brand-logo-slider__two .brand-logo-two {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  text-align: center;
+  position: relative;
+}
+
+.brand-logo-slider__two .brand-logo-two__image {
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.brand-logo-slider__two .brand-logo-two__image-hover {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translate(-50%, 20px);
+      -ms-transform: translate(-50%, 20px);
+          transform: translate(-50%, 20px);
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+}
+
+.brand-logo-slider__two .brand-logo-two:hover .brand-logo-two__image {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.brand-logo-slider__two .brand-logo-two:hover .brand-logo-two__image-hover {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.brand-logo-slider__two .brand-logo-two--slider {
+  margin-bottom: 0;
+}
+
+.brand-logo-slider__three .brand-logo {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  text-align: center;
+  position: relative;
+}
+
+.brand-logo-slider__three .brand-logo__image {
+  opacity: 0.4;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.brand-logo-slider__three .brand-logo:hover .brand-logo__image {
+  opacity: 1;
+}
+
+.brand-logo-slider__three .brand-logo--slider {
+  margin-bottom: 0;
+}
+
+.brand-logo-slider__four .brand-logo {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  text-align: center;
+  position: relative;
+}
+
+.brand-logo-slider__four .brand-logo__image {
+  opacity: 1;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.brand-logo-slider__four .brand-logo:hover .brand-logo__image {
+  opacity: 0.4;
+}
+
+.brand-logo-slider__four .brand-logo--slider {
+  margin-bottom: 0;
+}
+
+.brand-logo-slider-area .section-title .heading-text {
+  max-width: 700px;
+  width: 100%;
+  font-weight: 500;
+  margin: auto;
 }

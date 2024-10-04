@@ -335,11 +335,10 @@
   <script src="https://kit.fontawesome.com/5c46b192b1.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="./slider/style.css" />
-  <script src="./slider/script.js"></script>
+  <link rel="stylesheet" href="./slider/carousel.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
 
-  <link rel="stylesheet" href="slider.css" />
 </head>
 
 <body>
@@ -528,11 +527,12 @@
       </div>
     </div>
 
-    <div class="swiper-container" style="padding: 1rem; margin-top: 3rem; height: 50vh">
-      <div class="swiper-wrapper">
-        <div class="slider-item swiper-slide">
-          <div class="slider-image-wrapper">
-            <img class="slider-image" src="./datatroops_png/intro-v1-img1.jpg.png" alt="SliderImg" />
+    <div class="carousel-wrapper">
+      <div>
+        <div class="services-text-container our-services-text">
+          <div class="services-line"></div>
+          <div class="services-text" id="our-services-section">
+            Our Services
           </div>
           <div class="slider-item-content" style="padding: 20px">
             <h2 style="font-size: 2em; margin:0.67em,0;">High Performance Systems</h2>
@@ -566,9 +566,8 @@
             </p>
           </div>
         </div>
+        <div class="carousel-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
   </section>
   <!-- Our Services End -->
 
@@ -734,6 +733,80 @@
   </section>
   <!-- Technology Stack End -->
 
+  <div class="our-clients-container">
+    <div class="clients-served-line"></div>
+    <p class="our-clients-title">Our Clients</p>
+  </div>
+  <!--====================  brand logo slider area ====================-->
+
+  <div class="site-wrapper-reveal">
+    <div class="brand-logo-slider-area section-space--ptb_60">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- brand logo slider -->
+            <div class="brand-logo-slider__container-area">
+              <div class="swiper-container brand-logo-slider__container">
+                <div class="swiper-wrapper brand-logo-slider__one">
+                  <div class="swiper-slide brand-logo brand-logo--slider">
+                    <a href="https://www.pigscanfly.ca" target="_blank">
+                      <div class="brand-logo__image">
+                        <img src="assets/images/brand/piggs-can-fly-new.png" class="img-fluid" alt="" />
+                      </div>
+                      <div class="brand-logo__image-hover">
+                        <img src="assets/images/brand/piggs-can-fly-new.png" class="img-fluid" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-logo brand-logo--slider">
+                    <a href="https://www.calsoftinc.com" target="_blank">
+                      <div class="brand-logo__image">
+                        <img src="assets/images/brand/calsoft-new.png" class="img-fluid" alt="" />
+                      </div>
+                      <div class="brand-logo__image-hover">
+                        <img src="assets/images/brand/calsoft-new.png" class="img-fluid" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-logo brand-logo--slider">
+                    <a href="https://www.3tl.com" target="_blank">
+                      <div class="brand-logo__image">
+                        <img src="assets/images/brand/3tl-new.png" class="img-fluid" alt="" />
+                      </div>
+                      <div class="brand-logo__image-hover">
+                        <img src="assets/images/brand/3tl-new.png" class="img-fluid" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-logo brand-logo--slider">
+                    <a href="https://www.tellius.com" target="_blank">
+                      <div class="brand-logo__image">
+                        <img src="assets/images/brand/tellius-new.png" class="img-fluid" alt="" />
+                      </div>
+                      <div class="brand-logo__image-hover">
+                        <img src="assets/images/brand/tellius-new.png" class="img-fluid" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide brand-logo brand-logo--slider">
+                    <a href="https://www.tenable.com" target="_blank">
+                      <div class="brand-logo__image">
+                        <img src="assets/images/brand/tenable-new.png" class="img-fluid" alt="" />
+                      </div>
+                      <div class="brand-logo__image-hover">
+                        <img src="assets/images/brand/tenable-new.png" class="img-fluid" alt="" />
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--====================  End of brand logo slider area  ====================-->
   <!-- Company Specialization Start -->
   <section class="company-specialization-section">
     <div class="specialization-container">
@@ -995,7 +1068,7 @@
                 <ul class="footer-section__menu-options">
                   <li>
                     <a class="footer-section__menu-option"
-                      href="./about-us#about-delivering-wrapper-heading-id">Why choose us</a>
+                     href="./about-us#about-delivering-wrapper-heading-id">Why choose us</a>
                   </li>
                   <li class="">
                     <a class="footer-section__menu-option" href="./about-us">About us</a>
@@ -1079,8 +1152,6 @@
     </footer>
   </section>
   <!-- Contact Section End -->
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -1226,6 +1297,41 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+
+  <!-- jQuery JS -->
+  <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+
+  <!-- wow JS -->
+  <script src="assets/js/plugins/wow.min.js"></script>
+
+  <!-- Swiper Slider JS -->
+  <script src="assets/js/plugins/swiper.min.js"></script>
+
+  <!-- ImagesLoaded JS -->
+  <script src="assets/js/plugins/images-loaded.min.js"></script>
+
+  <!-- jQuery Wavify JS -->
+  <script src="assets/js/plugins/jquery.wavify.js"></script>
+
+  <!-- circle progress JS -->
+  <script src="assets/js/plugins/circle-progress.min.js"></script>
+
+  <!-- counterup JS -->
+  <script src="assets/js/plugins/counterup.min.js"></script>
+
+  <!-- animation text JS -->
+  <script src="assets/js/plugins/animation-text.min.js"></script>
+
+  <!-- Vivus JS -->
+  <script src="assets/js/plugins/vivus.min.js"></script>
+
+  <!-- Some plugins JS -->
+  <script src="assets/js/plugins/some-plugins.js"></script>
+
+  <script src="slider/carousel.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
