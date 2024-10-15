@@ -1334,7 +1334,7 @@ nav.fill ul li a:hover:after {
 /* Our clients */
 
 .our-clients-container {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .clients-served-line {
@@ -1353,13 +1353,12 @@ nav.fill ul li a:hover:after {
   font-family: Prompt;
   color: #080501;
   text-align: center;
-  /* margin-left: 11%; */
 }
 
 @media (max-width: 768px) {
 
   .our-clients-container {
-    margin-top: 8%;
+    margin-top: 4%;
   }
 
   .clients-served-line {
@@ -1387,7 +1386,7 @@ nav.fill ul li a:hover:after {
 .specialization-container {
   display: flex;
   flex-direction: row;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .specialization-content-container {
@@ -2958,7 +2957,7 @@ input:focus{
   position: relative;
   z-index: 2;
   background: #FFFFFF;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .brand-logo-slider__one .brand-logo-slider__container {
@@ -2996,6 +2995,19 @@ input:focus{
   left: 0;
   width: 100%;
 }
+
+.brand-logo-slider__one .brand-logo__image img {
+  height: 100px;
+  object-fit: contain;
+  width: auto;
+}
+
+.brand-logo-slider__one .brand-logo__image-hover img {
+  height: 100px;
+  object-fit: contain;
+  width: auto;
+}
+
 
 .brand-logo-slider__one .brand-logo:hover .brand-logo__image {
   visibility: hidden;
@@ -3113,4 +3125,13 @@ input:focus{
   width: 100%;
   font-weight: 500;
   margin: auto;
+}
+
+@media screen and (max-width: 576px) {
+  .site-wrapper-reveal {
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    margin-bottom: 25px;
+  }
 }
